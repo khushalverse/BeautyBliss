@@ -1,0 +1,5348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Best Practices -->
+  <title>Beauty Bliss by Kenjal | Luxury Boutique Nail Studio</title>
+  <meta name="description" content="Experience high-end, premium nail art, custom gel extensions, and wedding bridal nails handcrafted by artist Kenjal in London & Abohar. Book your appointment today.">
+  <meta name="keywords" content="Nail Studio, Nail Art, Gel Nails, Nail Extensions, Bridal Nails, London Nails, Abohar Nails, Beauty Bliss, Kenjal">
+  <meta name="author" content="Beauty Bliss by Kenjal">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Beauty Bliss by Kenjal | Luxury Boutique Nail Studio">
+  <meta property="og:description" content="Experience high-end, premium nail art and extensions handcrafted by artist Kenjal.">
+  <meta property="og:image" content="./assets/pink_gel_nails.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Beauty Bliss by Kenjal | Luxury Boutique Nail Studio">
+  <meta property="twitter:description" content="Experience high-end, premium nail art and extensions handcrafted by artist Kenjal.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Fredoka:wght@600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Twemoji (for Apple/iPhone emojis) -->
+  <script src="https://unpkg.com/@twemoji/api@14.1.0/dist/twemoji.min.js" crossorigin="anonymous"></script>
+  <style>
+    img.emoji {
+      height: 1em;
+      width: 1em;
+      margin: 0 .05em 0 .1em;
+      vertical-align: -0.1em;
+    }
+  </style>
+
+  <style>
+    /* ----------------------------------------------------
+       DESIGN SYSTEM & VARIABLES (CANDY-GLOSS PREMIUM)
+       ---------------------------------------------------- */
+    :root {
+      /* ── Luxury Color Palette ── */
+      --color-primary: #FF7EB6;
+      --color-primary-deep: #FF529C;
+      --color-primary-soft: #FFD1E8;
+      --color-bg: #FFFDFB;
+      --color-bg-warm: #FFF6F5;
+      --color-lavender: #EAE0FF;
+      --color-mint: #E5F9F1;
+      --color-coral: #FFD5CB;
+      --color-plum: #4A2B3C;
+      --color-plum-light: #7A5368;
+      --color-blue: #0066cc;
+      --color-gold: #D4A574;
+      --color-champagne: #FDF9F2;
+      --color-rose-deep: #C4547A;
+
+      /* ── Pastel Glows ── */
+      --glow-lavender: rgba(234, 224, 255, 0.45);
+      --glow-mint: rgba(229, 249, 241, 0.45);
+      --glow-pink: rgba(255, 209, 232, 0.45);
+      --glow-coral: rgba(255, 213, 203, 0.45);
+
+      /* ── Typography ── */
+      --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Quicksand', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+      /* ── Premium Glassmorphism ── */
+      --glass-bg: rgba(255, 255, 255, 0.54);
+      --glass-bg-frosted: rgba(255, 255, 255, 0.68);
+      --glass-border: rgba(255, 255, 255, 0.74);
+      --glass-blur: blur(28px);
+      --glass-saturate: saturate(185%);
+      --shadow-premium: 0 10px 30px rgba(107, 59, 87, 0.075), 0 3px 10px rgba(107, 59, 87, 0.035);
+      --shadow-glow-pink: 0 0 50px rgba(255, 126, 182, 0.18);
+      --shadow-glow-lavender: 0 0 50px rgba(217, 200, 255, 0.2);
+      --shadow-inset: inset 0 1px 0 rgba(255, 255, 255, 0.9), inset 0 -12px 24px rgba(255, 255, 255, 0.2), inset 0 0 2px rgba(107, 59, 87, 0.03);
+      --shadow-layered: 0 2px 4px rgba(107, 59, 87, 0.03), 0 8px 24px rgba(107, 59, 87, 0.05), 0 24px 60px rgba(107, 59, 87, 0.08);
+
+      /* ── Ambient Mesh ── */
+      --mesh-gradient: linear-gradient(135deg, #FFFDFB 0%, #FFF4F9 25%, #FFF6F5 50%, #FBF6FF 75%, #FFFDFB 100%);
+      --grain-opacity: 0.035;
+    }
+
+    /* ----------------------------------------------------
+       BASE STYLES & LAYOUT
+       ---------------------------------------------------- */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--font-sans), 'Apple Color Emoji', 'Segoe UI Emoji', 'Noto Color Emoji';
+      background-color: var(--color-bg);
+      color: var(--color-plum);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    /* Tactile grain texture overlay */
+    body::after {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 9999;
+      opacity: var(--grain-opacity);
+      mix-blend-mode: multiply;
+    }
+
+    /* Desktop Background — Living Ambient Blobs */
+    .desktop-bg-glow {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      display: block;
+      overflow: hidden;
+    }
+
+    .desktop-bg-glow::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      left: -10%;
+      width: 80%;
+      height: 80%;
+      background: radial-gradient(circle, rgba(217, 200, 255, 0.35) 0%, transparent 60%);
+      animation: blobDrift1 20s ease-in-out infinite;
+      mix-blend-mode: normal;
+    }
+
+    .desktop-bg-glow::after {
+      content: '';
+      position: absolute;
+      bottom: -20%;
+      right: -10%;
+      width: 70%;
+      height: 70%;
+      background: radial-gradient(circle, rgba(255, 209, 232, 0.4) 0%, transparent 55%);
+      animation: blobDrift2 18s ease-in-out infinite;
+      mix-blend-mode: normal;
+    }
+
+    /* ----------------------------------------------------
+       APP SHELL: MOBILE DEVICE FRAMING ON DESKTOP
+       ---------------------------------------------------- */
+    .app-shell {
+      width: 100%;
+      max-width: 430px; /* Exact dimensions of iPhone Pro Max */
+      height: 100vh;
+      background-color: var(--color-bg);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      box-shadow: none;
+      border-radius: 0;
+      border: none;
+    }
+
+    .app-shell::-webkit-scrollbar {
+      display: none;
+    }
+
+    @media (min-width: 768px) {
+      body {
+        padding: 20px 0;
+      }
+      .app-shell {
+        height: 860px;
+        border-radius: 44px;
+        border: 10px solid #2e1d28;
+        box-shadow: 
+          0 32px 80px rgba(107, 59, 87, 0.22), 
+          0 0 0 1px rgba(107, 59, 87, 0.05),
+          0 0 60px rgba(255, 126, 182, 0.12),
+          0 0 20px rgba(255, 126, 182, 0.1) inset;
+        background-color: var(--color-bg);
+        position: relative;
+      }
+
+      /* Mock Phone Speaker & Camera Notch Detail */
+      .app-shell::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 110px;
+        height: 25px;
+        background: #2e1d28;
+        border-radius: 20px;
+        z-index: 1000;
+        pointer-events: none;
+      }
+    }
+
+    /* ----------------------------------------------------
+       TYPOGRAPHY
+       ---------------------------------------------------- */
+    h1, h2, h3 {
+      font-family: var(--font-serif);
+      font-weight: 700;
+    }
+
+    h1 {
+      font-size: 2.6rem;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    h2 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 1.15;
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-rose-deep) 50%, var(--color-primary) 100%);
+      background-size: 200% 200%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: gradientText 6s ease infinite;
+      letter-spacing: 0.02em;
+    }
+
+    h2::after {
+      content: "✦";
+      display: block;
+      font-size: 0.6rem;
+      letter-spacing: 6px;
+      -webkit-text-fill-color: var(--color-primary);
+      margin: 6px auto 0;
+      opacity: 0.6;
+    }
+
+    /* Left Aligned Section Title for Meet Kenjal */
+    .section-title-left {
+      text-align: left;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--color-plum);
+      padding: 0 20px;
+      margin-bottom: 16px;
+      width: fit-content;
+      letter-spacing: 0.02em;
+    }
+
+    .section-title-left::after {
+      display: none; /* No line underneath */
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      font-weight: 500;
+      color: var(--color-plum-light);
+    }
+
+    /* ----------------------------------------------------
+       GLOBAL COMPONENTS (GLASS CARDS & BUTTONS)
+       ---------------------------------------------------- */
+    .glass-card {
+      background:
+        linear-gradient(150deg, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0.46) 52%, rgba(251,246,255,0.52) 100%),
+        radial-gradient(circle at 18% 0%, rgba(255,255,255,0.95), transparent 38%),
+        radial-gradient(circle at 100% 100%, rgba(255,209,232,0.22), transparent 45%);
+      backdrop-filter: var(--glass-blur) var(--glass-saturate);
+      -webkit-backdrop-filter: var(--glass-blur) var(--glass-saturate);
+      border: 1px solid var(--glass-border);
+      border-radius: 28px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium), var(--shadow-inset);
+      transition: box-shadow 0.5s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    /* Premium acrylic shimmer sweep */
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -80%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.14) 38%,
+        rgba(255, 255, 255, 0.52) 50%,
+        rgba(255, 255, 255, 0.12) 62%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: skewX(-20deg);
+      pointer-events: none;
+      animation: shimmerSweep 8s ease-in-out infinite;
+    }
+
+    /* ----------------------------------------------------
+       HEADER (SWIPES UP / NON-STICKY)
+       ---------------------------------------------------- */
+    header {
+      position: relative; /* Scrolls away with the page */
+      background: transparent;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 16px 8px;
+      z-index: 10;
+    }
+
+    /* Header Pill Container Left */
+    .header-pill-left {
+      background: linear-gradient(135deg, rgba(255,255,255,0.82), rgba(255,255,255,0.52));
+      border-radius: 50px;
+      padding: 4px 14px 4px 4px;
+      display: inline-flex;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(107, 59, 87, 0.04), var(--shadow-glow-pink);
+      border: 0.5px solid rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    }
+
+    .header-avatar-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 1.5px solid var(--color-primary);
+      overflow: hidden;
+      margin-right: 8px;
+    }
+
+    .header-avatar-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .header-text-block {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-plum);
+      line-height: 1.15;
+    }
+
+    .header-status {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--color-blue);
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      margin-top: 1px;
+    }
+
+    .header-status-dot {
+      width: 6px;
+      height: 6px;
+      background-color: #34c759;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Header Controls Right (Instagram & WhatsApp Logo Buttons) */
+    .header-controls-right {
+      display: flex;
+      gap: 8px;
+    }
+
+    .header-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(255,255,255,0.8), rgba(255,255,255,0.48));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(107, 59, 87, 0.04);
+      border: 0.5px solid rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+      color: var(--color-plum);
+      text-decoration: none;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    }
+
+    .header-btn:active {
+      transform: scale(0.9);
+    }
+
+    .header-btn i {
+      width: 16px;
+      height: 16px;
+    }
+
+    .hero-container {
+      padding-top: 18px;
+      padding-bottom: 22px;
+      text-align: center;
+    }
+
+    /* Bubbly Cute Text Logo ("strawberry moo" style) */
+    .hero-cute-title {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #FF7EB6;
+      margin: 18px auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      text-shadow: 
+        0 0 20px rgba(255, 126, 182, 0.3),
+        0 0 40px rgba(255, 126, 182, 0.15),
+        2px 2px 0px #FFF,
+        4px 4px 0px rgba(255, 126, 182, 0.12);
+      animation: floatCuteTitle 4s ease-in-out infinite;
+      user-select: none;
+      filter: drop-shadow(0 4px 12px rgba(255, 126, 182, 0.2));
+    }
+
+    @keyframes floatCuteTitle {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+      100% { transform: translateY(0px); }
+    }
+
+    .cute-heart-icon {
+      font-size: 1.5rem;
+      color: #FF529C;
+      display: inline-block;
+      animation: beatHeart 1.5s ease-in-out infinite alternate;
+    }
+
+    @keyframes beatHeart {
+      0% { transform: scale(1); }
+      100% { transform: scale(1.18); }
+    }
+
+    .hero-title {
+      font-size: 1.8rem;
+      color: var(--color-plum);
+      padding: 0 16px;
+      margin-bottom: 14px;
+      line-height: 1.2;
+    }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-primary);
+      position: relative;
+    }
+
+    .hero-title em::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: rgba(255, 209, 232, 0.6);
+      z-index: -1;
+      border-radius: 3px;
+    }
+
+    /* Action Buttons Grid Layout */
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 0 16px;
+      margin-bottom: 12px;
+    }
+
+    .btn-hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 11px 10px;
+      border-radius: 18px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      line-height: 1.25;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    }
+
+    .btn-hero:active {
+      transform: scale(0.94) translateY(1px);
+    }
+
+    .btn-hero-primary {
+      background: linear-gradient(135deg, #FF6BA8 0%, #FF529C 50%, #E8458A 100%);
+      color: white;
+      box-shadow: 
+        0 4px 12px rgba(255, 82, 156, 0.25),
+        0 12px 28px rgba(255, 82, 156, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-hero-secondary {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,255,255,0.42)),
+        radial-gradient(circle at 18% 0%, rgba(255,255,255,0.9), transparent 42%);
+      color: var(--color-plum);
+      border: 0.5px solid rgba(255, 255, 255, 0.7);
+      box-shadow: 
+        0 4px 16px rgba(107, 59, 87, 0.06),
+        inset 0 1px 1px rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+
+    /* Stacked Non-Swipeable Badges Layout */
+    .metrics-pills-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 7px;
+      margin: 10px 0 0;
+      padding: 0 16px;
+    }
+
+    .pills-row {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+    }
+
+    .pill-badge {
+      background: var(--glass-bg-frosted);
+      border: 0.5px solid rgba(255, 255, 255, 0.6);
+      border-radius: 50px;
+      padding: 6px 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--color-plum);
+      box-shadow: 0 8px 24px rgba(107, 59, 87, 0.07), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(18px) saturate(180%);
+      -webkit-backdrop-filter: blur(18px) saturate(180%);
+    }
+
+    .pill-icon {
+      width: 14px;
+      height: 14px;
+      stroke-width: 2px;
+      color: var(--color-primary);
+    }
+
+    /* ----------------------------------------------------
+       PINTEREST MOODBOARD GALLERY
+       ---------------------------------------------------- */
+    .masonry-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 10px 12px 30px;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .masonry-item {
+      background: var(--glass-bg-frosted);
+      border: 3px solid #fff;
+      border-radius: 12px;
+      padding: 8px;
+      padding-bottom: 20px;
+      overflow: visible;
+      margin: -6px;
+      box-shadow: 0 10px 30px rgba(107, 59, 87, 0.1), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, z-index 0.1s;
+      position: relative;
+      cursor: pointer;
+      width: 48%;
+      z-index: 1;
+    }
+    
+    .masonry-item:nth-child(1) {
+      transform: rotate(-7deg) translateY(10px) translateX(8px);
+      z-index: 2;
+    }
+    .masonry-item:nth-child(2) {
+      transform: rotate(8deg) translateY(-15px) translateX(-10px);
+      z-index: 1;
+    }
+    .masonry-item:nth-child(3) {
+      transform: rotate(-5deg) translateY(-10px) translateX(12px);
+      z-index: 3;
+    }
+    .masonry-item:nth-child(4) {
+      transform: rotate(9deg) translateY(20px) translateX(-15px);
+      z-index: 2;
+    }
+
+    .masonry-item:hover {
+      z-index: 10;
+      transform: scale(1.06) rotate(0deg);
+      box-shadow: 0 20px 40px rgba(107, 59, 87, 0.15), var(--shadow-glow-pink);
+    }
+
+    /* Decorative Tape */
+    .masonry-item::after {
+      content: '';
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(-3deg);
+      width: 44px;
+      height: 18px;
+      background: rgba(255, 255, 255, 0.8);
+      backdrop-filter: blur(4px);
+      border-radius: 1px;
+      z-index: 5;
+      box-shadow: 0 2px 4px rgba(107, 59, 87, 0.1), inset 0 0 4px rgba(0,0,0,0.05);
+      border-left: 1px dashed rgba(0,0,0,0.1);
+      border-right: 1px dashed rgba(0,0,0,0.1);
+    }
+
+    .masonry-img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .masonry-info {
+      padding: 12px 4px 0;
+      background: transparent;
+      border: none;
+      backdrop-filter: none;
+      text-align: center;
+    }
+
+    .masonry-info h3 {
+      font-size: 1rem;
+      color: var(--color-plum);
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+
+    .masonry-info span {
+      font-size: 0.65rem;
+      color: var(--color-primary-deep);
+      font-family: var(--font-sans);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-top: 4px;
+    }
+
+    /* ----------------------------------------------------
+       SERVICES SECTION (LUXURY COSMETIC PACKAGING)
+       ---------------------------------------------------- */
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 0 16px;
+      margin-bottom: 40px;
+    }
+
+    .service-card {
+      border-radius: 32px;
+      padding: 20px 16px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border: 1px solid #fff;
+      position: relative;
+      height: 175px;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+      box-shadow: var(--shadow-layered), var(--shadow-inset);
+      cursor: pointer;
+      backdrop-filter: blur(36px) saturate(200%);
+      -webkit-backdrop-filter: blur(36px) saturate(200%);
+    }
+
+    /* Light streak reflection */
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 60%;
+      height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.5), transparent);
+      transform: skewX(-25deg);
+      transition: left 0.7s ease;
+      z-index: 2;
+    }
+
+    .service-card:hover::before {
+      left: 120%;
+    }
+
+    .service-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        radial-gradient(circle at 100% 0%, rgba(255, 255, 255, 0.7) 0%, transparent 60%),
+        radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .service-card:active {
+      transform: scale(0.96) translateY(2px);
+    }
+
+    /* Accent Lighting with Richer Gradients */
+    .service-card.accent-lavender {
+      background: linear-gradient(145deg, rgba(234, 224, 255, 0.85) 0%, rgba(234, 224, 255, 0.35) 100%);
+    }
+    .service-card.accent-lavender:hover {
+      box-shadow: 0 12px 30px rgba(217, 200, 255, 0.5), var(--shadow-inset);
+    }
+
+    .service-card.accent-mint {
+      background: linear-gradient(145deg, rgba(229, 249, 241, 0.85) 0%, rgba(229, 249, 241, 0.35) 100%);
+    }
+    .service-card.accent-mint:hover {
+      box-shadow: 0 12px 30px rgba(207, 246, 229, 0.5), var(--shadow-inset);
+    }
+
+    .service-card.accent-pink {
+      background: linear-gradient(145deg, rgba(255, 209, 232, 0.9) 0%, rgba(255, 209, 232, 0.45) 100%);
+    }
+    .service-card.accent-pink:hover {
+      box-shadow: 0 12px 30px rgba(255, 126, 182, 0.3), var(--shadow-inset);
+    }
+
+    .service-card.accent-coral {
+      background: linear-gradient(145deg, rgba(255, 213, 203, 0.85) 0%, rgba(255, 213, 203, 0.35) 100%);
+    }
+    .service-card.accent-coral:hover {
+      box-shadow: 0 12px 30px rgba(255, 184, 163, 0.4), var(--shadow-inset);
+    }
+
+    .service-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .service-emoji {
+      font-size: 1.6rem;
+      filter: drop-shadow(0 4px 8px rgba(107, 59, 87, 0.1));
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .service-card:hover .service-emoji {
+      transform: scale(1.15) rotate(-5deg);
+    }
+
+    .service-icon-wrapper {
+      background: rgba(255, 255, 255, 0.5);
+      border-radius: 12px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+    }
+
+    .service-icon-wrapper i {
+      width: 14px;
+      height: 14px;
+      color: var(--color-plum);
+    }
+
+    .service-info {
+      margin-top: 8px;
+    }
+
+    .service-card h3 {
+      font-size: 0.95rem;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      color: var(--color-plum);
+      margin-bottom: 2px;
+    }
+
+    .service-card p {
+      font-size: 0.72rem;
+      color: var(--color-plum-light);
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .service-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(107, 59, 87, 0.05);
+      padding-top: 6px;
+      margin-top: auto;
+    }
+
+    .service-price {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-plum);
+    }
+
+    .service-duration {
+      font-size: 0.68rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.65);
+      padding: 3px 8px;
+      border-radius: 10px;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.02em;
+    }
+
+    /* ----------------------------------------------------
+       NAIL GLOW-UPS (BEFORE-AFTER SLIDER)
+       ---------------------------------------------------- */
+    .slider-card {
+      padding: 0;
+      height: 270px;
+      display: flex;
+      flex-direction: column;
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+
+    .slider-wrapper {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: var(--shadow-premium), var(--shadow-inset);
+      border: 1px solid var(--glass-border);
+    }
+
+    .slider-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+    }
+
+    .slider-after-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 50%;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .slider-after-container .slider-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Range Input overlay trick */
+    .slider-range-input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      cursor: ew-resize;
+      z-index: 5;
+    }
+
+    /* Custom vertical line divider */
+    .slider-divider-line {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), #fff, rgba(255,255,255,0.2));
+      z-index: 2;
+      box-shadow: 0 0 12px rgba(255,255,255,0.85), 0 0 18px rgba(255,126,182,0.35);
+      pointer-events: none;
+      transform: translateX(-50%);
+    }
+
+    /* Slider interactive center button (Pearl/Crystal Handle) */
+    .slider-handle-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 52px;
+      height: 52px;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(255,255,255,1) 0 10%, rgba(255,248,252,0.95) 25%, rgba(238,214,232,0.9) 62%, rgba(198,158,188,0.85) 100%);
+      border-radius: 50%;
+      z-index: 3;
+      box-shadow: 
+        0 12px 24px rgba(107, 59, 87, 0.24),
+        0 0 32px rgba(255, 126, 182, 0.38),
+        0 0 0 7px rgba(255,255,255,0.18),
+        inset -5px -6px 12px rgba(107, 59, 87, 0.12),
+        inset 5px 5px 12px rgba(255, 255, 255, 0.98);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      animation: buttonPulse 2.5s infinite;
+      backdrop-filter: blur(12px) saturate(180%);
+      -webkit-backdrop-filter: blur(12px) saturate(180%);
+    }
+
+    .slider-handle-btn::after {
+      content: "";
+      position: absolute;
+      right: -5px;
+      bottom: 5px;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 32% 28%, #fff 0 16%, #fff9fb 32%, #ead4e5 70%, #c6a1bd 100%);
+      box-shadow: -34px -29px 0 -4px rgba(255,255,255,0.92), 0 4px 10px rgba(107, 59, 87, 0.14), inset 0 1px 1px rgba(255,255,255,0.95);
+    }
+
+    .slider-handle-btn::before {
+      content: "";
+      position: absolute;
+      inset: 8px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.75);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,0.9), 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    .slider-handle-btn i,
+    .slider-handle-btn svg {
+      display: none;
+    }
+
+    /* Floating Pill Tag indicating interaction */
+    .slider-reveal-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(107, 59, 87, 0.7);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      color: white;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 6px 12px;
+      border-radius: 50px;
+      z-index: 4;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      pointer-events: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .slider-label {
+      position: absolute;
+      top: 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 4px 8px;
+      border-radius: 8px;
+      z-index: 4;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      pointer-events: none;
+    }
+
+    .slider-label-before {
+      right: 12px;
+      background: rgba(0, 0, 0, 0.4);
+      color: white;
+    }
+
+    .slider-label-after {
+      left: 12px;
+      background: rgba(255, 126, 182, 0.8);
+      color: white;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    /* ----------------------------------------------------
+       MEET KENJAL (COMPACT FRIENDLY PROFILE CARD)
+       ---------------------------------------------------- */
+    .story-card {
+      margin: 0 16px 28px;
+      padding: 15px;
+      border-radius: 24px;
+      overflow: hidden;
+    }
+
+    .story-header-pill {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      margin-bottom: 12px;
+    }
+
+    /* Polaroid Style Photo */
+    .story-avatar-glow {
+      width: 70px;
+      height: 70px;
+      border-radius: 22px;
+      padding: 3px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.92), rgba(255,209,232,0.45)),
+        radial-gradient(circle at 20% 0%, rgba(255,255,255,1), transparent 45%);
+      box-shadow: 0 10px 24px rgba(107, 59, 87, 0.13), 0 0 26px rgba(255, 126, 182, 0.16);
+      transform: rotate(-2deg);
+      animation: profileFloat 6s ease-in-out infinite;
+      position: relative;
+      display: flex;
+      flex-shrink: 0;
+    }
+
+    /* Tiny pearl accent */
+    .story-avatar-glow::before {
+      content: '';
+      position: absolute;
+      top: -4px;
+      right: -3px;
+      width: 15px;
+      height: 15px;
+      background: radial-gradient(circle at 30% 28%, #fff 0 18%, #fff8fb 30%, #f0d7ea 68%, #cda9c3 100%);
+      border-radius: 50%;
+      z-index: 5;
+      box-shadow: 0 3px 8px rgba(107, 59, 87, 0.14), inset 0 1px 1px rgba(255,255,255,0.9);
+    }
+
+    .story-avatar-glow img {
+      width: 100%;
+      height: 100%;
+      border-radius: 19px;
+      object-fit: cover;
+      border: 1px solid rgba(255,255,255,0.75);
+    }
+
+    @keyframes profileFloat {
+      0% { transform: rotate(-2deg) translateY(0); }
+      50% { transform: rotate(0deg) translateY(-3px); }
+      100% { transform: rotate(-2deg) translateY(0); }
+    }
+
+    .story-title-block h3 {
+      font-size: 2.15rem;
+      font-family: 'Caveat', cursive;
+      font-weight: 700;
+      color: var(--color-plum);
+      margin-bottom: 2px;
+      margin-top: -6px;
+      letter-spacing: 0.02em;
+    }
+
+    .story-badge-pink {
+      font-size: 0.62rem;
+      font-weight: 700;
+      color: var(--color-primary-deep);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .story-brief-text {
+      font-size: 0.88rem;
+      line-height: 1.45;
+      color: var(--color-plum);
+      margin-bottom: 12px;
+    }
+
+    /* Read My Story rounded pill button */
+    .story-modal-open-btn {
+      width: 100%;
+      background: var(--glass-bg-frosted);
+      color: var(--color-plum);
+      border: 0.5px solid rgba(255, 255, 255, 0.6);
+      border-radius: 16px;
+      padding: 10px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 16px rgba(107, 59, 87, 0.05), var(--shadow-glow-pink);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    }
+
+    .story-modal-open-btn:active {
+      transform: scale(0.96) translateY(1px);
+      box-shadow: 0 2px 8px rgba(107, 59, 87, 0.03);
+    }
+
+    /* ----------------------------------------------------
+       CLIENT LOVE NOTES (TESTIMONIALS)
+       ---------------------------------------------------- */
+    .imessage-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      background: transparent;
+      padding: 6px 12px;
+      border-radius: 50px;
+      margin: -2px auto 10px;
+      width: fit-content;
+    }
+
+    .imessage-dot {
+      display: none;
+    }
+
+    .imessage-header span {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--color-plum-light);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .chat-thread {
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      padding: 0 2px 2px;
+    }
+
+    .chat-bubble-group {
+      display: flex;
+      flex-direction: column;
+      max-width: 84%;
+      position: relative;
+    }
+
+    .chat-bubble-group.left {
+      align-self: flex-start;
+    }
+
+    .chat-bubble-group.right {
+      align-self: flex-end;
+    }
+
+    .chat-bubble {
+      padding: 11px 14px;
+      border-radius: 18px;
+      position: relative;
+      box-shadow: 0 8px 18px rgba(107, 59, 87, 0.07);
+      font-family: var(--font-sans);
+      font-size: 0.86rem;
+      line-height: 1.38;
+      font-weight: 700;
+      letter-spacing: 0;
+    }
+
+    .left .chat-bubble {
+      background: rgba(255, 255, 255, 0.72);
+      backdrop-filter: blur(20px) saturate(170%);
+      -webkit-backdrop-filter: blur(20px) saturate(170%);
+      color: var(--color-plum);
+      border-radius: 20px;
+      border-bottom-left-radius: 4px;
+      border: 1px solid var(--glass-border);
+    }
+
+    .right .chat-bubble {
+      background: linear-gradient(135deg, rgba(255, 209, 232, 0.78), rgba(255, 255, 255, 0.72));
+      backdrop-filter: blur(20px) saturate(175%);
+      -webkit-backdrop-filter: blur(20px) saturate(175%);
+      color: var(--color-plum);
+      border-radius: 20px;
+      border-bottom-right-radius: 4px;
+      box-shadow: 0 8px 18px rgba(255, 126, 182, 0.16);
+      border: 1px solid #fff;
+    }
+
+    .chat-reaction {
+      position: absolute;
+      top: -8px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border-radius: 50%;
+      width: 19px;
+      height: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.66rem;
+      box-shadow: 0 2px 8px rgba(255, 126, 182, 0.15), 0 1px 3px rgba(0,0,0,0.08);
+      border: 0.5px solid rgba(255, 255, 255, 0.6);
+      z-index: 2;
+    }
+
+    .left .chat-reaction {
+      right: -8px;
+    }
+
+    .right .chat-reaction {
+      left: -8px;
+    }
+
+    .chat-meta {
+      font-size: 0.62rem;
+      color: var(--color-plum-light);
+      margin-top: 3px;
+      padding: 0 4px;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .left .chat-meta {
+      align-self: flex-start;
+    }
+
+    .right .chat-meta {
+      align-self: flex-end;
+      color: var(--color-primary);
+    }
+
+    .right .chat-meta i {
+      width: 10px;
+      height: 10px;
+      stroke-width: 3;
+    }
+
+    #testimonials-section .glass-card {
+      margin: 0 16px 30px;
+      padding: 12px;
+      border-radius: 24px;
+    }
+
+    #testimonials-section h2 {
+      margin-bottom: 12px;
+    }
+
+    #before-after-section h2,
+    #creations-section h2,
+    #services-section h2 {
+      margin-bottom: 16px;
+    }
+
+    /* ----------------------------------------------------
+       STUDIO VIBE GRID (LUXURY SOCIAL MOODBOARD)
+       ---------------------------------------------------- */
+    .insta-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0;
+      padding: 10px 12px 30px;
+      margin-bottom: 30px;
+    }
+
+    .insta-item {
+      width: 48%;
+      aspect-ratio: 1/1;
+      border-radius: 6px;
+      border: 3px solid #fff;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 8px 24px rgba(107, 59, 87, 0.12);
+      cursor: pointer;
+      margin: -6px;
+      transition: transform 0.4s ease, z-index 0.1s;
+      z-index: 1;
+    }
+
+    .insta-item:nth-child(1) { transform: rotate(-5deg) translateY(12px); }
+    .insta-item:nth-child(2) { transform: rotate(4deg) translateY(-8px); }
+    .insta-item:nth-child(3) { transform: rotate(3deg) translateY(0) translateX(6px); }
+    .insta-item:nth-child(4) { transform: rotate(-6deg) translateY(15px) translateX(-6px); }
+
+    .insta-item:hover {
+      z-index: 10;
+      transform: scale(1.1) rotate(0deg);
+      box-shadow: 0 15px 35px rgba(107, 59, 87, 0.2), var(--shadow-glow-pink);
+    }
+
+    .insta-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+    }
+
+    .insta-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(107, 59, 87, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .insta-item:hover .insta-overlay {
+      opacity: 1;
+    }
+
+    .insta-overlay i {
+      color: white;
+      width: 16px;
+      height: 16px;
+    }
+
+    /* ----------------------------------------------------
+       INSTAGRAM PROFILE HEADER ADD-ON
+       ---------------------------------------------------- */
+    .insta-profile-header {
+      padding: 16px;
+      background: rgba(255, 255, 255, 0.5);
+      border: 1px solid var(--glass-border);
+      border-radius: 24px;
+      margin: 8px 16px 16px;
+      box-shadow: var(--shadow-premium), var(--shadow-inset);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+    }
+
+    .insta-profile-main {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Avatar with Instagram story gradient ring */
+    .insta-profile-avatar-wrapper {
+      position: relative;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      padding: 2.5px;
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .insta-profile-avatar {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2.5px solid #FFF8F2;
+      background: white;
+    }
+
+    /* Pulsing story ring detail */
+    .insta-profile-avatar-wrapper::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      border-radius: 50%;
+      border: 1.5px solid #dc2743;
+      animation: storyRingPulse 2.5s infinite ease-in-out;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    @keyframes storyRingPulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 0; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    .insta-profile-stats {
+      display: flex;
+      justify-content: space-around;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .insta-stat-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .insta-stat-val {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--color-plum);
+    }
+
+    .insta-stat-label {
+      font-size: 0.7rem;
+      color: var(--color-plum-light);
+      font-weight: 600;
+    }
+
+    .insta-profile-bio {
+      font-size: 0.82rem;
+      line-height: 1.4;
+      color: var(--color-plum);
+      margin-bottom: 12px;
+      padding: 0 4px;
+    }
+
+    .insta-bio-name {
+      font-weight: 700;
+      display: block;
+    }
+
+    .insta-bio-cat {
+      color: var(--color-plum-light);
+      font-weight: 600;
+      font-size: 0.76rem;
+      margin-bottom: 2px;
+      display: block;
+    }
+
+    .insta-bio-link {
+      color: var(--color-blue);
+      text-decoration: none;
+      font-weight: 700;
+      display: block;
+      margin-top: 3px;
+    }
+
+    .insta-profile-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .insta-action-btn {
+      flex: 1;
+      padding: 8px;
+      border-radius: 12px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.2s, color 0.2s;
+    }
+
+    .insta-action-btn:active {
+      transform: scale(0.96);
+    }
+
+    .insta-btn-follow {
+      background: #FF529C;
+      color: white;
+      box-shadow: 0 4px 12px rgba(255, 82, 156, 0.15);
+    }
+
+    .insta-btn-follow.following {
+      background: rgba(107, 59, 87, 0.08);
+      color: var(--color-plum);
+      box-shadow: none;
+    }
+
+    .insta-btn-message {
+      background: rgba(107, 59, 87, 0.05);
+      color: var(--color-plum);
+      border: 1px solid rgba(107, 59, 87, 0.08);
+    }
+
+    /* ----------------------------------------------------
+       INSTAGRAM FEED GRID SECTION (3-COLUMNS)
+       ---------------------------------------------------- */
+    /* Cute colored box for the Instagram Feed section */
+    .insta-feed-wrapper-card {
+      background: linear-gradient(135deg, rgba(255, 209, 232, 0.22) 0%, rgba(217, 200, 255, 0.18) 50%, rgba(207, 246, 229, 0.12) 100%);
+      background-size: 200% 200%;
+      animation: meshFlow 12s ease infinite;
+      border: 0.5px solid rgba(255, 255, 255, 0.6);
+      border-radius: 32px;
+      padding: 20px 14px 14px;
+      margin: 0 16px 24px;
+      box-shadow: 
+        var(--shadow-layered),
+        var(--shadow-inset),
+        0 0 48px rgba(217, 200, 255, 0.1);
+      backdrop-filter: blur(32px) saturate(180%);
+      -webkit-backdrop-filter: blur(32px) saturate(180%);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .insta-feed-wrapper-card::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: -20%;
+      width: 150%;
+      height: 60%;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: rotate(-15deg);
+      pointer-events: none;
+    }
+
+    .instafeed-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      padding: 0 4px;
+      margin-bottom: 20px;
+      margin-top: 0;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .instafeed-title {
+      font-size: 1.8rem;
+      font-family: var(--font-display);
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-rose-deep) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1.1;
+      width: auto;
+      margin: 0;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+    
+    .instafeed-title::after {
+      display: none;
+    }
+    
+    /* Cute pill link for the username handle */
+    .instafeed-handle {
+      font-size: 0.74rem;
+      font-family: var(--font-sans);
+      font-weight: 700;
+      color: var(--color-primary-deep);
+      text-decoration: none;
+      background: var(--glass-bg-frosted);
+      padding: 5px 12px;
+      border-radius: 50px;
+      box-shadow: 0 2px 8px rgba(255, 82, 156, 0.1), var(--shadow-glow-pink);
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+      align-self: center;
+      letter-spacing: 0.01em;
+    }
+    
+    .instafeed-handle:active {
+      transform: scale(0.95);
+      box-shadow: 0 1px 4px rgba(255, 82, 156, 0.08);
+    }
+    
+    .instafeed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+    
+    .instafeed-card {
+      aspect-ratio: 1/1;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 4px 12px rgba(107, 59, 87, 0.03);
+      cursor: pointer;
+    }
+    
+    .instafeed-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    
+    .instafeed-card:active img {
+      transform: scale(1.05);
+    }
+    
+    .instafeed-hover-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(107, 59, 87, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      pointer-events: none;
+    }
+    
+    .instafeed-card:hover .instafeed-hover-overlay {
+      opacity: 1;
+    }
+
+    /* ----------------------------------------------------
+       INSTAGRAM POST VIEWER LIGHTBOX MODAL
+       ---------------------------------------------------- */
+    .insta-post-box {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(40px) saturate(200%);
+      -webkit-backdrop-filter: blur(40px) saturate(200%);
+      width: 90%;
+      height: auto;
+      max-height: 88%;
+      border-radius: 32px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 60px rgba(107, 59, 87, 0.15), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      margin: 0 auto;
+    }
+
+    .insta-post-header {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(107, 59, 87, 0.04);
+    }
+
+    .insta-post-avatar-ring {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      padding: 1.5px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+    }
+
+    .insta-post-avatar-ring img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid white;
+    }
+
+    .insta-post-header-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .insta-post-user {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--color-plum);
+    }
+
+    .insta-post-loc {
+      font-size: 0.68rem;
+      color: var(--color-plum-light);
+      font-weight: 500;
+    }
+
+    .insta-post-close-btn {
+      margin-left: auto;
+      background: none;
+      border: none;
+      color: var(--color-plum);
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+    }
+
+    .insta-post-close-btn:active {
+      opacity: 0.6;
+    }
+
+    .insta-post-img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: #000;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .insta-post-main-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Giant Heart Double Tap overlay */
+    .insta-heart-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0;
+      pointer-events: none;
+      transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.2s;
+      z-index: 10;
+    }
+
+    .insta-heart-overlay.pulse {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+
+    .insta-post-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 16px 6px;
+    }
+
+    .insta-post-bar-left {
+      display: flex;
+      gap: 12px;
+    }
+
+    .insta-bar-icon-btn {
+      background: none;
+      border: none;
+      color: var(--color-plum);
+      cursor: pointer;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.2s;
+    }
+
+    .insta-bar-icon-btn:active {
+      transform: scale(0.85);
+    }
+
+    .insta-bar-icon-btn i {
+      width: 20px;
+      height: 20px;
+      stroke-width: 2px;
+      transition: fill 0.2s, stroke 0.2s;
+    }
+
+    .insta-bar-icon-btn.liked {
+      color: #FF529C;
+    }
+
+    .insta-post-details {
+      padding: 0 16px 16px;
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+
+    .insta-post-likes {
+      font-weight: 700;
+      color: var(--color-plum);
+      margin-bottom: 4px;
+    }
+
+    .insta-post-caption {
+      margin-bottom: 6px;
+    }
+
+    .insta-post-caption-user {
+      font-weight: 700;
+      color: var(--color-plum);
+      margin-right: 4px;
+    }
+
+    .insta-post-comments {
+      max-height: 80px;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      padding-right: 4px;
+      margin-bottom: 4px;
+    }
+
+    .insta-post-comments::-webkit-scrollbar {
+      width: 4px;
+    }
+    .insta-post-comments::-webkit-scrollbar-thumb {
+      background: rgba(107, 59, 87, 0.2);
+      border-radius: 4px;
+    }
+
+    .insta-comment-line {
+      font-size: 0.78rem;
+      margin-bottom: 4px;
+    }
+
+    .insta-comment-user {
+      font-weight: 700;
+      color: var(--color-plum);
+      margin-right: 4px;
+    }
+
+    .insta-post-time {
+      font-size: 0.65rem;
+      color: var(--color-plum-light);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 6px;
+    }
+
+    /* ----------------------------------------------------
+       REFINED BOOKING CTA SECTION
+       ---------------------------------------------------- */
+    .cta-card {
+      margin-bottom: 24px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 209, 232, 0.2) 40%, rgba(217, 200, 255, 0.15) 100%);
+      background-size: 200% 200%;
+      animation: meshFlow 10s ease infinite;
+      border: 0.5px solid rgba(255, 255, 255, 0.65);
+      padding: 28px 20px;
+      border-radius: 32px;
+    }
+    
+    .cta-card h3 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-rose-deep) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.02em;
+    }
+    
+    .cta-card p {
+      font-size: 0.86rem;
+      color: var(--color-plum-light);
+      line-height: 1.45;
+      margin-bottom: 20px;
+      padding: 0 10px;
+    }
+    
+    /* Large green button */
+    .cta-btn-whatsapp-large {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      background: linear-gradient(135deg, #10B981 0%, #059669 60%, #047857 100%);
+      color: white;
+      padding: 15px 22px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      box-shadow: 
+        0 4px 12px rgba(16, 185, 129, 0.25),
+        0 12px 32px rgba(16, 185, 129, 0.15),
+        inset 0 1px 1px rgba(255, 255, 255, 0.2);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+      margin-bottom: 16px;
+      cursor: pointer;
+      position: relative;
+    }
+    
+    .cta-btn-whatsapp-large:active {
+      transform: scale(0.96) translateY(1px);
+    }
+    
+    .cta-bottom-links {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-top: 4px;
+    }
+    
+    .cta-link-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--color-plum);
+      text-decoration: none;
+      background: var(--glass-bg-frosted);
+      padding: 8px 16px;
+      border-radius: 50px;
+      border: 0.5px solid rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      box-shadow: 0 2px 8px rgba(107, 59, 87, 0.04);
+      transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+    }
+    
+    .cta-link-item:active {
+      transform: scale(0.96);
+      box-shadow: 0 1px 4px rgba(107, 59, 87, 0.02);
+    }
+    
+    .brand-svg-illustration {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    footer {
+      padding: 20px 16px 32px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, rgba(255, 209, 232, 0.06) 100%);
+      border-top: 0.5px solid rgba(107, 59, 87, 0.05);
+      font-size: 0.72rem;
+      color: var(--color-plum-light);
+    }
+
+    footer p {
+      font-size: 0.72rem;
+      margin-bottom: 4px;
+      letter-spacing: 0.02em;
+    }
+
+    footer a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 700;
+      transition: color 0.2s;
+    }
+
+    /* ----------------------------------------------------
+       LIGHTBOX / IMAGE MODAL DETAIL
+       ---------------------------------------------------- */
+    .lightbox {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(46, 29, 40, 0.25);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    .lightbox-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 80%;
+      text-align: center;
+    }
+
+    .lightbox-img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 16px;
+      border: 3px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    .lightbox-title {
+      color: white;
+      margin-top: 12px;
+      font-size: 1.1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: -40px;
+      right: 0;
+      color: white;
+      background: rgba(255, 255, 255, 0.15);
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* ----------------------------------------------------
+       STORY POPUP MODAL (GORGEOUS OVERLAY)
+       ---------------------------------------------------- */
+    .story-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(46, 29, 40, 0.45);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      z-index: 1500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+      padding: 16px;
+    }
+
+    .story-modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .story-modal-box {
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(40px) saturate(200%);
+      -webkit-backdrop-filter: blur(40px) saturate(200%);
+      border-radius: 32px;
+      width: 100%;
+      max-width: 390px;
+      padding: 28px 24px;
+      box-shadow: 0 24px 64px rgba(107, 59, 87, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      position: relative;
+      transform: translateY(30px) scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .story-modal-overlay.active .story-modal-box {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+
+    .story-modal-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-plum);
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(107, 59, 87, 0.05);
+    }
+
+    .story-modal-close:active {
+      transform: scale(0.9);
+    }
+
+    .story-modal-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+      margin-top: 4px;
+    }
+
+    .story-modal-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      border: 2px solid var(--color-primary);
+      padding: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 4px 12px rgba(255, 82, 156, 0.2);
+    }
+
+    .story-modal-avatar img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    .story-modal-titles h3 {
+      font-size: 1.45rem;
+      font-weight: 600;
+      font-family: var(--font-display);
+      background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-rose-deep) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 2px;
+      margin-top: 0;
+      letter-spacing: -0.01em;
+    }
+
+    .story-modal-badge {
+      font-size: 0.65rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      opacity: 0.9;
+    }
+
+    .story-modal-body {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--color-plum-light);
+      margin-bottom: 28px;
+      max-height: 340px;
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+
+    .story-modal-body::-webkit-scrollbar {
+      display: none;
+    }
+
+    .story-modal-body p {
+      margin-bottom: 14px;
+    }
+
+    .story-modal-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .btn-modal-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      background: linear-gradient(135deg, var(--color-primary) 0%, #FF7EB6 100%);
+      color: white;
+      padding: 16px;
+      border-radius: 20px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 10px 24px rgba(255, 82, 156, 0.3), inset 0 2px 4px rgba(255, 255, 255, 0.4);
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
+      text-align: center;
+      letter-spacing: 0.02em;
+    }
+
+    .btn-modal-cta:active {
+      transform: scale(0.96);
+      box-shadow: 0 4px 12px rgba(255, 82, 156, 0.2);
+    }
+
+    /* ----------------------------------------------------
+       ANIMATIONS
+       ---------------------------------------------------- */
+    @keyframes floatLogo {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-6px); }
+      100% { transform: translateY(0px); }
+    }
+
+    @keyframes avatarGlow {
+      0% { box-shadow: 0 0 0 0 rgba(255, 126, 182, 0.4); }
+      70% { box-shadow: 0 0 0 8px rgba(255, 126, 182, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 126, 182, 0); }
+    }
+
+    @keyframes buttonPulse {
+      0% {
+        box-shadow: 0 4px 15px rgba(107, 59, 87, 0.25), 0 0 0 0 rgba(255, 209, 232, 0.6);
+      }
+      70% {
+        box-shadow: 0 4px 15px rgba(107, 59, 87, 0.25), 0 0 0 8px rgba(255, 209, 232, 0);
+      }
+      100% {
+        box-shadow: 0 4px 15px rgba(107, 59, 87, 0.25), 0 0 0 0 rgba(255, 209, 232, 0);
+      }
+    }
+
+    /* Custom scroll helper for element animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px) scale(0.98);
+      transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+
+    /* Staggered entrance for children */
+    .fade-in.visible > *:nth-child(1) { transition-delay: 0s; }
+    .fade-in.visible > *:nth-child(2) { transition-delay: 0.05s; }
+    .fade-in.visible > *:nth-child(3) { transition-delay: 0.1s; }
+    .fade-in.visible > *:nth-child(4) { transition-delay: 0.15s; }
+
+    /* ──────────────────────────────────────────────────
+       LUXURY AMBIENT ANIMATIONS
+       ────────────────────────────────────────────────── */
+    @keyframes ambientMesh {
+      0% { background-position: 0% 50%; }
+      25% { background-position: 50% 0%; }
+      50% { background-position: 100% 50%; }
+      75% { background-position: 50% 100%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes blobDrift1 {
+      0% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(15%, 10%) scale(1.1); }
+      66% { transform: translate(-5%, 20%) scale(0.95); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes blobDrift2 {
+      0% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(-10%, -15%) scale(1.05); }
+      66% { transform: translate(10%, -5%) scale(0.98); }
+      100% { transform: translate(0, 0) scale(1); }
+    }
+
+    @keyframes shimmerSweep {
+      0% { left: -80%; }
+      40% { left: -80%; }
+      100% { left: 120%; }
+    }
+
+    @keyframes gradientText {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes sparkleFloat {
+      0% { transform: translateY(0) scale(1); opacity: 0.4; }
+      25% { transform: translateY(-8px) scale(1.2); opacity: 0.8; }
+      50% { transform: translateY(-4px) scale(0.9); opacity: 0.5; }
+      75% { transform: translateY(-12px) scale(1.1); opacity: 0.7; }
+      100% { transform: translateY(0) scale(1); opacity: 0.4; }
+    }
+
+    @keyframes sparkleFloat2 {
+      0% { transform: translateY(0) rotate(0deg) scale(1); opacity: 0.3; }
+      50% { transform: translateY(-10px) rotate(180deg) scale(1.3); opacity: 0.7; }
+      100% { transform: translateY(0) rotate(360deg) scale(1); opacity: 0.3; }
+    }
+
+    /* ──────────────────────────────────────────────────
+       FLOATING DECORATIVE SPARKLE ELEMENTS
+       ────────────────────────────────────────────────── */
+    .deco-sparkle {
+      position: absolute;
+      pointer-events: none;
+      z-index: 1;
+      font-size: 0.6rem;
+      opacity: 0.28;
+    }
+
+    .deco-sparkle-1 {
+      top: 8%;
+      right: 12%;
+      animation: sparkleFloat 5s ease-in-out infinite;
+      color: var(--color-primary);
+      font-size: 0.5rem;
+    }
+
+    .deco-sparkle-2 {
+      top: 35%;
+      left: 8%;
+      animation: sparkleFloat2 7s ease-in-out infinite;
+      animation-delay: 1s;
+      color: var(--color-lavender);
+      font-size: 0.45rem;
+    }
+
+    .deco-sparkle-3 {
+      top: 60%;
+      right: 6%;
+      animation: sparkleFloat 6s ease-in-out infinite;
+      animation-delay: 2.5s;
+      color: var(--color-coral);
+      font-size: 0.4rem;
+    }
+
+    .deco-sparkle-4 {
+      top: 82%;
+      left: 15%;
+      animation: sparkleFloat2 8s ease-in-out infinite;
+      animation-delay: 0.5s;
+      color: var(--color-mint);
+      font-size: 0.5rem;
+    }
+
+    /* Ambient gradient blob behind hero */
+    .deco-hero-blob {
+      position: absolute;
+      top: -5%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 126, 182, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      animation: blobDrift1 15s ease-in-out infinite;
+    }
+
+    /* ----------------------------------------------------
+       LIVE INSTAGRAM ADD-ON NEW STYLES
+       ---------------------------------------------------- */
+    
+    /* Stories Highlights Tray */
+    .stories-tray {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 0 16px;
+      margin: 8px 0 24px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+    
+    .stories-tray::-webkit-scrollbar {
+      display: none;
+    }
+    
+    .story-highlight {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      flex-shrink: 0;
+      width: 78px;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .story-highlight:active {
+      transform: scale(0.94);
+    }
+    
+    .story-ring {
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      padding: 2.5px;
+      background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888, #f09433);
+      background-size: 300% 300%;
+      animation: conicBorderRotate 4s linear infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 8px rgba(220, 39, 67, 0.15), 0 0 16px rgba(255, 126, 182, 0.1);
+      position: relative;
+    }
+    
+    .story-highlight.viewed .story-ring {
+      background: linear-gradient(45deg, #e5e5e5 0%, #d5d5d5 100%);
+    }
+    
+    .story-circle-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #FFF8F2;
+      background: white;
+    }
+    
+    .story-highlight-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--color-plum);
+      margin-top: 5px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+      letter-spacing: 0.01em;
+    }
+    
+    /* Stories Highlights Underline Indicator */
+    .insta-stories-divider {
+      height: 1px;
+      background: rgba(107, 59, 87, 0.06);
+      margin: 0 16px 20px;
+    }
+
+    /* Full-screen Lookbook Overlay */
+    .story-viewer-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 248, 242, 0.96);
+      z-index: 2500;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      backdrop-filter: blur(25px) saturate(180%);
+      -webkit-backdrop-filter: blur(25px) saturate(180%);
+    }
+    
+    .story-viewer-overlay.active {
+      display: flex;
+      opacity: 1;
+    }
+    
+    .story-viewer-box {
+      width: 100%;
+      max-width: 480px;
+      height: 100%;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      background: transparent;
+    }
+    
+    @media (min-width: 768px) {
+      .story-viewer-box {
+        height: 85vh;
+        max-height: 900px;
+        border-radius: 32px;
+        box-shadow: 0 30px 80px rgba(107, 59, 87, 0.15), var(--shadow-inset);
+      }
+    }
+    
+    .story-viewer-close {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-plum);
+      cursor: pointer;
+      z-index: 20;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow: 0 4px 12px rgba(107, 59, 87, 0.1);
+    }
+
+    .story-viewer-close:active {
+      transform: scale(0.9);
+    }
+
+    .story-viewer-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: #000;
+      border-radius: inherit;
+      overflow: hidden;
+    }
+    
+    .story-viewer-content img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .lookbook-top-fade {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 120px;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.4), transparent);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .lookbook-bottom-fade {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 350px;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.5) 40%, transparent 100%);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    .lookbook-info-area {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: 30px 24px;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .lookbook-title {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: white;
+      font-weight: 600;
+      line-height: 1.2;
+      text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+      margin: 0;
+    }
+
+    .lookbook-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .lookbook-btn {
+      width: 100%;
+      padding: 16px;
+      border-radius: 20px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      cursor: pointer;
+    }
+
+    .lookbook-btn.primary {
+      background: var(--glass-bg-frosted);
+      color: var(--color-plum);
+      border: 1px solid rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.2), inset 0 2px 4px rgba(255,255,255,1);
+    }
+
+    .lookbook-btn.secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    .lookbook-btn:active {
+      transform: scale(0.96);
+    }
+
+    .story-tap-left, .story-tap-right {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 40%;
+      z-index: 15;
+      cursor: pointer;
+    }
+    
+    .story-tap-left { left: 0; }
+    .story-tap-right { right: 0; }
+
+    .lookbook-next-hint {
+      position: absolute;
+      top: 50%;
+      right: 16px;
+      transform: translateY(-50%);
+      background: rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      color: white;
+      padding: 12px 16px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .story-tap-right:hover .lookbook-next-hint {
+      opacity: 1;
+    }
+    
+    /* Liking system floating heart animation */
+    .floating-heart {
+      position: absolute;
+      pointer-events: none;
+      animation: floatUpAndFade 1.2s cubic-bezier(0.18, 0.89, 0.32, 1.28) forwards;
+      z-index: 100;
+    }
+    
+    @keyframes floatUpAndFade {
+      0% {
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+        opacity: 0;
+      }
+      20% {
+        opacity: 1;
+        transform: translate(0, -15px) scale(1.1) rotate(var(--rot));
+      }
+      100% {
+        transform: translate(var(--dx), var(--dy)) scale(0.7) rotate(calc(var(--rot) * 2.2));
+        opacity: 0;
+      }
+    }
+    
+    /* External link icon button next to close in post modal */
+    .insta-post-external-btn {
+      margin-left: 8px;
+      background: none;
+      border: none;
+      color: var(--color-plum-light);
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s;
+    }
+    
+    .insta-post-external-btn:active {
+      color: var(--color-primary);
+    }
+    
+    .insta-post-external-btn i {
+      width: 16px;
+      height: 16px;
+    }
+    
+    /* Comment addition section styling */
+    .insta-post-add-comment {
+      display: none; /* Removed feature to add custom text comments */
+    }
+    
+    .insta-comment-line {
+      animation: commentFadeIn 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    
+    @keyframes commentFadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(6px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Instagram Post Image Carousel */
+    .insta-post-img-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1/1;
+      background: #000;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    
+    .insta-post-carousel-inner {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    
+    .insta-post-carousel-inner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+    
+    .insta-carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border: none;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 12;
+      color: #2e1d28;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      opacity: 0;
+      transition: opacity 0.2s, background-color 0.2s, transform 0.2s;
+    }
+    
+    .insta-carousel-btn:hover {
+      transform: translateY(-50%) scale(1.08);
+      background: rgba(255, 255, 255, 0.9);
+    }
+    
+    .insta-post-img-wrapper:hover .insta-carousel-btn {
+      opacity: 1;
+    }
+    
+    .insta-carousel-btn:active {
+      transform: translateY(-50%) scale(0.95);
+    }
+    
+    .insta-carousel-btn.prev {
+      left: 12px;
+    }
+    
+    .insta-carousel-btn.next {
+      right: 12px;
+    }
+    
+    .insta-carousel-dots {
+      position: absolute;
+      bottom: 14px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 6px;
+      z-index: 12;
+      pointer-events: none;
+    }
+    
+    .insta-carousel-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.4);
+      transition: background-color 0.25s, transform 0.25s;
+    }
+    
+    .insta-carousel-dot.active {
+      background: white;
+      transform: scale(1.3);
+    }
+    
+    /* Live Typing Indicator bubble */
+    .typing-indicator-bubble {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      background: #F0E8E2;
+      border-radius: 12px;
+      width: fit-content;
+      margin-top: 4px;
+      margin-bottom: 2px;
+      animation: commentFadeIn 0.3s ease;
+    }
+    
+    .typing-dot {
+      width: 5px;
+      height: 5px;
+      background: var(--color-plum-light);
+      border-radius: 50%;
+      animation: typingBounce 0.8s infinite alternate;
+    }
+    
+    .typing-dot:nth-child(2) {
+      animation-delay: 0.15s;
+    }
+    
+    .typing-dot:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+    
+    @keyframes typingBounce {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-4px); }
+    }
+
+    /* ----------------------------------------------------
+       INSTAGRAM TABS BAR & BADGES
+       ---------------------------------------------------- */
+    .insta-tabs-bar {
+      display: flex;
+      border-top: 0.5px solid rgba(107, 59, 87, 0.06);
+      border-bottom: 0.5px solid rgba(107, 59, 87, 0.06);
+      margin: 8px 0 16px;
+      position: relative;
+      background: rgba(255, 255, 255, 0.35);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 12px;
+    }
+    
+    .insta-tab-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      padding: 10px 0;
+      color: var(--color-plum-light);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: color 0.2s ease, transform 0.1s;
+      z-index: 2;
+    }
+    
+    .insta-tab-btn:active {
+      transform: scale(0.92);
+    }
+    
+    .insta-tab-btn.active {
+      color: #FF529C;
+    }
+    
+    .insta-tab-btn i {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .insta-tab-indicator {
+      position: absolute;
+      bottom: 2px;
+      left: 2px;
+      width: calc(33.33% - 2px);
+      height: calc(100% - 4px);
+      background: rgba(255, 82, 156, 0.1);
+      border-radius: 10px;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 0 12px rgba(255, 82, 156, 0.15);
+      z-index: 1;
+    }
+    
+    .insta-panel {
+      display: none;
+      opacity: 0;
+    }
+    
+    .insta-panel.active {
+      display: block;
+      animation: panelFadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    
+    @keyframes panelFadeIn {
+      0% { 
+        opacity: 0; 
+        transform: scale(0.95) translateY(12px); 
+        filter: blur(8px);
+      }
+      100% { 
+        opacity: 1; 
+        transform: scale(1) translateY(0); 
+        filter: blur(0);
+      }
+    }
+    
+    /* Play count badge for reels */
+    .instafeed-card .reels-views-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: white;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      pointer-events: none;
+      z-index: 5;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .instafeed-card .reels-views-badge i {
+      width: 10px;
+      height: 10px;
+      stroke-width: 2.5;
+    }
+    
+    /* Tagged client label */
+    .instafeed-card .tagged-handle-badge {
+      position: absolute;
+      bottom: 8px;
+      left: 8px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      color: var(--color-plum);
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 6px;
+      pointer-events: none;
+      z-index: 5;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    /* ----------------------------------------------------
+       CRAZY LIGHTBOX GLOWS, TRANSFORMS & TAGS
+       ---------------------------------------------------- */
+    /*Conic Gradient animated outer glow border wrapper */
+    .insta-post-box {
+      border: none;
+      position: relative;
+      background: #FFF8F2;
+      z-index: 1;
+    }
+    
+    /* Animated glowing neon outline wrapper */
+    .lightbox-glow-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 3px;
+      border-radius: 31px;
+      background: linear-gradient(135deg, #FF7EB6, #D9C8FF, #CFF6E5, #FFB8A3, #FF7EB6);
+      background-size: 400% 400%;
+      animation: conicBorderRotate 8s linear infinite;
+      box-shadow: 0 24px 64px rgba(107, 59, 87, 0.35);
+      transform: translateY(30px) scale(0.95);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+      opacity: 0;
+      width: 90%;
+      max-width: 380px;
+      height: 680px; /* Constant premium fixed height */
+      max-height: 82vh; /* Limit modal height to fit within simulated screens */
+    }
+    
+    .lightbox.active .lightbox-glow-wrapper {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    
+    @keyframes conicBorderRotate {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+    
+    /* Moving mesh gradient background inside details & comments area */
+    .insta-post-details, .insta-post-add-comment, .insta-post-header {
+      background: linear-gradient(135deg, #FFF8F2 0%, #FFF4EE 50%, #FFF8F2 100%);
+      background-size: 200% 200%;
+      animation: meshFlow 6s ease infinite;
+    }
+    
+    @keyframes meshFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Size Adjustments and Scrollable Comments Container */
+    .insta-post-details {
+      padding: 0 16px 12px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 1;
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .insta-post-comments {
+      max-height: 110px;
+      overflow-y: auto;
+      margin: 6px 0;
+      padding-right: 4px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      min-height: 0;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* Custom thin scrollbar styling */
+    .insta-post-comments::-webkit-scrollbar {
+      width: 4px;
+    }
+    .insta-post-comments::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .insta-post-comments::-webkit-scrollbar-thumb {
+      background: rgba(107, 59, 87, 0.15);
+      border-radius: 10px;
+    }
+
+    /* Inline Apple Emoji styling */
+    .apple-emoji {
+      display: inline-block;
+      height: 1.2em;
+      width: auto;
+      vertical-align: -0.2em;
+      margin: 0 0.07em;
+      aspect-ratio: 1/1;
+    }
+
+    /* Hotspot Tag Elements on Post Images */
+    .post-tag-hotspot {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      z-index: 15;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      pointer-events: auto;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    
+    .post-tag-hotspot.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .post-tag-dot {
+      width: 14px;
+      height: 14px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      position: relative;
+      cursor: pointer;
+    }
+    
+    .post-tag-dot::after {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border-radius: 50%;
+      border: 2px solid white;
+      animation: tagPulse 1.8s infinite;
+    }
+    
+    @keyframes tagPulse {
+      0% { transform: scale(0.8); opacity: 1; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    
+    .post-tag-label {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(107, 59, 87, 0.08);
+      border-radius: 10px;
+      padding: 6px 10px;
+      color: var(--color-plum);
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-top: 6px;
+      white-space: nowrap;
+      box-shadow: 0 4px 12px rgba(107, 59, 87, 0.12);
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      cursor: pointer;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    
+    .post-tag-label:active {
+      transform: scale(0.95);
+    }
+    
+    .post-tag-label span {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+    
+    .post-tag-label i {
+      width: 10px;
+      height: 10px;
+      stroke-width: 2.5;
+    }
+    
+    /* Quick Emojis Reaction Bar */
+    .insta-post-quick-emojis {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 16px 14px; /* Increased bottom padding for card rounded corners */
+      background: #FFF8F2;
+      border-top: 1px solid rgba(107, 59, 87, 0.03);
+      gap: 8px;
+    }
+    
+    .quick-emoji-btn {
+      flex: 1;
+      background: none;
+      border: none;
+      font-size: 1.25rem;
+      cursor: pointer;
+      transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px 0;
+    }
+    
+    .quick-emoji-btn:hover {
+      transform: scale(1.3);
+    }
+    
+    .quick-emoji-btn:active {
+      transform: scale(0.9);
+    }
+    
+    /* Animated Explosive Emoji Particle */
+    .emoji-particle {
+      position: fixed;
+      pointer-events: none;
+      font-size: 1.5rem;
+      z-index: 3000;
+      animation: emojiExplode 1.0s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+    }
+    
+    @keyframes emojiExplode {
+      0% {
+        transform: translate(0, 0) scale(0.5);
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+        transform: translate(calc(var(--dx) * 0.3), calc(var(--dy) * 0.3)) scale(1.2) rotate(var(--rot));
+      }
+      100% {
+        transform: translate(var(--dx), var(--dy)) scale(0.6) rotate(calc(var(--rot) * 2));
+        opacity: 0;
+      }
+    }
+
+    /* Spring animation for bouncier comment insertion */
+    .insta-comment-line {
+      animation: commentBounceIn 0.45s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards !important;
+    }
+    
+    @keyframes commentBounceIn {
+      0% { opacity: 0; transform: translateY(12px) scale(0.92); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* 3D Perspective Context */
+    .lightbox {
+      perspective: 1000px;
+    }
+
+    /* Visual shake warning when reply drops */
+    .insta-post-box.shake {
+      animation: cardShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+      transform: translate3d(0, 0, 0);
+    }
+    
+    @keyframes cardShake {
+      10%, 90% { transform: translate3d(-1px, 0, 0); }
+      20%, 80% { transform: translate3d(2px, 0, 0); }
+      30%, 50%, 70% { transform: translate3d(-3px, 0, 0); }
+      40%, 60% { transform: translate3d(3px, 0, 0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Background Desktop Ambient Glow -->
+  <div class="desktop-bg-glow"></div>
+
+    <!-- Simulated Mobile App Container -->
+    <div class="app-shell" id="app-viewport">
+      
+      <!-- Intentional Decorative System -->
+      <div class="deco-sparkle deco-sparkle-1">✦</div>
+      <div class="deco-sparkle deco-sparkle-3">✦</div>
+      <div class="deco-sparkle" style="position: absolute; top:35%; left:10%; font-size:0.62rem; animation: sparkleFloat 6s ease-in-out infinite; z-index:0; pointer-events:none;">⚪</div>
+      <div class="deco-hero-blob"></div>
+
+    <!-- ----------------------------------------------------
+         HEADER (SCROLLS AWAY / NON-STICKY)
+         ---------------------------------------------------- -->
+    <header id="main-header">
+      <!-- Left Pill Component (Avatar + Booking State) -->
+      <div class="header-pill-left" id="header-pill-trigger">
+        <div class="header-avatar-circle">
+          <img id="config-avatar-header" src="" alt="Kenjal Profile">
+        </div>
+        <div class="header-text-block">
+          <span class="header-name" id="config-header-name"></span>
+          <span class="header-status">
+            <span class="header-status-dot"></span>
+            Open & Booking
+          </span>
+        </div>
+      </div>
+      
+      <!-- Right Circle Controls (Instagram & WhatsApp Brand Buttons) -->
+      <div class="header-controls-right">
+        <a class="header-btn" id="config-header-btn-insta" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg class="brand-svg-illustration" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 18px; height: 18px;">
+            <defs>
+              <radialGradient id="header-rg" cx="30%" cy="107%" r="130%">
+                <stop offset="0%" stop-color="#f09433"/>
+                <stop offset="25%" stop-color="#e6683c"/>
+                <stop offset="50%" stop-color="#dc2743"/>
+                <stop offset="75%" stop-color="#cc2366"/>
+                <stop offset="100%" stop-color="#bc1888"/>
+              </radialGradient>
+            </defs>
+            <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#header-rg)"/>
+            <rect x="5" y="5" width="14" height="14" rx="4" stroke="white" stroke-width="1.8" fill="none"/>
+            <circle cx="12" cy="12" r="3" stroke="white" stroke-width="1.8" fill="none"/>
+            <circle cx="16.5" cy="7.5" r="1" fill="white"/>
+          </svg>
+        </a>
+        <a class="header-btn" id="config-header-btn-whatsapp" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <svg class="brand-svg-illustration" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 20px; height: 20px;">
+            <circle cx="12" cy="12" r="10" fill="#25D366"/>
+            <path d="M12 6C8.69 6 6 8.69 6 12C6 13.41 6.49 14.71 7.3 15.75L6.5 18.5L9.36 17.72C10.15 18.21 11.05 18.5 12 18.5C15.31 18.5 18 15.81 18 12.5C18 9.19 15.31 6 12 6ZM14.65 14.15C14.47 14.65 13.78 14.94 13.36 14.94C13.07 14.94 12.72 14.81 11.66 14.37C10.22 13.77 9.29 12.3 9.22 12.21C9.15 12.12 8.65 11.45 8.65 10.76C8.65 10.07 9 9.73 9.14 9.59C9.28 9.45 9.49 9.41 9.64 9.41C9.79 9.41 9.94 9.41 10.05 9.41C10.17 9.41 10.33 9.37 10.48 9.73C10.65 10.15 11.08 11.21 11.13 11.31C11.18 11.41 11.23 11.54 11.16 11.68C11.09 11.82 11.03 11.89 10.93 12.01C10.83 12.13 10.73 12.23 10.63 12.36C10.54 12.47 10.43 12.59 10.56 12.81C10.69 13.03 11.14 13.76 11.8 14.35C12.65 15.11 13.34 15.35 13.56 15.44C13.78 15.53 13.91 15.51 14.04 15.36C14.17 15.21 14.61 14.69 14.75 14.48C14.89 14.27 15.03 14.32 15.22 14.39C15.41 15.46 16.42 14.97 16.51 15.02C16.6 15.07 16.7 15.12 16.66 15.21C16.62 15.3 16.34 15.93 15.89 16.14C15.44 16.35 14.83 13.65 14.65 14.15Z" fill="white"/>
+          </svg>
+        </a>
+      </div>
+    </header>
+
+    <!-- ----------------------------------------------------
+         MAIN SCROLLABLE CONTENTS
+         ---------------------------------------------------- -->
+    <main>
+      
+      <!-- HERO AREA -->
+      <section class="hero-container" id="hero-section">
+        <!-- Cute bubbly text logo matching "strawberry moo" style -->
+        <div class="hero-cute-title" id="config-cute-title">
+          <span class="cute-heart-icon">💕</span>
+          <span class="cute-title-text" id="config-cute-title-text">Beauty Bliss</span>
+          <span class="cute-heart-icon">💕</span>
+        </div>
+        
+        <h1 class="hero-title" id="config-hero-title"></h1>
+        
+        <!-- Grid Hero Buttons (Two lines of text) -->
+        <div class="hero-actions">
+          <a class="btn-hero btn-hero-primary" id="config-hero-btn-primary" href="#booking-cta-section"></a>
+          <a class="btn-hero btn-hero-secondary" id="config-hero-btn-secondary" href="#creations-section"></a>
+        </div>
+
+        <div class="metrics-pills-container" id="metrics-badge-container">
+          <!-- Dynamically Rendered Non-Swipeable Badges -->
+        </div>
+      </section>
+
+      <!-- SERVICES MATRIX -->
+      <section id="services-section">
+        <h2 id="services-title">Specialty Services</h2>
+        <div class="services-grid" id="services-container">
+          <!-- Dynamically Mapped Services Matrix -->
+        </div>
+      </section>
+
+      <!-- PINTEREST MASONRY CREATIONS -->
+      <section id="creations-section">
+        <h2 id="creations-title">Latest Creations</h2>
+        <div class="masonry-container" id="creations-container">
+          <!-- Dynamically Rendered Masonry Grid -->
+        </div>
+      </section>
+
+      <!-- BEFORE-AFTER SLIDER -->
+      <section id="before-after-section">
+        <h2 id="slider-title">Nail Glow-Ups</h2>
+        <div class="glass-card slider-card">
+          <div class="slider-wrapper" id="slider-frame">
+            <!-- Background "Before" Image -->
+            <img class="slider-img" id="slider-before-img" src="" alt="Nails Before Manicure">
+            <span class="slider-label slider-label-before" id="slider-before-label"></span>
+            
+            <!-- Overlay "After" Image Container -->
+            <div class="slider-after-container" id="slider-after-box">
+              <img class="slider-img" id="slider-after-img" src="" alt="Nails After Manicure">
+              <span class="slider-label slider-label-after" id="slider-after-label"></span>
+            </div>
+            
+            <!-- Draggable divider line -->
+            <div class="slider-divider-line" id="slider-divider"></div>
+            
+            <!-- Centered glossy handle button -->
+            <div class="slider-handle-btn" id="slider-handle">
+              <i data-lucide="chevrons-left-right"></i>
+            </div>
+            
+            <!-- Drag Helper Tag -->
+            <div class="slider-reveal-tag">
+              <i data-lucide="hand"></i>
+              <span>Slide the Pearl</span>
+            </div>
+            
+            <!-- Interactive range input overlay -->
+            <input type="range" class="slider-range-input" id="slider-control" min="0" max="100" value="50">
+          </div>
+        </div>
+      </section>
+
+      <!-- MEET KENJAL (REFINED STORY CARD DESIGN) -->
+      <section id="story-section">
+        <h2 class="section-title-left" id="story-title">Meet Kenjal</h2>
+        <div class="glass-card story-card">
+          <div class="story-header-pill">
+            <div class="story-avatar-glow">
+              <img id="story-avatar-img" src="" alt="Kenjal Avatar">
+            </div>
+            <div class="story-title-block">
+              <h3 id="story-author"></h3>
+              <span class="story-badge-pink" id="story-subtitle"></span>
+            </div>
+          </div>
+          <p class="story-brief-text" id="story-intro-text"></p>
+          <button class="story-modal-open-btn" id="story-trigger-btn">
+            <span>✨ Read My Story</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS (iMESSAGE FORMAT) -->
+      <section id="testimonials-section">
+        <h2>Happy Clients</h2>
+        <div class="glass-card">
+          <div class="imessage-header">
+            <div class="imessage-dot"></div>
+            <span>iMessage with Clients</span>
+          </div>
+          <div class="chat-thread" id="chat-thread-container">
+            <!-- Dynamically Rendered Chat bubbles -->
+          </div>
+        </div>
+      </section>
+
+      <!-- INSTAGRAM STORIES HIGHLIGHTS (STUDIO VIBE) -->
+      <section id="insta-section">
+        <h2>Studio Vibe</h2>
+        <div class="stories-tray" id="insta-stories-container">
+          <!-- Dynamically Rendered Stories Highlight circles -->
+        </div>
+        <div class="insta-stories-divider"></div>
+      </section>
+
+      <!-- INSTAGRAM FEED (LIVE WIDGET EMBED OR FALLBACK GRID) -->
+      <section id="instagram-feed-section">
+        <div class="insta-feed-wrapper-card">
+          <div class="instafeed-header">
+            <h2 class="instafeed-title">Instagram Feed</h2>
+            <a class="instafeed-handle" id="config-instafeed-handle-link" href="https://www.instagram.com/beauty._.blissss" target="_blank" rel="noopener">@beauty._.blissss</a>
+          </div>
+          
+          <!-- Live Instagram Profile Embed Container -->
+          <div id="instagram-embed-container">
+  
+            <!-- Tab Bar -->
+            <div class="insta-tabs-bar">
+              <button class="insta-tab-btn active" data-tab="posts" aria-label="View Posts">
+                <i data-lucide="grid"></i>
+              </button>
+              <button class="insta-tab-btn" data-tab="reels" aria-label="View Reels">
+                <i data-lucide="clapperboard"></i>
+              </button>
+              <button class="insta-tab-btn" data-tab="tagged" aria-label="View Tagged Posts">
+                <i data-lucide="user-square-2"></i>
+              </button>
+              <div class="insta-tab-indicator" id="insta-tab-indicator"></div>
+            </div>
+  
+            <!-- Tab Content Panels -->
+            <div class="insta-tabs-content">
+              <!-- Posts Panel -->
+              <div class="insta-panel active" id="insta-panel-posts">
+                <div class="instafeed-grid" id="instagram-feed-container">
+                  <!-- Dynamically Rendered 3-column feed -->
+                </div>
+              </div>
+              
+              <!-- Reels Panel -->
+              <div class="insta-panel" id="insta-panel-reels">
+                <div class="instafeed-grid" id="instagram-reels-container">
+                  <!-- Dynamically Rendered reels -->
+                </div>
+              </div>
+              
+              <!-- Tagged Panel -->
+              <div class="insta-panel" id="insta-panel-tagged">
+                <div class="instafeed-grid" id="instagram-tagged-container">
+                  <!-- Dynamically Rendered tagged posts -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOKING CTA -->
+      <section id="booking-cta-section">
+        <div class="glass-card cta-card">
+          <h3 id="cta-heading">Ready to get Pretty?</h3>
+          <p id="cta-tagline">Ready to transform your nails? Book your slot now and let's create something magical together!</p>
+          
+          <!-- Large WhatsApp CTA Button -->
+          <a class="cta-btn-whatsapp-large" id="cta-whatsapp" target="_blank" rel="noopener">
+            <svg class="brand-svg-illustration" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width: 20px; height: 20px;">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Book on WhatsApp</span>
+          </a>
+
+          <!-- Bottom links (Instagram & WhatsApp) with brand illustrations -->
+          <div class="cta-bottom-links">
+            <a class="cta-link-item" id="cta-instagram" target="_blank" rel="noopener">
+              <svg class="brand-svg-illustration" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <radialGradient id="rg" cx="30%" cy="107%" r="130%">
+                    <stop offset="0%" stop-color="#f09433"/>
+                    <stop offset="25%" stop-color="#e6683c"/>
+                    <stop offset="50%" stop-color="#dc2743"/>
+                    <stop offset="75%" stop-color="#cc2366"/>
+                    <stop offset="100%" stop-color="#bc1888"/>
+                  </radialGradient>
+                </defs>
+                <rect x="2" y="2" width="20" height="20" rx="5" fill="url(#rg)"/>
+                <rect x="5" y="5" width="14" height="14" rx="4" stroke="white" stroke-width="2" fill="none"/>
+                <circle cx="12" cy="12" r="3" stroke="white" stroke-width="2" fill="none"/>
+                <circle cx="16.5" cy="7.5" r="1" fill="white"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+
+            <a class="cta-link-item" id="cta-whatsapp-bottom" target="_blank" rel="noopener">
+              <svg class="brand-svg-illustration" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="10" fill="#25D366"/>
+                <path d="M12 6C8.69 6 6 8.69 6 12C6 13.41 6.49 14.71 7.3 15.75L6.5 18.5L9.36 17.72C10.15 18.21 11.05 18.5 12 18.5C15.31 18.5 18 15.81 18 12.5C18 9.19 15.31 6 12 6ZM14.65 14.15C14.47 14.65 13.78 14.94 13.36 14.94C13.07 14.94 12.72 14.81 11.66 14.37C10.22 13.77 9.29 12.3 9.22 12.21C9.15 12.12 8.65 11.45 8.65 10.76C8.65 10.07 9 9.73 9.14 9.59C9.28 9.45 9.49 9.41 9.64 9.41C9.79 9.41 9.94 9.41 10.05 9.41C10.17 9.41 10.33 9.37 10.48 9.73C10.65 10.15 11.08 11.21 11.13 11.31C11.18 11.41 11.23 11.54 11.16 11.68C11.09 11.82 11.03 11.89 10.93 12.01C10.83 12.13 10.73 12.23 10.63 12.36C10.54 12.47 10.43 12.59 10.56 12.81C10.69 13.03 11.14 13.76 11.8 14.35C12.65 15.11 13.34 15.35 13.56 15.44C13.78 15.53 13.91 15.51 14.04 15.36C14.17 15.21 14.61 14.69 14.75 14.48C14.89 14.27 15.03 14.32 15.22 14.39C15.41 15.46 16.42 14.97 16.51 15.02C16.6 15.07 16.7 15.12 16.66 15.21C16.62 15.3 16.34 15.93 15.89 16.14C15.44 16.35 14.83 13.65 14.65 14.15Z" fill="white"/>
+              </svg>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+      <p id="footer-copyright"></p>
+      <p>Designed with 💖 for Kenjal's clients. <a href="#" id="footer-privacy">Privacy Policy</a></p>
+    </footer>
+
+  </div>
+
+  <!-- ----------------------------------------------------
+       STORY POPUP MODAL (REFINED OVERLAY DESIGN)
+       ---------------------------------------------------- -->
+  <div class="story-modal-overlay" id="story-modal">
+    <div class="story-modal-box">
+      <button class="story-modal-close" id="story-modal-close-btn" aria-label="Close story popup">
+        <i data-lucide="x"></i>
+      </button>
+      <div class="story-modal-header">
+        <div class="story-modal-avatar">
+          <img id="story-modal-avatar-img" src="" alt="Kenjal Profile">
+        </div>
+        <div class="story-modal-titles">
+          <h3 id="story-modal-author"></h3>
+          <span class="story-modal-badge" id="story-modal-subtitle"></span>
+        </div>
+      </div>
+      <div class="story-modal-body" id="story-modal-body-content">
+        <!-- Dynamically Mapped Story Paragraphs -->
+      </div>
+      <div class="story-modal-footer">
+        <a class="btn-modal-cta" id="story-modal-cta-btn" target="_blank" rel="noopener">
+          💖 Book an Appointment with Kenjal
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------
+       INSTAGRAM POST VIEWER LIGHTBOX MODAL
+       ---------------------------------------------------- -->
+  <div class="lightbox" id="insta-lightbox">
+    <div class="lightbox-glow-wrapper" id="insta-lightbox-glow-wrapper">
+      <div class="insta-post-box" id="insta-post-box-card">
+        <!-- Header -->
+        <div class="insta-post-header">
+          <div class="insta-post-avatar-ring">
+            <img id="insta-post-avatar" src="" alt="Kenjal Profile">
+          </div>
+          <div class="insta-post-header-text">
+            <span class="insta-post-user">beauty._.blissss</span>
+            <span class="insta-post-loc">London & Abohar</span>
+          </div>
+          
+          <!-- View on Instagram External Link button -->
+          <a id="insta-post-external-link" href="#" target="_blank" rel="noopener" class="insta-post-external-btn" aria-label="Open post on Instagram">
+            <i data-lucide="instagram"></i>
+          </a>
+          
+          <button class="insta-post-close-btn" id="insta-lightbox-close" aria-label="Close post view">
+            <i data-lucide="x"></i>
+          </button>
+        </div>
+        
+        <!-- Image Wrapper with Double Tap Like overlay & Carousel slider -->
+        <div class="insta-post-img-wrapper" id="insta-post-img-area">
+          <div class="insta-post-carousel-inner" id="insta-post-carousel-inner">
+            <img id="insta-post-main-img" class="insta-post-main-img" src="" alt="Post content">
+          </div>
+          
+          <!-- Hotspot/Product tags container -->
+          <div id="insta-post-tags-container" style="position:absolute; top:0; left:0; width:100%; height:100%; pointer-events:none;"></div>
+          
+          <!-- Chevron Buttons for Carousel -->
+          <button class="insta-carousel-btn prev" id="insta-carousel-prev" aria-label="Previous image">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <button class="insta-carousel-btn next" id="insta-carousel-next" aria-label="Next image">
+            <i data-lucide="chevron-right"></i>
+          </button>
+          
+          <!-- Carousel Dots Indicator -->
+          <div class="insta-carousel-dots" id="insta-carousel-dots">
+            <!-- Dynamically Rendered dots -->
+          </div>
+  
+          <!-- Giant pop-up heart icon -->
+          <div class="insta-heart-overlay" id="insta-heart-overlay-icon">
+            <i data-lucide="heart" style="fill: white; stroke: white; width: 64px; height: 64px; filter: drop-shadow(0 4px 10px rgba(0,0,0,0.15));"></i>
+          </div>
+        </div>
+        
+        <!-- Interactions Bar -->
+        <div class="insta-post-bar">
+          <div class="insta-post-bar-left">
+            <button class="insta-bar-icon-btn" id="insta-like-btn">
+              <i data-lucide="heart" id="insta-like-icon"></i>
+            </button>
+            <button class="insta-bar-icon-btn" aria-label="Comment">
+              <i data-lucide="message-circle"></i>
+            </button>
+            <button class="insta-bar-icon-btn" aria-label="Share">
+              <i data-lucide="send"></i>
+            </button>
+          </div>
+          <button class="insta-bar-icon-btn" aria-label="Save">
+            <i data-lucide="bookmark"></i>
+          </button>
+        </div>
+        
+        <!-- Content Details -->
+        <div class="insta-post-details">
+          <div class="insta-post-likes">
+            <span id="insta-post-likes-count">128</span> likes
+          </div>
+          <div class="insta-post-caption">
+            <span class="insta-post-caption-user">beauty._.blissss</span>
+            <span id="insta-post-caption-text"></span>
+          </div>
+          <div class="insta-post-comments" id="insta-post-comments-container">
+            <!-- Dynamically loaded comments -->
+          </div>
+          <div class="insta-post-time" id="insta-post-time-text">2 hours ago</div>
+        </div>
+        
+        <!-- Quick Emojis Bar -->
+        <div class="insta-post-quick-emojis" id="insta-quick-emojis-bar">
+          <button class="quick-emoji-btn" data-emoji="❤️">❤️</button>
+          <button class="quick-emoji-btn" data-emoji="🙌">🙌</button>
+          <button class="quick-emoji-btn" data-emoji="🔥">🔥</button>
+          <button class="quick-emoji-btn" data-emoji="👏">👏</button>
+          <button class="quick-emoji-btn" data-emoji="😍">😍</button>
+          <button class="quick-emoji-btn" data-emoji="💅">💅</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------
+       EDITORIAL STORY LOOKBOOK MODAL
+       ---------------------------------------------------- -->
+  <div class="story-viewer-overlay" id="story-viewer">
+    <div class="story-viewer-box lookbook-box">
+      <!-- Media Area -->
+      <div class="story-viewer-content" id="story-viewer-content-area">
+        <img id="story-viewer-media" src="" alt="Story Media">
+        
+        <!-- Subtle Top Gradient for Close Button -->
+        <div class="lookbook-top-fade"></div>
+        <button class="story-viewer-close" id="story-viewer-close-btn" aria-label="Close lookbook">
+          <i data-lucide="x"></i>
+        </button>
+        
+        <!-- Subtle Bottom Gradient for text and controls -->
+        <div class="lookbook-bottom-fade"></div>
+        
+        <div class="lookbook-info-area">
+          <h2 class="lookbook-title" id="story-viewer-caption-label"></h2>
+          
+          <div class="lookbook-actions">
+            <a class="lookbook-btn primary" id="story-viewer-reply-link" target="_blank" rel="noopener">
+              <i data-lucide="calendar"></i> Book This Style
+            </a>
+            <button class="lookbook-btn secondary" id="story-viewer-save-btn">
+              <i data-lucide="bookmark"></i> Save Inspiration
+            </button>
+          </div>
+        </div>
+
+        <!-- Navigation Tap Areas -->
+        <div class="story-tap-left" id="story-tap-left-area"></div>
+        <div class="story-tap-right" id="story-tap-right-area">
+          <div class="lookbook-next-hint">Next <i data-lucide="arrow-right"></i></div>
+        </div>
+        
+        <!-- Hide elements not used in editorial lookbook to prevent JS errors -->
+        <div style="display:none;" id="story-progress-bars"></div>
+        <div style="display:none;" id="story-viewer-time-label"></div>
+        <img style="display:none;" id="story-viewer-avatar" src="" alt="">
+      </div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------
+       IMAGE LIGHTBOX MODAL (FOR PINTEREST GALLERY PREVIEWS)
+       ---------------------------------------------------- -->
+  <div class="lightbox" id="lightbox-modal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightbox-close-btn" aria-label="Close image lightbox">
+        <i data-lucide="x"></i>
+      </button>
+      <img class="lightbox-img" id="lightbox-image" src="" alt="Expanded View">
+      <div class="lightbox-title" id="lightbox-title-text"></div>
+    </div>
+  </div>
+
+  <!-- ----------------------------------------------------
+       JAVASCRIPT ARCHITECTURE (CONFIG-DRIVEN)
+       ---------------------------------------------------- -->
+  <script>
+    /* 🚨 CENTRALIZED CONFIGURATION DATA
+       Customize all text, links, details, and images below.
+       No changes are needed in the code structure below it. */
+    const CONFIG_DATA = {
+      studioInfo: {
+        name: "Beauty Bliss",
+        subName: "by Kenjal",
+        tagline: "Luxury Nails, Crafted With Love",
+        avatar: "./assets/kenjal_profile.png",
+        logoText: "Beauty Bliss",
+        heroTitle: "Luxury Nails, Crafted With <em>Love</em> By Kenjal",
+        rating: "4.9",
+        reviewsCount: "142",
+        clientCount: "500+ Happy Clients",
+        location: "London & Abohar",
+        artistName: "Artist: Kenjal",
+        primaryActionHTML: "<span>💖 Book</span><span>Appointment</span>",
+        secondaryActionHTML: "<span>✨ View</span><span>Gallery</span>",
+        whatsappLink: "https://wa.me/447700900077?text=Hi%20Kenjal!%20I'd%20like%20to%20book%20a%20nail%20appointment%20with%20you%20%F0%9F%92%85",
+        instagramLink: "https://www.instagram.com/beauty._.blissss",
+        emailAddress: "mailto:hello@beautyblissbykenjal.com?subject=Nail%20Studio%20Booking%20Inquiry"
+      },
+      services: [
+        {
+          id: "gel-nails",
+          title: "Gel Nails",
+          description: "Long lasting & high-gloss finish.",
+          duration: "45 min",
+          price: "£45",
+          emoji: "💅",
+          accentClass: "accent-lavender",
+          iconName: "sparkles"
+        },
+        {
+          id: "extensions",
+          title: "Extensions",
+          description: "Added length & custom elegance.",
+          duration: "90 min",
+          price: "£65",
+          emoji: "✨",
+          accentClass: "accent-mint",
+          iconName: "scissors"
+        },
+        {
+          id: "bridal-nails",
+          title: "Bridal Nails",
+          description: "Tailored for your perfect day.",
+          duration: "120 min",
+          price: "£85",
+          emoji: "🌸",
+          accentClass: "accent-pink",
+          iconName: "heart"
+        },
+        {
+          id: "nail-art",
+          title: "Nail Art",
+          description: "Hand-painted custom masterpieces.",
+          duration: "60 min",
+          price: "£55",
+          emoji: "🎀",
+          accentClass: "accent-coral",
+          iconName: "palette"
+        }
+      ],
+      gallery: [
+        {
+          id: "gal-1",
+          title: "Cotton Candy Glaze",
+          image: "./assets/pink_gel_nails.png",
+          tag: "Gel Nails"
+        },
+        {
+          id: "gal-2",
+          title: "Lavender Gold Luxe",
+          image: "./assets/lavender_gold_nails.png",
+          tag: "Extensions"
+        },
+        {
+          id: "gal-3",
+          title: "Fresh Mint Swirls",
+          image: "./assets/mint_swirl_nails.png",
+          tag: "Nail Art"
+        },
+        {
+          id: "gal-4",
+          title: "Bridal Pearl Lace",
+          image: "./assets/bridal_lace_nails.png",
+          tag: "Bridal Nails"
+        }
+      ],
+      beforeAfter: {
+        beforeImage: "./assets/before_nails.png",
+        afterImage: "./assets/after_nails.png",
+        beforeLabel: "Before",
+        afterLabel: "After Bliss"
+      },
+      meetKenjal: {
+        title: "Meet Kenjal",
+        subtitle: "NAIL ARTIST & DETAIL GIRL",
+        introText: "Hi, I'm Kenjal. I make soft, glossy, custom nails that feel personal, pretty, and a little bit magical.",
+        modalStory: [
+          "For over 5 years, nail artistry has been my true calling. What started as a personal creative outlet in my home studio has grown into a premium luxury service. Today, I'm proud to welcome you to Beauty Bliss - a tactile, high-end experience where technical precision meets high-vibes art.",
+          "Every manicure is a custom piece of art. I use only the highest-grade, non-toxic, and vegan gel formulations to ensure your natural nails remain incredibly strong, healthy, and pristine beneath the gloss.",
+          "Whether it's a sleek minimalist accent, long coffin extensions, or fine hand-painted lace for your special day, I handle every detail with absolute devotion. I can't wait to give your nails the luxury glow-up they deserve!"
+        ]
+      },
+      testimonials: [
+        {
+          id: "t-1",
+          name: "Sophia Carter",
+          reviewText: "Obsessed. Tiny 3D drops, mirror-gloss shine, compliments every day. 😍✨",
+          date: "Just now",
+          side: "left",
+          reactionEmoji: "💖"
+        },
+        {
+          id: "t-2",
+          name: "Priya Sharma",
+          reviewText: "Bridal set lasted 4+ weeks. The lace matched my dress perfectly. 🌸💍",
+          date: "2 hours ago",
+          side: "right",
+          reactionEmoji: "😍"
+        },
+        {
+          id: "t-3",
+          name: "Emma Watson",
+          reviewText: "Soft studio vibes, perfect details, and zero damage after removal. 🎀",
+          date: "Yesterday",
+          side: "left",
+          reactionEmoji: "✨"
+        }
+      ],
+      instagramStories: [
+        {
+          id: "story-bridal",
+          title: "Bridal 👰",
+          cover: "./assets/bridal_lace_nails.png",
+          slides: [
+            { image: "./assets/bridal_lace_nails.png", caption: "Custom pearls & hand-painted lace for our gorgeous bride! 💍✨", time: "4h" },
+            { image: "./assets/pink_gel_nails.png", caption: "Soft pastel pinks under the veil. Classic elegance. 💕", time: "3h" }
+          ]
+        },
+        {
+          id: "story-nailart",
+          title: "Nail Art 🎨",
+          cover: "./assets/lavender_gold_nails.png",
+          slides: [
+            { image: "./assets/lavender_gold_nails.png", caption: "Lavender Luxe with handcrafted gold foils. 💜✨", time: "8h" },
+            { image: "./assets/mint_swirl_nails.png", caption: "Fresh mint swirls on custom almond shapes! 🌿", time: "6h" }
+          ]
+        },
+        {
+          id: "story-studio",
+          title: "Studio 💅",
+          cover: "./assets/kenjal_profile.png",
+          slides: [
+            { image: "./assets/kenjal_profile.png", caption: "Welcome to Beauty Bliss! Creating beautiful canvases daily. ✨", time: "1d" },
+            { image: "./assets/logo.jpg", caption: "Ready to get pretty? Slots are open for this week! 💖", time: "1d" }
+          ]
+        },
+        {
+          id: "story-glowups",
+          title: "Glow-Ups ✨",
+          cover: "./assets/after_nails.png",
+          slides: [
+            { image: "./assets/before_nails.png", caption: "Before: Split cuticles and chipped old polish.", time: "2d" },
+            { image: "./assets/after_nails.png", caption: "After: Fresh structured gel overlay & clean nail art! 😍", time: "2d" }
+          ]
+        }
+      ],
+      instagramFeedConfig: {
+        embedHTML: "",
+        beholdApiUrl: ""
+      },
+      instagramFeed: [
+        { 
+          id: "insta-1", 
+          image: "./assets/pink_gel_nails.png",
+          carouselImages: ["./assets/pink_gel_nails.png", "./assets/bridal_lace_nails.png", "./assets/after_nails.png"],
+          likes: 142,
+          caption: "Cotton Candy Glaze 🍬✨ Soft, iridescent, and glossy. Structured gels at their absolute finest!",
+          time: "2 hours ago",
+          commentUser: "sophia.carter",
+          commentText: "Omg, literal nail goals! 😍✨",
+          permalink: "https://www.instagram.com/beauty._.blissss",
+          tags: [
+            { x: 55, y: 45, label: "Gel Nails", price: "£45", serviceId: "gel-nails" }
+          ]
+        },
+        { 
+          id: "insta-2", 
+          image: "./assets/lavender_gold_nails.png",
+          carouselImages: ["./assets/lavender_gold_nails.png", "./assets/after_nails.png"],
+          likes: 98,
+          caption: "Lavender Luxe 💜 Gold foil details on custom coffin extensions. Ready for the weekend vibe!",
+          time: "5 hours ago",
+          commentUser: "priya.sharma",
+          commentText: "Obsessed with this gold detail! 🔥💍",
+          permalink: "https://www.instagram.com/beauty._.blissss",
+          tags: [
+            { x: 60, y: 55, label: "Extensions", price: "£65", serviceId: "extensions" }
+          ]
+        },
+        { 
+          id: "insta-3", 
+          image: "./assets/kenjal_profile.png",
+          likes: 215,
+          caption: "Behind the Bliss! 💅 Smiling because I get to design beautiful, healthy nails for you everyday. Come say hi!",
+          time: "1 day ago",
+          commentUser: "emma.watson",
+          commentText: "The absolute best in the business! 💕🙌",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        },
+        { 
+          id: "insta-4", 
+          image: "./assets/bridal_lace_nails.png",
+          likes: 184,
+          caption: "Bridal Pearl Lace 🌸💍 Hand-painted custom lace details matching the wedding dress perfectly. A dream day project.",
+          time: "2 days ago",
+          commentUser: "chloe_m",
+          commentText: "Breathtaking artistry, Kenjal! 🥺👰",
+          permalink: "https://www.instagram.com/beauty._.blissss",
+          tags: [
+            { x: 50, y: 50, label: "Bridal Nails", price: "£85", serviceId: "bridal-nails" }
+          ]
+        },
+        { 
+          id: "insta-5", 
+          image: "./assets/after_nails.png",
+          likes: 112,
+          caption: "Bubblegum gel extensions with holographic glitter gradients and 3D fluid gloss drop accents. Absolute fun! 💕🍬",
+          time: "3 days ago",
+          commentUser: "lily_carter",
+          commentText: "The 3D drops are insane! Need this next time!",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        },
+        { 
+          id: "insta-6", 
+          image: "./assets/mint_swirl_nails.png",
+          carouselImages: ["./assets/mint_swirl_nails.png", "./assets/before_nails.png"],
+          likes: 85,
+          caption: "Fresh Mint Swirls 🌿 Abstract white sweeps on structured almond shapes. Clean and refreshing.",
+          time: "4 days ago",
+          commentUser: "mia.jones",
+          commentText: "So chic and clean! Love it!",
+          permalink: "https://www.instagram.com/beauty._.blissss",
+          tags: [
+            { x: 45, y: 40, label: "Nail Art", price: "£55", serviceId: "nail-art" }
+          ]
+        }
+      ],
+      instagramReels: [
+        {
+          id: "reel-1",
+          image: "./assets/pink_gel_nails.png",
+          views: "15.4k",
+          likes: 248,
+          caption: "Holographic glaze overlays caught in the sun! ☀️🍬 Pure magic. #gelnails",
+          time: "1 day ago",
+          commentUser: "lily_c",
+          commentText: "I can't stop staring at this video! 😍",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        },
+        {
+          id: "reel-2",
+          image: "./assets/lavender_gold_nails.png",
+          views: "22.1k",
+          likes: 385,
+          caption: "Custom lavender coffin extension process from start to finish! 💜💅 #extensions",
+          time: "3 days ago",
+          commentUser: "sophia.carter",
+          commentText: "The technical precision is just mindblowing! 🙌🌸",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        },
+        {
+          id: "reel-3",
+          image: "./assets/mint_swirl_nails.png",
+          views: "9.8k",
+          likes: 120,
+          caption: "ASMR fresh structure gel application and clean file down. Satisfying! 🌿🤤 #nailart",
+          time: "5 days ago",
+          commentUser: "chloe_m",
+          commentText: "So clean! Satisfying to watch! 🎀",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        }
+      ],
+      instagramTagged: [
+        {
+          id: "tagged-1",
+          image: "./assets/bridal_lace_nails.png",
+          taggedBy: "@sophia.carter",
+          likes: 184,
+          caption: "Best wedding nails ever! Match my bridal dress lace. Thank you Kenjal! 👰🌸💍 @beauty._.blissss",
+          time: "2 days ago",
+          commentUser: "beauty._.blissss",
+          commentText: "It was an absolute pleasure styling your bridal nails! Wishing you endless bliss! 💕",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        },
+        {
+          id: "tagged-2",
+          image: "./assets/after_nails.png",
+          taggedBy: "@priya.sharma",
+          likes: 112,
+          caption: "Fresh bubblegum acrylic overlay looking so stunning for the weekend! 💅🎀 @beauty._.blissss",
+          time: "3 days ago",
+          commentUser: "sophia.carter",
+          commentText: "Omg so cute Priya! 💕",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        },
+        {
+          id: "tagged-3",
+          image: "./assets/before_nails.png",
+          taggedBy: "@emma.watson",
+          likes: 64,
+          caption: "The magic before & after transformation of my short cuticles by artist Kenjal! Swipe to see! ✨🙌 @beauty._.blissss",
+          time: "6 days ago",
+          commentUser: "beauty._.blissss",
+          commentText: "Cuticle care is everything! So glad you love the results! 💖💅",
+          permalink: "https://www.instagram.com/beauty._.blissss"
+        }
+      ],
+      footer: {
+        copyright: "© 2026 Beauty Bliss by Kenjal. All Rights Reserved."
+      }
+    };
+
+    /* ----------------------------------------------------
+       IPHONE EMOJI CONVERSION SYSTEM
+       ---------------------------------------------------- */
+    const convertEmojisToAppleStyle = (element = document.body) => {
+      if (typeof twemoji !== 'undefined') {
+        twemoji.parse(element, {
+          callback: function(icon, options, variant) {
+            return `https://unpkg.com/emoji-datasource-apple@15.0.1/img/apple/64/${icon}.png`;
+          }
+        });
+      }
+    };
+
+    /* ----------------------------------------------------
+       DOM RENDERING LOGIC
+       ---------------------------------------------------- */
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Studio Info Headers & Hero Elements
+      document.getElementById("config-header-name").textContent = CONFIG_DATA.studioInfo.subName.replace("by ", "");
+      document.getElementById("config-avatar-header").src = CONFIG_DATA.studioInfo.avatar;
+      
+      // Header Buttons (Instagram & WhatsApp)
+      document.getElementById("config-header-btn-insta").href = CONFIG_DATA.studioInfo.instagramLink;
+      document.getElementById("config-header-btn-whatsapp").href = CONFIG_DATA.studioInfo.whatsappLink;
+
+      // Hero Elements (Bubbly Text Logo)
+      document.getElementById("config-cute-title-text").textContent = CONFIG_DATA.studioInfo.logoText;
+      document.getElementById("config-hero-title").innerHTML = CONFIG_DATA.studioInfo.heroTitle;
+      
+      const primaryBtn = document.getElementById("config-hero-btn-primary");
+      primaryBtn.innerHTML = CONFIG_DATA.studioInfo.primaryActionHTML;
+      
+      const secondaryBtn = document.getElementById("config-hero-btn-secondary");
+      secondaryBtn.innerHTML = CONFIG_DATA.studioInfo.secondaryActionHTML;
+
+      // Render Non-Swipeable Metric Badges
+      const badgeContainer = document.getElementById("metrics-badge-container");
+      badgeContainer.innerHTML = `
+        <div class="pills-row centered">
+          <div class="pill-badge">
+            <i data-lucide="star" class="pill-icon"></i>
+            <span>${CONFIG_DATA.studioInfo.clientCount}</span>
+          </div>
+        </div>
+        <div class="pills-row double">
+          <div class="pill-badge">
+            <i data-lucide="map-pin" class="pill-icon"></i>
+            <span>${CONFIG_DATA.studioInfo.location}</span>
+          </div>
+          <div class="pill-badge">
+            <i data-lucide="award" class="pill-icon"></i>
+            <span>${CONFIG_DATA.studioInfo.artistName}</span>
+          </div>
+        </div>
+      `;
+
+      // 2. Services Matrix (2x2 Grid)
+      const servicesContainer = document.getElementById("services-container");
+      servicesContainer.innerHTML = CONFIG_DATA.services.map(s => `
+        <div class="service-card ${s.accentClass}" id="service-${s.id}">
+          <div class="service-header">
+            <span class="service-emoji">${s.emoji}</span>
+            <div class="service-icon-wrapper">
+              <i data-lucide="${s.iconName}"></i>
+            </div>
+          </div>
+          <div class="service-info">
+            <h3>${s.title}</h3>
+            <p>${s.description}</p>
+          </div>
+          <div class="service-footer">
+            <span class="service-price">${s.price}</span>
+            <span class="service-duration">${s.duration}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // 3. Pinterest Masonry Grid
+      const creationsContainer = document.getElementById("creations-container");
+      creationsContainer.innerHTML = CONFIG_DATA.gallery.map(g => `
+        <div class="masonry-item" id="gallery-card-${g.id}" data-image="${g.image}" data-title="${g.title}">
+          <img class="masonry-img" src="${g.image}" alt="${g.title}" loading="lazy">
+          <div class="masonry-info">
+            <h3>${g.title}</h3>
+            <span>${g.tag}</span>
+          </div>
+        </div>
+      `).join('');
+
+      // Add click listener for Lightbox Modal on Gallery Items
+      document.querySelectorAll(".masonry-item").forEach(item => {
+        item.addEventListener("click", () => {
+          openLightbox(item.getAttribute("data-image"), item.getAttribute("data-title"));
+        });
+      });
+
+      // 4. Before-After Slider Images & Labels
+      document.getElementById("slider-before-img").src = CONFIG_DATA.beforeAfter.beforeImage;
+      document.getElementById("slider-after-img").src = CONFIG_DATA.beforeAfter.afterImage;
+      document.getElementById("slider-before-label").textContent = CONFIG_DATA.beforeAfter.beforeLabel;
+      document.getElementById("slider-after-label").textContent = CONFIG_DATA.beforeAfter.afterLabel;
+
+      // 5. Meet Kenjal Card details
+      document.getElementById("story-avatar-img").src = CONFIG_DATA.studioInfo.avatar;
+      document.getElementById("story-author").textContent = CONFIG_DATA.studioInfo.artistName.replace("Artist: ", "");
+      document.getElementById("story-subtitle").textContent = CONFIG_DATA.meetKenjal.subtitle;
+      document.getElementById("story-intro-text").textContent = CONFIG_DATA.meetKenjal.introText;
+
+      // 6. Meet Kenjal Story Modal elements
+      document.getElementById("story-modal-avatar-img").src = CONFIG_DATA.studioInfo.avatar;
+      document.getElementById("story-modal-author").textContent = CONFIG_DATA.studioInfo.artistName.replace("Artist: ", "");
+      document.getElementById("story-modal-subtitle").textContent = CONFIG_DATA.meetKenjal.subtitle;
+      document.getElementById("story-modal-cta-btn").href = CONFIG_DATA.studioInfo.whatsappLink;
+
+      // Map story paragraphs inside story modal body
+      const storyModalBody = document.getElementById("story-modal-body-content");
+      storyModalBody.innerHTML = CONFIG_DATA.meetKenjal.modalStory.map(pText => `<p>${pText}</p>`).join('');
+
+      // Story Card Modal Actions
+      const storyTriggerBtn = document.getElementById("story-trigger-btn");
+      const storyModal = document.getElementById("story-modal");
+      const storyModalCloseBtn = document.getElementById("story-modal-close-btn");
+
+      const openStoryModal = () => {
+        storyModal.classList.add("active");
+      };
+
+      const closeStoryModal = () => {
+        storyModal.classList.remove("active");
+      };
+
+      storyTriggerBtn.addEventListener("click", openStoryModal);
+      storyModalCloseBtn.addEventListener("click", closeStoryModal);
+      storyModal.addEventListener("click", (e) => {
+        if (e.target === storyModal) closeStoryModal();
+      });
+
+      // Header Pill click also toggles story modal
+      document.getElementById("header-pill-trigger").addEventListener("click", openStoryModal);
+
+      // 7. Testimonials iMessage bubbles
+      const chatContainer = document.getElementById("chat-thread-container");
+      chatContainer.innerHTML = CONFIG_DATA.testimonials.map(t => {
+        const checkIcon = t.side === 'right' ? '<i data-lucide="check-check"></i> ' : '';
+        const metaLabel = t.side === 'right' ? `Read ${t.date}` : `${t.name} • ${t.date}`;
+        return `
+          <div class="chat-bubble-group ${t.side}">
+            <div class="chat-bubble">
+              ${t.reviewText}
+              <div class="chat-reaction">${t.reactionEmoji}</div>
+            </div>
+            <div class="chat-meta">
+              ${checkIcon}${metaLabel}
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // 8. Render Instagram Stories Highlights (Studio Vibe circles)
+      const renderInstagramStories = () => {
+        const storiesContainer = document.getElementById("insta-stories-container");
+        if (!storiesContainer) return;
+        
+        storiesContainer.innerHTML = CONFIG_DATA.instagramStories.map((story, index) => `
+          <div class="story-highlight" data-index="${index}">
+            <div class="story-ring">
+              <img class="story-circle-img" src="${story.cover}" alt="${story.title}" loading="lazy">
+            </div>
+            <span class="story-highlight-title">${story.title}</span>
+          </div>
+        `).join('');
+        
+        document.querySelectorAll(".story-highlight").forEach(bubble => {
+          bubble.addEventListener("click", () => {
+            const index = parseInt(bubble.getAttribute("data-index"));
+            bubble.classList.add("viewed");
+            openStoryViewer(index);
+          });
+        });
+      };
+      
+      renderInstagramStories();
+
+      // 9. Render Instagram Profile Feed & Live Widget Embed
+      const instafeedHandle = document.getElementById("config-instafeed-handle-link");
+      instafeedHandle.href = CONFIG_DATA.studioInfo.instagramLink;
+      instafeedHandle.textContent = `@${CONFIG_DATA.studioInfo.instagramLink.split('/').pop()}`;
+
+      const renderInstagramFeedGrid = () => {
+        const embedContainer = document.getElementById("instagram-embed-container");
+        const embedConfig = CONFIG_DATA.instagramFeedConfig;
+        
+        if (embedConfig && embedConfig.embedHTML && embedConfig.embedHTML.trim() !== "") {
+          // Load live widget embed HTML (iframe/scripts)
+          embedContainer.innerHTML = embedConfig.embedHTML;
+          
+          // Execute script tags inside the embed if present (like Elfsight)
+          const scripts = embedContainer.querySelectorAll("script");
+          scripts.forEach(oldScript => {
+            const newScript = document.createElement("script");
+            Array.from(oldScript.attributes).forEach(attr => {
+              newScript.setAttribute(attr.name, attr.value);
+            });
+            newScript.appendChild(document.createTextNode(oldScript.innerHTML));
+            oldScript.parentNode.replaceChild(newScript, oldScript);
+          });
+          return;
+        }
+        
+        // Otherwise, render our custom mock Instagram Profile Feed
+        
+        // Render tab panels grids
+        const postsContainer = document.getElementById("instagram-feed-container");
+        if (postsContainer) {
+          postsContainer.innerHTML = CONFIG_DATA.instagramFeed.map((post, index) => `
+            <div class="instafeed-card" data-index="${index}" data-source="posts">
+              <img src="${post.image}" alt="Nails Post" loading="lazy">
+              <div class="instafeed-hover-overlay">
+                <i data-lucide="heart" style="fill: white; stroke: white; width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        const reelsContainer = document.getElementById("instagram-reels-container");
+        if (reelsContainer) {
+          reelsContainer.innerHTML = CONFIG_DATA.instagramReels.map((reel, index) => `
+            <div class="instafeed-card" data-index="${index}" data-source="reels">
+              <img src="${reel.image}" alt="Reel Video" loading="lazy">
+              <div class="reels-views-badge">
+                <i data-lucide="play"></i>
+                <span>${reel.views}</span>
+              </div>
+              <div class="instafeed-hover-overlay">
+                <i data-lucide="heart" style="fill: white; stroke: white; width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+          `).join('');
+        }
+
+        const taggedContainer = document.getElementById("instagram-tagged-container");
+        if (taggedContainer) {
+          taggedContainer.innerHTML = CONFIG_DATA.instagramTagged.map((tagged, index) => `
+            <div class="instafeed-card" data-index="${index}" data-source="tagged">
+              <img src="${tagged.image}" alt="Tagged customer post" loading="lazy">
+              <div class="tagged-handle-badge">
+                <span>${tagged.taggedBy}</span>
+              </div>
+              <div class="instafeed-hover-overlay">
+                <i data-lucide="heart" style="fill: white; stroke: white; width: 18px; height: 18px;"></i>
+              </div>
+            </div>
+          `).join('');
+        }
+        
+        // Add click listener to Instagram mock posts/reels/tagged grids to open the details modal
+        document.querySelectorAll(".instafeed-card").forEach(card => {
+          card.addEventListener("click", () => {
+            const index = parseInt(card.getAttribute("data-index"));
+            const source = card.getAttribute("data-source") || "posts";
+            openInstaLightbox(index, source);
+          });
+        });
+        
+        lucide.createIcons();
+      };
+
+      
+      // Profile Tabs Switcher logic
+      const tabBtns = document.querySelectorAll(".insta-tab-btn");
+      const tabPanels = document.querySelectorAll(".insta-panel");
+      const tabIndicator = document.getElementById("insta-tab-indicator");
+      
+      tabBtns.forEach((btn, index) => {
+        btn.addEventListener("click", () => {
+          tabBtns.forEach(b => b.classList.remove("active"));
+          tabPanels.forEach(p => p.classList.remove("active"));
+          
+          btn.classList.add("active");
+          const tabName = btn.getAttribute("data-tab");
+          const panel = document.getElementById(`insta-panel-${tabName}`);
+          if (panel) panel.classList.add("active");
+          
+          if (tabIndicator) {
+            tabIndicator.style.transform = `translate3d(${index * 100}%, 0, 0)`;
+          }
+        });
+      });
+
+      // Live Instagram Feed fetcher (Behold.so integration)
+      const loadInstagramFeed = async () => {
+        const apiUrl = CONFIG_DATA.instagramFeedConfig && CONFIG_DATA.instagramFeedConfig.beholdApiUrl;
+        
+        if (apiUrl && apiUrl.trim() !== "") {
+          try {
+            const response = await fetch(apiUrl);
+            if (!response.ok) throw new Error("Live Feed API failed");
+            const posts = await response.json();
+            
+            if (posts && posts.length > 0) {
+              // Map Behold posts to our internal array
+              const mappedFeed = posts.slice(0, 6).map(post => {
+                return {
+                  id: post.id,
+                  image: post.mediaUrl || post.thumbnailUrl,
+                  likes: post.likeCount || Math.floor(Math.random() * 80) + 40,
+                  caption: post.caption || "Beauty Bliss by Kenjal 💅✨ Custom structured gels and premium nail art.",
+                  time: formatInstagramTime(post.timestamp),
+                  commentUser: "client_love",
+                  commentText: "Obsessed with these nails! Omg 😍💕",
+                  permalink: post.permalink || CONFIG_DATA.studioInfo.instagramLink
+                };
+              });
+              
+              // Set the data
+              CONFIG_DATA.instagramFeed = mappedFeed;
+            }
+          } catch (e) {
+            console.warn("Could not load live Instagram feed. Falling back to default posts. Error:", e);
+          }
+        }
+        
+        renderInstagramFeedGrid();
+      };
+      
+      // Helper function to format Instagram timestamp to time ago
+      const formatInstagramTime = (timestampString) => {
+        try {
+          const date = new Date(timestampString);
+          const now = new Date();
+          const diffMs = now - date;
+          const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
+          
+          if (diffHrs < 24) {
+            return `${diffHrs > 0 ? diffHrs : 1} hour${diffHrs > 1 ? 's' : ''} ago`;
+          } else {
+            const diffDays = Math.floor(diffHrs / 24);
+            return `${diffDays} day${diffDays > 1 ? 's' : ''} ago`;
+          }
+        } catch (e) {
+          return "2 hours ago";
+        }
+      };
+      
+      // Call live load
+      loadInstagramFeed();
+
+      // 10. Contact Details & Footer
+      document.getElementById("cta-whatsapp").href = CONFIG_DATA.studioInfo.whatsappLink;
+      document.getElementById("cta-instagram").href = CONFIG_DATA.studioInfo.instagramLink;
+      document.getElementById("cta-whatsapp-bottom").href = CONFIG_DATA.studioInfo.whatsappLink;
+      document.getElementById("footer-copyright").textContent = CONFIG_DATA.footer.copyright;
+
+      // Initialise Lucide SVGs
+      lucide.createIcons();
+
+      // ----------------------------------------------------
+      // TELEPORT ACTION & CUSTOM SMOOTH SCROLL EASING
+      // ----------------------------------------------------
+      const triggerCardHighlight = (elementId) => {
+        const targetElement = document.getElementById(elementId);
+        if (!targetElement) return;
+        
+        // Target the main visual card container within the section
+        const card = targetElement.querySelector('.glass-card') || targetElement.querySelector('.services-grid') || targetElement.querySelector('.masonry-container') || targetElement;
+        if (!card) return;
+        
+        // Premium gentle pulse glow transition
+        card.style.transition = 'transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.8s cubic-bezier(0.25, 1, 0.5, 1)';
+        card.style.boxShadow = '0 12px 40px rgba(255, 126, 182, 0.35), var(--shadow-inset)';
+        card.style.transform = 'scale(1.015)';
+        
+        setTimeout(() => {
+          card.style.boxShadow = '';
+          card.style.transform = '';
+        }, 800);
+      };
+
+      const teleportScrollTo = (targetId) => {
+        const viewport = document.getElementById("app-viewport");
+        const target = document.getElementById(targetId);
+        if (!viewport || !target) return;
+        
+        // Calculate vertical offset inside the scrolling frame
+        const startScroll = viewport.scrollTop;
+        const targetScrollPosition = target.offsetTop - viewport.offsetTop;
+        const scrollDistance = targetScrollPosition - startScroll;
+        const scrollDuration = 1200; // 1.2s for slow sweeping portfolio-like glide
+        let scrollStartTime = null;
+        
+        // Premium Ease-In-Out Quart S-curve (smooth acceleration & deceleration)
+        const easeInOutQuart = (t) => {
+          return t < 0.5 ? 8 * t * t * t * t : 1 - Math.pow(-2 * t + 2, 4) / 2;
+        };
+        
+        const performScrollAnimation = (currentTime) => {
+          if (!scrollStartTime) scrollStartTime = currentTime;
+          const timeElapsed = currentTime - scrollStartTime;
+          const timePercent = Math.min(timeElapsed / scrollDuration, 1);
+          
+          viewport.scrollTop = startScroll + scrollDistance * easeInOutQuart(timePercent);
+          
+          if (timeElapsed < scrollDuration) {
+            requestAnimationFrame(performScrollAnimation);
+          } else {
+            // Callback: run premium gentle highlight animation when scrolled into place
+            triggerCardHighlight(targetId);
+          }
+        };
+        
+        requestAnimationFrame(performScrollAnimation);
+      };
+
+      // Hook up Hero actions to the custom eased scroll function
+      document.getElementById("config-hero-btn-primary").addEventListener("click", (e) => {
+        e.preventDefault();
+        teleportScrollTo("booking-cta-section");
+      });
+
+      document.getElementById("config-hero-btn-secondary").addEventListener("click", (e) => {
+        e.preventDefault();
+        teleportScrollTo("creations-section");
+      });
+
+      // ----------------------------------------------------
+      // BEFORE-AFTER SLIDER INTERACTIVE LOGIC
+      // ----------------------------------------------------
+      const sliderControl = document.getElementById("slider-control");
+      const sliderAfterBox = document.getElementById("slider-after-box");
+      const sliderDivider = document.getElementById("slider-divider");
+      const sliderHandle = document.getElementById("slider-handle");
+
+      const updateSlider = (percent) => {
+        sliderAfterBox.style.width = `${percent}%`;
+        sliderDivider.style.left = `${percent}%`;
+        sliderHandle.style.left = `${percent}%`;
+      };
+
+      sliderControl.addEventListener("input", (e) => {
+        updateSlider(e.target.value);
+      });
+
+      // Initialize slider visual sync
+      updateSlider(50);
+
+      // ----------------------------------------------------
+      // INSTAGRAM POST VIEWER LIGHTBOX MODAL LOGIC
+      // ----------------------------------------------------
+      const instaLightbox = document.getElementById("insta-lightbox");
+      const instaPostCarouselInner = document.getElementById("insta-post-carousel-inner");
+      const instaPostLikesCount = document.getElementById("insta-post-likes-count");
+      const instaPostCaptionText = document.getElementById("insta-post-caption-text");
+      const instaPostCommentsContainer = document.getElementById("insta-post-comments-container");
+      const instaPostTimeText = document.getElementById("insta-post-time-text");
+      const instaLightboxClose = document.getElementById("insta-lightbox-close");
+      const instaLikeBtn = document.getElementById("insta-like-btn");
+      const instaLikeIcon = document.getElementById("insta-like-icon");
+      const instaPostImgArea = document.getElementById("insta-post-img-area");
+      const instaHeartOverlayIcon = document.getElementById("insta-heart-overlay-icon");
+      const instaPostExternalLink = document.getElementById("insta-post-external-link");
+      
+      const carouselPrev = document.getElementById("insta-carousel-prev");
+      const carouselNext = document.getElementById("insta-carousel-next");
+      const carouselDots = document.getElementById("insta-carousel-dots");
+
+      let currentPostIndex = 0;
+      let currentPostSource = "posts"; // "posts", "reels", "tagged"
+      let currentSlideIndex = 0;
+      let postLikedStates = { posts: {}, reels: {}, tagged: {} }; // Keep track of liked items by source & index
+      let postCommentsData = { posts: {}, reels: {}, tagged: {} }; // Stores arrays of comments/replies by source & index
+
+      const getActivePostData = (index, source) => {
+        if (source === "reels") return CONFIG_DATA.instagramReels[index];
+        if (source === "tagged") return CONFIG_DATA.instagramTagged[index];
+        return CONFIG_DATA.instagramFeed[index];
+      };
+
+      const openInstaLightbox = (index, source = "posts") => {
+        currentPostIndex = index;
+        currentPostSource = source;
+        currentSlideIndex = 0;
+        const postData = getActivePostData(index, source);
+        if (!postData) return;
+        
+        // Populate static elements
+        document.getElementById("insta-post-avatar").src = CONFIG_DATA.studioInfo.avatar;
+        
+        // Custom header handles for Tagged posts
+        const postUserSpan = document.querySelector(".insta-post-user");
+        const postLocSpan = document.querySelector(".insta-post-loc");
+        const postCaptionUserSpan = document.querySelector(".insta-post-caption-user");
+        
+        if (source === "tagged") {
+          const rawHandle = postData.taggedBy || "@client";
+          postUserSpan.textContent = rawHandle.replace("@", "");
+          postCaptionUserSpan.textContent = rawHandle;
+          postLocSpan.textContent = "Tagged Client Post";
+        } else {
+          postUserSpan.textContent = "beauty._.blissss";
+          postCaptionUserSpan.textContent = "beauty._.blissss";
+          postLocSpan.textContent = "London & Abohar";
+        }
+        
+        instaPostCaptionText.textContent = postData.caption;
+        instaPostTimeText.textContent = postData.time;
+        instaPostExternalLink.href = postData.permalink || CONFIG_DATA.studioInfo.instagramLink;
+        
+        // Render images carousel
+        if (postData.carouselImages && postData.carouselImages.length > 0) {
+          instaPostCarouselInner.innerHTML = postData.carouselImages.map(img => `
+            <img src="${img}" alt="Carousel image">
+          `).join('');
+          
+          // Render dots
+          carouselDots.innerHTML = postData.carouselImages.map((_, i) => `
+            <div class="insta-carousel-dot ${i === 0 ? 'active' : ''}"></div>
+          `).join('');
+          
+          carouselPrev.style.display = "flex";
+          carouselNext.style.display = "flex";
+          carouselDots.style.display = "flex";
+        } else {
+          // Single Image fallback
+          const imageSrc = postData.image || "./assets/pink_gel_nails.png";
+          instaPostCarouselInner.innerHTML = `<img src="${imageSrc}" alt="Nail image" class="insta-post-main-img">`;
+          
+          carouselPrev.style.display = "none";
+          carouselNext.style.display = "none";
+          carouselDots.style.display = "none";
+        }
+        
+        // Reset slide position
+        instaPostCarouselInner.style.transform = "translate3d(0, 0, 0)";
+        
+        // Render Hotspot Tags if present on first image
+        renderHotspotTags(postData.tags || []);
+        
+        // Sync like count & icon fill state
+        const isLiked = (postLikedStates[source] && postLikedStates[source][index]) || false;
+        const likesOffset = isLiked ? 1 : 0;
+        instaPostLikesCount.textContent = postData.likes + likesOffset;
+        
+        if (isLiked) {
+          instaLikeBtn.classList.add("liked");
+          instaLikeIcon.setAttribute("style", "fill: #FF529C; stroke: #FF529C;");
+        } else {
+          instaLikeBtn.classList.remove("liked");
+          instaLikeIcon.setAttribute("style", "fill: none; stroke: currentColor;");
+        }
+
+        // Render Comments
+        renderCommentsForPost(index, source);
+
+        // Convert emojis in the entire lightbox content area (header, caption, details, tags)
+        convertEmojisToAppleStyle(document.getElementById("insta-post-box-card"));
+
+        instaLightbox.classList.add("active");
+        lucide.createIcons();
+      };
+
+      const renderHotspotTags = (tags) => {
+        const container = document.getElementById("insta-post-tags-container");
+        if (!container) return;
+        
+        container.innerHTML = "";
+        if (!tags || tags.length === 0) return;
+        
+        tags.forEach(tag => {
+          const hotspot = document.createElement("div");
+          hotspot.className = "post-tag-hotspot";
+          hotspot.style.left = `${tag.x}%`;
+          hotspot.style.top = `${tag.y}%`;
+          
+          hotspot.innerHTML = `
+            <div class="post-tag-dot"></div>
+            <div class="post-tag-label">
+              ${tag.label} • <span>${tag.price}</span>
+              <i data-lucide="arrow-right"></i>
+            </div>
+          `;
+          
+          container.appendChild(hotspot);
+          
+          // Add click listener to tag label to teleport scroll
+          const label = hotspot.querySelector(".post-tag-label");
+          label.addEventListener("click", (e) => {
+            e.stopPropagation(); // Prevent toggling tags or triggering slide
+            closeInstaLightbox();
+            teleportScrollTo("services-section");
+            
+            // Highlight the card of the service
+            setTimeout(() => {
+              const serviceCard = document.getElementById(`service-${tag.serviceId}`);
+              if (serviceCard) {
+                serviceCard.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                serviceCard.style.boxShadow = '0 0 30px rgba(255, 82, 156, 0.8), var(--shadow-inset)';
+                serviceCard.style.transform = 'scale(1.08)';
+                setTimeout(() => {
+                  serviceCard.style.boxShadow = '';
+                  serviceCard.style.transform = '';
+                }, 2000);
+              }
+            }, 1300); // After teleport glide finishes
+          });
+        });
+        
+        // Show tags after a brief delay
+        setTimeout(() => {
+          container.querySelectorAll(".post-tag-hotspot").forEach(el => el.classList.add("visible"));
+        }, 500);
+      };
+
+      // Toggle hotspot tags on image tap (excluding double-taps and carousel clicks)
+      let clickTimer = null;
+      instaPostImgArea.addEventListener("click", (e) => {
+        // Ignore clicks on arrows or buttons
+        if (e.target.closest(".insta-carousel-btn") || e.target.closest(".post-tag-label") || e.target.closest(".post-tag-dot")) {
+          return;
+        }
+        
+        if (clickTimer === null) {
+          clickTimer = setTimeout(() => {
+            clickTimer = null;
+            // Single tap detected! Toggle tags
+            const hotspots = document.querySelectorAll(".post-tag-hotspot");
+            hotspots.forEach(el => el.classList.toggle("visible"));
+          }, 250); // Delay slightly to allow double click/tap to cancel
+        } else {
+          clearTimeout(clickTimer);
+          clickTimer = null;
+          // Double-tap will be fired separately
+        }
+      });
+
+      const updateCarouselSlide = () => {
+        instaPostCarouselInner.style.transform = `translate3d(-${currentSlideIndex * 100}%, 0, 0)`;
+        
+        // Update dots indicators
+        const dots = carouselDots.querySelectorAll(".insta-carousel-dot");
+        dots.forEach((dot, i) => {
+          if (i === currentSlideIndex) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+      };
+
+      carouselPrev.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent double tap trigger
+        const postData = getActivePostData(currentPostIndex, currentPostSource);
+        if (postData.carouselImages && currentSlideIndex > 0) {
+          currentSlideIndex--;
+          updateCarouselSlide();
+        }
+      });
+
+      carouselNext.addEventListener("click", (e) => {
+        e.stopPropagation(); // prevent double tap trigger
+        const postData = getActivePostData(currentPostIndex, currentPostSource);
+        if (postData.carouselImages && currentSlideIndex < postData.carouselImages.length - 1) {
+          currentSlideIndex++;
+          updateCarouselSlide();
+        }
+      });
+
+      const renderCommentsForPost = (index, source) => {
+        const postData = getActivePostData(index, source);
+        if (!postData) return;
+        
+        let commentsHTML = `
+          <div class="insta-comment-line">
+            <span class="insta-comment-user">${postData.commentUser}</span>
+            <span>${postData.commentText}</span>
+          </div>
+        `;
+
+        // Add user typed comments and replies if exist
+        if (postCommentsData[source] && postCommentsData[source][index]) {
+          postCommentsData[source][index].forEach(c => {
+            commentsHTML += `
+              <div class="insta-comment-line">
+                <span class="insta-comment-user">${c.user}</span>
+                <span>${c.text}</span>
+              </div>
+            `;
+          });
+        }
+        
+        instaPostCommentsContainer.innerHTML = commentsHTML;
+        convertEmojisToAppleStyle(instaPostCommentsContainer);
+      };
+
+      const closeInstaLightbox = () => {
+        instaLightbox.classList.remove("active");
+        const cardEl = document.getElementById("insta-post-box-card");
+        if (cardEl) cardEl.style.transform = "";
+      };
+
+      instaLightboxClose.addEventListener("click", closeInstaLightbox);
+      instaLightbox.addEventListener("click", (e) => {
+        if (e.target === instaLightbox || e.target === document.getElementById("insta-lightbox-glow-wrapper")) {
+          closeInstaLightbox();
+        }
+      });
+
+      // Liking system floating heart burst particles (High-fidelity SVGs)
+      const spawnFloatingHearts = (x, y, container) => {
+        for (let i = 0; i < 7; i++) {
+          const heart = document.createElement("div");
+          heart.className = "floating-heart";
+          heart.innerHTML = `
+            <svg viewBox="0 0 24 24" fill="#FF529C" stroke="#FF529C" stroke-width="0.5" style="width:100%;height:100%;">
+              <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+            </svg>
+          `;
+          
+          const size = Math.floor(Math.random() * 10) + 12; // 12px to 22px
+          heart.style.width = `${size}px`;
+          heart.style.height = `${size}px`;
+          heart.style.left = `${x - size / 2}px`;
+          heart.style.top = `${y - size}px`;
+          
+          const dx = (Math.random() - 0.5) * 80; 
+          const dy = -90 - Math.random() * 70;    
+          const rot = (Math.random() - 0.5) * 90; 
+          
+          heart.style.setProperty("--dx", `${dx}px`);
+          heart.style.setProperty("--dy", `${dy}px`);
+          heart.style.setProperty("--rot", `${rot}deg`);
+          
+          container.appendChild(heart);
+          
+          setTimeout(() => {
+            heart.remove();
+          }, 1200);
+        }
+      };
+
+      // Like toggle button
+      const toggleLike = () => {
+        const index = currentPostIndex;
+        const source = currentPostSource;
+        const postData = getActivePostData(index, source);
+        if (!postData) return;
+        
+        if (!postLikedStates[source]) postLikedStates[source] = {};
+        const isCurrentlyLiked = postLikedStates[source][index] || false;
+        postLikedStates[source][index] = !isCurrentlyLiked;
+        
+        const likesOffset = !isCurrentlyLiked ? 1 : 0;
+        instaPostLikesCount.textContent = postData.likes + likesOffset;
+
+        if (!isCurrentlyLiked) {
+          instaLikeBtn.classList.add("liked");
+          instaLikeIcon.setAttribute("style", "fill: #FF529C; stroke: #FF529C;");
+          
+          // Trigger floating particles
+          const rect = instaLikeBtn.getBoundingClientRect();
+          const boxRect = document.getElementById("insta-post-box-card").getBoundingClientRect();
+          const pX = rect.left - boxRect.left + rect.width / 2;
+          const pY = rect.top - boxRect.top;
+          spawnFloatingHearts(pX, pY, document.getElementById("insta-post-box-card"));
+
+          // Micro scale-up pop
+          instaLikeBtn.style.transform = "scale(1.25)";
+          setTimeout(() => instaLikeBtn.style.transform = "", 150);
+        } else {
+          instaLikeBtn.classList.remove("liked");
+          instaLikeIcon.setAttribute("style", "fill: none; stroke: currentColor;");
+        }
+      };
+
+      instaLikeBtn.addEventListener("click", toggleLike);
+
+      // Double-Tap to Like logic
+      let lastTapTime = 0;
+      instaPostImgArea.addEventListener("click", (e) => {
+        // Ignore clicks on arrows/tags
+        if (e.target.closest(".insta-carousel-btn") || e.target.closest(".post-tag-label") || e.target.closest(".post-tag-dot")) {
+          return;
+        }
+        
+        const currentTime = new Date().getTime();
+        const tapDelay = currentTime - lastTapTime;
+        
+        if (tapDelay < 300 && tapDelay > 0) {
+          handleDoubleTapLike(e);
+        }
+        lastTapTime = currentTime;
+      });
+
+      const handleDoubleTapLike = (e) => {
+        const index = currentPostIndex;
+        const source = currentPostSource;
+        if (!postLikedStates[source]) postLikedStates[source] = {};
+        const isLiked = postLikedStates[source][index] || false;
+        
+        // Trigger giant center heart animation
+        instaHeartOverlayIcon.classList.add("pulse");
+        setTimeout(() => {
+          instaHeartOverlayIcon.classList.remove("pulse");
+        }, 800);
+
+        if (!isLiked) {
+          toggleLike(); 
+        } else {
+          // Even if already liked, spawn floating hearts at tap position
+          const boxRect = document.getElementById("insta-post-box-card").getBoundingClientRect();
+          const pX = e.clientX - boxRect.left;
+          const pY = e.clientY - boxRect.top;
+          spawnFloatingHearts(pX, pY, document.getElementById("insta-post-box-card"));
+        }
+      };
+
+      // Emoji explosion blaster!
+      const spawnEmojiParticles = (emoji, x, y) => {
+        for (let i = 0; i < 8; i++) {
+          const p = document.createElement("div");
+          p.className = "emoji-particle";
+          p.textContent = emoji;
+          
+          // Make sure particles use Apple style emojis as well!
+          convertEmojisToAppleStyle(p);
+          
+          p.style.left = `${x}px`;
+          p.style.top = `${y}px`;
+          
+          const angle = Math.random() * Math.PI * 2;
+          const velocity = Math.random() * 80 + 50;
+          const dx = Math.cos(angle) * velocity;
+          const dy = Math.sin(angle) * velocity - 100; // Explode upwards
+          const rot = (Math.random() - 0.5) * 120;
+          
+          p.style.setProperty("--dx", `${dx}px`);
+          p.style.setProperty("--dy", `${dy}px`);
+          p.style.setProperty("--rot", `${rot}deg`);
+          
+          document.body.appendChild(p);
+          
+          setTimeout(() => {
+            p.remove();
+          }, 1000);
+        }
+      };
+
+      // Just trigger Kenjal's autopilot typing reply (comments disabled to prevent infinite window growth)
+      const postReactionComment = (emoji) => {
+        const source = currentPostSource;
+        const index = currentPostIndex;
+        const postData = getActivePostData(index, source);
+        if (!postData) return;
+
+        // Autopilot Typing Indicator & Kenjal Reply
+        setTimeout(() => {
+          // Check if typing indicator already exists, if so remove it
+          const existingTyping = document.getElementById("insta-comment-typing-indicator");
+          if (existingTyping) existingTyping.remove();
+
+          // Append typing indicator bubble
+          const typingBubble = document.createElement("div");
+          typingBubble.className = "typing-indicator-bubble";
+          typingBubble.id = "insta-comment-typing-indicator";
+          typingBubble.innerHTML = `
+            <span class="insta-comment-user" style="font-size:0.78rem; font-weight:700; color:var(--color-plum); margin-right:4px;">beauty._.blissss</span>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+            <div class="typing-dot"></div>
+          `;
+          instaPostCommentsContainer.appendChild(typingBubble);
+          instaPostCommentsContainer.scrollTop = instaPostCommentsContainer.scrollHeight;
+          
+          // Add a subtle vibrate to card to simulate alert
+          const cardEl = document.getElementById("insta-post-box-card");
+          cardEl.classList.add("shake");
+          setTimeout(() => cardEl.classList.remove("shake"), 400);
+          
+          // Delay Kenjal's reply
+          setTimeout(() => {
+            const typingEl = document.getElementById("insta-comment-typing-indicator");
+            if (typingEl) typingEl.remove();
+            
+            const replies = [
+              "Thank you so much love! Can't wait to style your nails! 💕💅",
+              "Aww, thank you! Glad you love the design! 🌸✨",
+              "You are the sweetest! Hope to see you in the studio soon! 💖🎀",
+              "Tysm! Let's do something similar for your next set! 😍✨",
+              "Omg thank you! 🥺👰 Bridal season is pure bliss!"
+            ];
+            const randomReply = replies[Math.floor(Math.random() * replies.length)];
+            
+            // Add reply to data model and render
+            postCommentsData[source][index].push({ user: "beauty._.blissss", text: randomReply });
+            renderCommentsForPost(index, source);
+            
+            // Scroll to bottom
+            instaPostCommentsContainer.scrollTop = instaPostCommentsContainer.scrollHeight;
+            
+            // Shake visual alert
+            cardEl.classList.add("shake");
+            setTimeout(() => cardEl.classList.remove("shake"), 400);
+          }, 1400);
+        }, 800);
+      };
+
+      // Hook up Emoji Quick Reply Bar
+      const emojiBar = document.getElementById("insta-quick-emojis-bar");
+      if (emojiBar) {
+        emojiBar.querySelectorAll(".quick-emoji-btn").forEach(btn => {
+          btn.addEventListener("click", (e) => {
+            const emoji = btn.getAttribute("data-emoji") || btn.textContent;
+            
+            // Blast emoji particles
+            const rect = btn.getBoundingClientRect();
+            spawnEmojiParticles(emoji, rect.left + rect.width / 2, rect.top + rect.height / 2);
+            
+            // Post comment
+            postReactionComment(emoji);
+            
+            // Scale pop
+            btn.style.transform = "scale(1.4)";
+            setTimeout(() => btn.style.transform = "", 150);
+          });
+        });
+      }
+
+      // Touch Swipe / Mouse Drag gesture tracking for Carousel
+      let startX = 0;
+      let startY = 0;
+      let isDragging = false;
+      
+      instaPostImgArea.addEventListener("touchstart", (e) => {
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        isDragging = true;
+      }, { passive: true });
+      
+      instaPostImgArea.addEventListener("touchend", (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const endX = e.changedTouches[0].clientX;
+        const endY = e.changedTouches[0].clientY;
+        const diffX = endX - startX;
+        const diffY = endY - startY;
+        
+        // Swipe horizontal threshold 50px, vertical displacement < 40px
+        if (Math.abs(diffX) > 50 && Math.abs(diffY) < 40) {
+          const postData = getActivePostData(currentPostIndex, currentPostSource);
+          if (postData && postData.carouselImages && postData.carouselImages.length > 0) {
+            if (diffX < 0) {
+              // Swipe Left -> Next Slide
+              if (currentSlideIndex < postData.carouselImages.length - 1) {
+                currentSlideIndex++;
+                updateCarouselSlide();
+              }
+            } else {
+              // Swipe Right -> Prev Slide
+              if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateCarouselSlide();
+              }
+            }
+          }
+        }
+      }, { passive: true });
+      
+      // Support mouse swipe drag
+      let mouseStartX = 0;
+      instaPostImgArea.addEventListener("mousedown", (e) => {
+        if (e.target.closest(".insta-carousel-btn") || e.target.closest(".post-tag-label") || e.target.closest(".post-tag-dot")) {
+          return;
+        }
+        mouseStartX = e.clientX;
+        isDragging = true;
+      });
+      
+      instaPostImgArea.addEventListener("mouseup", (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        
+        const diffX = e.clientX - mouseStartX;
+        if (Math.abs(diffX) > 50) {
+          const postData = getActivePostData(currentPostIndex, currentPostSource);
+          if (postData && postData.carouselImages && postData.carouselImages.length > 0) {
+            if (diffX < 0) {
+              if (currentSlideIndex < postData.carouselImages.length - 1) {
+                currentSlideIndex++;
+                updateCarouselSlide();
+              }
+            } else {
+              if (currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateCarouselSlide();
+              }
+            }
+          }
+        }
+      });
+
+      // 3D Card Tilt Effect on Desktop
+      const card = document.getElementById("insta-post-box-card");
+      const wrapper = document.getElementById("insta-lightbox-glow-wrapper");
+      
+      if (card && wrapper) {
+        document.getElementById("insta-lightbox").addEventListener("mousemove", (e) => {
+          if (window.innerWidth < 768) {
+            wrapper.style.transform = "";
+            return;
+          }
+          
+          const rect = wrapper.getBoundingClientRect();
+          const cardX = rect.left + rect.width / 2;
+          const cardY = rect.top + rect.height / 2;
+          
+          const angleX = -(e.clientY - cardY) / (rect.height / 2) * 6; // Max 6 degrees tilt
+          const angleY = (e.clientX - cardX) / (rect.width / 2) * 6;
+          
+          wrapper.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.01)`;
+        });
+        
+        document.getElementById("insta-lightbox").addEventListener("mouseleave", () => {
+          wrapper.style.transform = "";
+        });
+      }
+
+
+
+      // ----------------------------------------------------
+      // INSTAGRAM STORIES VIEWER MODAL PLAYBACK LOGIC
+      // ----------------------------------------------------
+      const storyViewer = document.getElementById("story-viewer");
+      const storyViewerMedia = document.getElementById("story-viewer-media");
+      const storyViewerCaptionLabel = document.getElementById("story-viewer-caption-label");
+      const storyViewerTimeLabel = document.getElementById("story-viewer-time-label");
+      const storyViewerCloseBtn = document.getElementById("story-viewer-close-btn");
+      const storyProgressBars = document.getElementById("story-progress-bars");
+      const storyViewerReplyLink = document.getElementById("story-viewer-reply-link");
+      
+      const storyTapLeftArea = document.getElementById("story-tap-left-area");
+      const storyTapRightArea = document.getElementById("story-tap-right-area");
+
+      let activeStoryIdx = 0;
+      let activeSlideIdx = 0;
+      
+      let storyAnimFrame = null;
+      let storyStartTimestamp = null;
+      let storyDuration = 4000; // 4 seconds per story slide
+      let storyElapsedMs = 0;
+      let storyIsPaused = false;
+      let storyPauseStartTimestamp = null;
+
+      const openStoryViewer = (storyIndex) => {
+        activeStoryIdx = storyIndex;
+        activeSlideIdx = 0;
+        storyIsPaused = false;
+        storyElapsedMs = 0;
+        
+        document.getElementById("story-viewer-avatar").src = CONFIG_DATA.studioInfo.avatar;
+        storyViewer.classList.add("active");
+        
+        renderStoryProgressBars();
+        loadStorySlide(activeStoryIdx, activeSlideIdx);
+      };
+
+      const closeStoryViewer = () => {
+        storyViewer.classList.remove("active");
+        cancelAnimationFrame(storyAnimFrame);
+      };
+
+      storyViewerCloseBtn.addEventListener("click", closeStoryViewer);
+
+      const renderStoryProgressBars = () => {
+        const story = CONFIG_DATA.instagramStories[activeStoryIdx];
+        storyProgressBars.innerHTML = story.slides.map((_, index) => `
+          <div class="story-progress-bg">
+            <div class="story-progress-fill" id="story-progress-fill-${index}"></div>
+          </div>
+        `).join('');
+      };
+
+      const loadStorySlide = (storyIdx, slideIdx) => {
+        const story = CONFIG_DATA.instagramStories[storyIdx];
+        const slide = story.slides[slideIdx];
+        
+        storyViewerMedia.src = slide.image;
+        storyViewerCaptionLabel.textContent = slide.caption;
+        convertEmojisToAppleStyle(storyViewerCaptionLabel);
+        storyViewerTimeLabel.textContent = slide.time;
+        
+        // Setup WhatsApp deep reply text link
+        const replyText = encodeURIComponent(`Hi Kenjal! I saw your "${story.title}" story highlighting "${slide.caption}" and would love to ask about booking! 💅✨`);
+        storyViewerReplyLink.href = `${CONFIG_DATA.studioInfo.whatsappLink.split('?')[0]}?text=${replyText}`;
+        
+        // Reset timers
+        storyElapsedMs = 0;
+        storyStartTimestamp = null;
+        storyIsPaused = false;
+        
+        // Update previous segments to complete
+        for (let i = 0; i < story.slides.length; i++) {
+          const fillEl = document.getElementById(`story-progress-fill-${i}`);
+          if (fillEl) {
+            if (i < slideIdx) {
+              fillEl.classList.add("completed");
+              fillEl.style.width = "100%";
+            } else {
+              fillEl.classList.remove("completed");
+              fillEl.style.width = "0%";
+            }
+          }
+        }
+        
+        // Start animation loop
+        cancelAnimationFrame(storyAnimFrame);
+        storyAnimFrame = requestAnimationFrame(storyStepAnimation);
+      };
+
+      const storyStepAnimation = (timestamp) => {
+        if (!storyStartTimestamp) storyStartTimestamp = timestamp;
+        
+        if (!storyIsPaused) {
+          storyElapsedMs = timestamp - storyStartTimestamp;
+          
+          // Render active progress segment width
+          const fillEl = document.getElementById(`story-progress-fill-${activeSlideIdx}`);
+          if (fillEl) {
+            const percentage = Math.min((storyElapsedMs / storyDuration) * 100, 100);
+            fillEl.style.width = `${percentage}%`;
+          }
+          
+          if (storyElapsedMs >= storyDuration) {
+            advanceStoryNext();
+            return;
+          }
+        } else {
+          // Adjust start time to ignore paused duration
+          storyStartTimestamp = timestamp - storyElapsedMs;
+        }
+        
+        storyAnimFrame = requestAnimationFrame(storyStepAnimation);
+      };
+
+      const advanceStoryNext = () => {
+        const story = CONFIG_DATA.instagramStories[activeStoryIdx];
+        
+        if (activeSlideIdx < story.slides.length - 1) {
+          // Next slide in current story
+          activeSlideIdx++;
+          loadStorySlide(activeStoryIdx, activeSlideIdx);
+        } else if (activeStoryIdx < CONFIG_DATA.instagramStories.length - 1) {
+          // Move to next story highlight bubble
+          activeStoryIdx++;
+          activeSlideIdx = 0;
+          renderStoryProgressBars();
+          loadStorySlide(activeStoryIdx, activeSlideIdx);
+        } else {
+          // No more stories, close
+          closeStoryViewer();
+        }
+      };
+
+      const advanceStoryPrev = () => {
+        if (activeSlideIdx > 0) {
+          // Go to previous slide in same story
+          activeSlideIdx--;
+          loadStorySlide(activeStoryIdx, activeSlideIdx);
+        } else if (activeStoryIdx > 0) {
+          // Go to previous story bubble (load its last slide)
+          activeStoryIdx--;
+          const prevStory = CONFIG_DATA.instagramStories[activeStoryIdx];
+          activeSlideIdx = prevStory.slides.length - 1;
+          renderStoryProgressBars();
+          loadStorySlide(activeStoryIdx, activeSlideIdx);
+        } else {
+          // Restart first slide
+          loadStorySlide(activeStoryIdx, activeSlideIdx);
+        }
+      };
+
+      // Tap navigation triggers
+      storyTapLeftArea.addEventListener("click", () => {
+        advanceStoryPrev();
+      });
+      
+      storyTapRightArea.addEventListener("click", () => {
+        advanceStoryNext();
+      });
+
+      // Hold to Pause Logic
+      const pauseStoryPlayback = () => {
+        storyIsPaused = true;
+      };
+
+      const resumeStoryPlayback = () => {
+        storyIsPaused = false;
+      };
+
+      // Mouse Hook events
+      storyViewer.addEventListener("mousedown", pauseStoryPlayback);
+      storyViewer.addEventListener("mouseup", resumeStoryPlayback);
+      storyViewer.addEventListener("mouseleave", resumeStoryPlayback);
+      
+      // Touch Hook events
+      storyViewer.addEventListener("touchstart", pauseStoryPlayback);
+      storyViewer.addEventListener("touchend", resumeStoryPlayback);
+
+      // ----------------------------------------------------
+      // LIGHTBOX INTERACTION LOGIC (FOR PINTEREST CREATIONS)
+      // ----------------------------------------------------
+      const lightbox = document.getElementById("lightbox-modal");
+      const lightboxImg = document.getElementById("lightbox-image");
+      const lightboxTitle = document.getElementById("lightbox-title-text");
+      const lightboxCloseBtn = document.getElementById("lightbox-close-btn");
+
+      const openLightbox = (imgSrc, title) => {
+        lightboxImg.src = imgSrc;
+        lightboxTitle.textContent = title;
+        lightbox.classList.add("active");
+      };
+
+      const closeLightbox = () => {
+        lightbox.classList.remove("active");
+      };
+
+      lightboxCloseBtn.addEventListener("click", closeLightbox);
+      lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) closeLightbox();
+      });
+
+      // Keyboard Accessibility
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeLightbox();
+          closeInstaLightbox();
+          closeStoryModal();
+          closeStoryViewer();
+        }
+      });
+
+      // ----------------------------------------------------
+      // SCROLL VIEWPORT FADE IN EFFECTS
+      // ----------------------------------------------------
+      const observerOptions = {
+        root: document.getElementById("app-viewport"),
+        rootMargin: "0px",
+        threshold: 0.1
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll("main > section").forEach(section => {
+        section.classList.add("fade-in");
+        observer.observe(section);
+      });
+
+      // Initial page-wide conversion of emojis to Apple color style
+      convertEmojisToAppleStyle(document.body);
+    });
+  </script>
+</body>
+</html>
