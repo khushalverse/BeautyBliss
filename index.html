@@ -512,7 +512,7 @@
       grid-template-columns: 1fr 1fr;
       gap: 10px;
       padding: 0 16px;
-      margin-bottom: 12px;
+      margin-bottom: 24px;
     }
 
     .btn-hero {
@@ -3315,182 +3315,167 @@
 <body>
 
   <!-- ============================================================
-       LUXURY BRAND REVEAL / LOADING SCREEN
+       BEAUTY BLISS BRAND ASSEMBLY REVEAL
        ============================================================ -->
   <div id="brand-reveal-overlay">
-    <!-- Ambient glow orbs -->
-    <div class="reveal-orb reveal-orb-1"></div>
-    <div class="reveal-orb reveal-orb-2"></div>
+    <!-- Soft blush radial background -->
+    <div class="bb-reveal-bg"></div>
 
-    <!-- Centered brand content -->
-    <div class="reveal-content">
-      <div class="reveal-logo-wrapper">
-        <span class="reveal-logo-text">Beauty Bliss</span>
-        <span class="reveal-logo-underline"></span>
-      </div>
-      <p class="reveal-tagline">by Kenjal</p>
-      <p class="reveal-sub-tagline">Luxury Nails, Crafted With Love</p>
+    <!-- Assembly stage: letters injected by JS -->
+    <div class="bb-reveal-stage">
+      <div class="bb-reveal-wordmark" id="bb-reveal-wordmark"></div>
+      <div class="bb-reveal-byline" id="bb-reveal-byline">by Kenjal</div>
     </div>
 
-    <!-- Slim progress bar at bottom -->
-    <div class="reveal-progress-track">
-      <div class="reveal-progress-bar" id="reveal-progress-bar"></div>
+    <!-- Ultra-slim timing bar & percentage -->
+    <div class="bb-reveal-progress-wrapper">
+      <div class="bb-reveal-percent" id="bb-reveal-percent">0%</div>
+      <div class="bb-reveal-track">
+        <div class="bb-reveal-fill" id="bb-reveal-fill"></div>
+      </div>
     </div>
   </div>
 
   <style id="brand-reveal-styles">
-    /* ── Brand Reveal Overlay ── */
+    /* ══ Beauty Bliss Brand Assembly Reveal ══ */
+
     #brand-reveal-overlay {
       position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
+      inset: 0;
       z-index: 99999;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(160deg, #FFFDFB 0%, #FFF4F9 30%, #FBF6FF 60%, #FFF6F5 100%);
-      background-size: 300% 300%;
-      animation: revealBgShift 3s ease infinite;
       overflow: hidden;
-      will-change: opacity, transform;
-      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+      background: #F8EBF2;
     }
 
-    #brand-reveal-overlay.reveal-exit {
-      opacity: 0;
-      transform: scale(1.04);
-      pointer-events: none;
-    }
-
-    @keyframes revealBgShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Ambient orbs */
-    .reveal-orb {
+    /* Soft radial blush background */
+    .bb-reveal-bg {
       position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-      will-change: transform;
+      inset: 0;
+      background: radial-gradient(
+        ellipse 88% 68% at 50% 48%,
+        #FFF6FB 0%,
+        #FDE8F2 38%,
+        #F5DDEF 68%,
+        #EDD5E9 100%
+      );
+      opacity: 0;
+      animation: bbBgIn 0.35s ease forwards;
     }
-    .reveal-orb-1 {
-      width: 280px; height: 280px;
-      top: -60px; right: -40px;
-      background: radial-gradient(circle, rgba(255, 209, 232, 0.35) 0%, transparent 70%);
-    }
-    .reveal-orb-2 {
-      width: 220px; height: 220px;
-      bottom: -30px; left: -30px;
-      background: radial-gradient(circle, rgba(234, 224, 255, 0.35) 0%, transparent 70%);
+    @keyframes bbBgIn {
+      to { opacity: 1; }
     }
 
-    /* Brand content */
-    .reveal-content {
-      text-align: center;
+    /* Stage — centered flex column */
+    .bb-reveal-stage {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0;
+      gap: 18px;
     }
 
-    .reveal-logo-wrapper {
-      position: relative;
-      display: inline-flex;
+    /* Wordmark — letters flow inline, transforms are purely visual */
+    .bb-reveal-wordmark {
+      font-family: 'Fredoka', sans-serif;
+      font-size: clamp(2.05rem, 8.5vw, 2.85rem);
+      font-weight: 700;
+      color: #C9437A;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      white-space: nowrap;
+      filter: drop-shadow(0 2px 14px rgba(201, 67, 122, 0.13));
+    }
+
+    /* Each animated letter */
+    .bb-reveal-letter {
+      display: inline-block;
+      will-change: transform, opacity;
+    }
+
+    /* Inter-word space */
+    .bb-reveal-space {
+      display: inline-block;
+      width: 0.28em;
+    }
+
+    /* "by Kenjal" subtitle */
+    .bb-reveal-byline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(0.88rem, 3.6vw, 1.02rem);
+      font-weight: 400;
+      font-style: italic;
+      color: #956079;
+      letter-spacing: 0.09em;
+      opacity: 0;
+      transform: translateY(9px);
+      transition:
+        opacity 0.5s ease,
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .bb-reveal-byline.bb-byline-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Progress wrapper & text */
+    .bb-reveal-progress-wrapper {
+      position: absolute;
+      top: 62%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
       flex-direction: column;
       align-items: center;
+      gap: 12px;
     }
 
-    .reveal-logo-text {
+    .bb-reveal-percent {
       font-family: 'Fredoka', sans-serif;
-      font-size: 2.6rem;
-      font-weight: 700;
-      color: #FF7EB6;
-      letter-spacing: -0.01em;
-      text-shadow: 0 0 30px rgba(255, 126, 182, 0.2);
-      opacity: 0;
-      transform: translateY(12px);
-      animation: revealLogoIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
-    }
-
-    .reveal-logo-underline {
-      display: block;
-      width: 0;
-      height: 2.5px;
-      background: linear-gradient(90deg, transparent, #FF7EB6, transparent);
-      border-radius: 2px;
-      margin-top: 4px;
-      animation: revealUnderlineGrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
-    }
-
-    .reveal-tagline {
-      font-family: 'Cormorant Garamond', Georgia, serif;
       font-size: 1.15rem;
-      font-weight: 500;
-      font-style: italic;
-      color: #7A5368;
-      letter-spacing: 0.04em;
-      margin-top: 10px;
-      opacity: 0;
-      transform: translateY(8px);
-      animation: revealFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
-    }
-
-    .reveal-sub-tagline {
-      font-family: 'Quicksand', sans-serif;
-      font-size: 0.72rem;
       font-weight: 600;
-      color: #C4547A;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-top: 6px;
-      opacity: 0;
-      animation: revealFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+      color: #C9437A;
+      letter-spacing: 0.05em;
     }
 
-    /* Progress bar */
-    .reveal-progress-track {
-      position: absolute;
-      bottom: 60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 120px;
-      height: 2px;
-      background: rgba(255, 126, 182, 0.15);
+    /* Ultra-slim progress track */
+    .bb-reveal-track {
+      width: 96px;
+      height: 1.5px;
+      background: rgba(201, 67, 122, 0.12);
       border-radius: 2px;
       overflow: hidden;
-      opacity: 0;
-      animation: revealFadeUp 0.4s ease 1.0s forwards;
     }
-
-    .reveal-progress-bar {
-      width: 0%;
+    .bb-reveal-fill {
       height: 100%;
-      background: linear-gradient(90deg, #FF7EB6, #FF529C);
+      width: 0%;
+      background: linear-gradient(90deg, #E1658B, #C9437A);
       border-radius: 2px;
-      transition: width 0.1s linear;
+      will-change: width;
+      box-shadow: 0 0 5px rgba(201, 67, 122, 0.38);
     }
 
-    /* Keyframes */
-    @keyframes revealLogoIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes revealUnderlineGrow {
-      to { width: 80px; }
-    }
-    @keyframes revealFadeUp {
-      to { opacity: 1; transform: translateY(0); }
+    /* Overlay exit */
+    #brand-reveal-overlay.bb-dissolve {
+      transition: opacity 0.52s cubic-bezier(0.4, 0, 0.6, 1);
+      opacity: 0;
+      pointer-events: none;
     }
 
-    /* Hide app content during reveal */
+    /* App visibility */
     .app-hidden {
       opacity: 0 !important;
       pointer-events: none !important;
     }
     .app-visible {
       opacity: 1 !important;
-      transition: opacity 0.5s ease 0.1s !important;
+      transition: opacity 0.6s ease 0.05s !important;
     }
   </style>
 
@@ -3632,7 +3617,7 @@
 
       <!-- MEET KENJAL (REFINED STORY CARD DESIGN) -->
       <section id="story-section">
-        <h2 class="section-title-left" id="story-title">Meet Kenjal</h2>
+        <h2 class="section-title" id="story-title" style="margin-bottom: 36px;">Meet Kenjal</h2>
         <div class="glass-card story-card">
           <div class="story-header-pill">
             <div class="story-avatar-glow">
@@ -3989,7 +3974,7 @@
         artistName: "Artist: Kenjal",
         primaryActionHTML: "<span>💖 Book</span><span>Appointment</span>",
         secondaryActionHTML: "<span>✨ View</span><span>Gallery</span>",
-        whatsappLink: "https://wa.me/447700900077?text=Hi%20Kenjal!%20I'd%20like%20to%20book%20a%20nail%20appointment%20with%20you%20%F0%9F%92%85",
+        whatsappLink: "https://wa.me/919914010455?text=Hi%20Kenjal!%20I'd%20like%20to%20book%20a%20nail%20appointment%20with%20you%20%F0%9F%92%85",
         instagramLink: "https://www.instagram.com/beauty._.blissss",
         emailAddress: "mailto:hello@beautyblissbykenjal.com?subject=Nail%20Studio%20Booking%20Inquiry"
       },
@@ -4321,7 +4306,7 @@
       }, observerOptions);
 
       // Elements to reveal
-      document.querySelectorAll('.service-card, .masonry-item, .insta-post-card, .review-card').forEach((el, index) => {
+      document.querySelectorAll('.service-card, .insta-post-card, .review-card').forEach((el, index) => {
         el.classList.add('fade-in');
         // Add staggered delay based on index modulo for rows
         el.style.transitionDelay = `${(index % 3) * 0.08}s`;
@@ -4346,47 +4331,117 @@
        ---------------------------------------------------- */
     document.addEventListener("DOMContentLoaded", () => {
 
-      /* ── Brand Reveal Orchestration ── */
+      /* ══ Beauty Bliss Brand Assembly Reveal ══
+       *
+       * Inspired by Spylt.com: letter fragments scatter across the
+       * blush background then spring together to form the wordmark.
+       *
+       * Timeline (approximate):
+       *   0ms     — background fades in
+       *   ~60ms   — letters begin assembling (stagger: 52ms each)
+       *   ~1100ms — last letter lands
+       *   ~1180ms — "by Kenjal" fades in
+       *   ~1420ms — overlay dissolves, app revealed
+       *   ~1980ms — overlay removed from DOM
+       */
       const revealOverlay = document.getElementById('brand-reveal-overlay');
-      const progressBar = document.getElementById('reveal-progress-bar');
-      const appShell = document.getElementById('app-viewport');
+      const bbWordmark    = document.getElementById('bb-reveal-wordmark');
+      const bbByline      = document.getElementById('bb-reveal-byline');
+      const bbFill        = document.getElementById('bb-reveal-fill');
+      const appShell      = document.getElementById('app-viewport');
 
-      if (revealOverlay && progressBar && appShell) {
-        let progress = 0;
-        const totalDuration = 2500;
-        const intervalMs = 30;
-        const steps = totalDuration / intervalMs;
-        let step = 0;
-
-        const progressInterval = setInterval(() => {
-          step++;
-          const t = step / steps;
-          progress = Math.round(100 * (1 - Math.pow(1 - t, 2.5)));
-          progressBar.style.width = progress + '%';
-
-          if (step >= steps) {
-            clearInterval(progressInterval);
-            progressBar.style.width = '100%';
-
-            setTimeout(() => {
-              revealOverlay.classList.add('reveal-exit');
-              appShell.classList.remove('app-hidden');
-              appShell.classList.add('app-visible');
-              initScrollReveals();
-
-              setTimeout(() => {
-                revealOverlay.remove();
-              }, 700);
-            }, 300);
-          }
-        }, intervalMs);
-      } else {
-        // Fallback: no overlay
+      function startApp() {
         if (appShell) {
           appShell.classList.remove('app-hidden');
           appShell.classList.add('app-visible');
         }
         initScrollReveals();
+      }
+
+      if (revealOverlay && bbWordmark && appShell) {
+
+        // ── Character list & designed scatter positions ──
+        // Each character starts at a distinct scattered position;
+        // spring easing assembles them into the wordmark.
+        const CHARS = ['B','e','a','u','t','y',' ','B','l','i','s','s'];
+        const SCATTER = [
+          { tx: -90, ty: -44, r: -22, s: 0.72 }, // B
+          { tx: -52, ty:  40, r:  17, s: 0.78 }, // e
+          { tx:  60, ty: -52, r: -11, s: 0.80 }, // a
+          { tx: -30, ty:  70, r:  24, s: 0.74 }, // u
+          { tx:  74, ty:  28, r: -28, s: 0.76 }, // t
+          { tx: -16, ty: -76, r:  15, s: 0.82 }, // y
+          { tx:   0, ty:   0, r:   0, s:  1.0 }, // [space]
+          { tx:  72, ty: -38, r:  20, s: 0.76 }, // B
+          { tx: -58, ty:  54, r: -18, s: 0.72 }, // l
+          { tx:  84, ty: -60, r:  26, s: 0.78 }, // i
+          { tx: -70, ty:  24, r: -22, s: 0.74 }, // s
+          { tx:  44, ty:  64, r:  12, s: 0.80 }, // s
+        ];
+
+        // Build letter elements in scattered state
+        CHARS.forEach((ch, i) => {
+          const el = document.createElement('span');
+          if (ch === ' ') {
+            el.className = 'bb-reveal-space';
+          } else {
+            el.className = 'bb-reveal-letter';
+            el.textContent = ch;
+            const sc = SCATTER[i];
+            el.style.opacity = '0';
+            el.style.transform =
+              `translateX(${sc.tx}px) translateY(${sc.ty}px) rotate(${sc.r}deg) scale(${sc.s})`;
+          }
+          bbWordmark.appendChild(el);
+        });
+
+        const letters     = Array.from(bbWordmark.querySelectorAll('.bb-reveal-letter'));
+        const STAGGER     = 78;                            // ms between letters  (~2s total)
+        const LETTER_MS   = 720;                           // ms per letter spring (~2s total)
+        const assemblyEnd = (letters.length - 1) * STAGGER + LETTER_MS;
+        const exitAt      = assemblyEnd + 480;             // hold then exit       (~2s total)
+
+        // ── Progress bar & text — fills smoothly over exitAt duration ──
+        let pv = 0;
+        const bbPercent = document.getElementById('bb-reveal-percent');
+        const pStep = 100 / (exitAt / 16);
+        const pInt = setInterval(() => {
+          pv = Math.min(100, pv + pStep);
+          bbFill.style.width = pv.toFixed(1) + '%';
+          if (bbPercent) bbPercent.textContent = Math.floor(pv) + '%';
+          if (pv >= 100) clearInterval(pInt);
+        }, 16);
+
+        // ── Assemble letters with staggered spring ──
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            letters.forEach((el, i) => {
+              setTimeout(() => {
+                el.style.transition =
+                  `transform ${LETTER_MS}ms cubic-bezier(0.16,1,0.3,1),` +
+                  `opacity ${Math.round(LETTER_MS * 0.72)}ms ease`;
+                el.style.transform = 'translateX(0) translateY(0) rotate(0deg) scale(1)';
+                el.style.opacity   = '1';
+              }, i * STAGGER);
+            });
+          });
+        });
+
+        // ── Show "by Kenjal" after all letters land ──
+        setTimeout(() => {
+          bbByline.classList.add('bb-byline-in');
+        }, assemblyEnd + 80);
+
+        // ── Exit: dissolve overlay & reveal app ──
+        setTimeout(() => {
+          startApp();
+          revealOverlay.classList.add('bb-dissolve');
+          setTimeout(() => revealOverlay.remove(), 570);
+        }, exitAt);
+
+      } else {
+        // Fallback: skip reveal
+        startApp();
       }
 
       // ── App Initialization (always runs) ──
