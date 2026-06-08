@@ -3314,11 +3314,191 @@
 </head>
 <body>
 
+  <!-- ============================================================
+       LUXURY BRAND REVEAL / LOADING SCREEN
+       ============================================================ -->
+  <div id="brand-reveal-overlay">
+    <!-- Ambient glow orbs -->
+    <div class="reveal-orb reveal-orb-1"></div>
+    <div class="reveal-orb reveal-orb-2"></div>
+
+    <!-- Centered brand content -->
+    <div class="reveal-content">
+      <div class="reveal-logo-wrapper">
+        <span class="reveal-logo-text">Beauty Bliss</span>
+        <span class="reveal-logo-underline"></span>
+      </div>
+      <p class="reveal-tagline">by Kenjal</p>
+      <p class="reveal-sub-tagline">Luxury Nails, Crafted With Love</p>
+    </div>
+
+    <!-- Slim progress bar at bottom -->
+    <div class="reveal-progress-track">
+      <div class="reveal-progress-bar" id="reveal-progress-bar"></div>
+    </div>
+  </div>
+
+  <style id="brand-reveal-styles">
+    /* ── Brand Reveal Overlay ── */
+    #brand-reveal-overlay {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 99999;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(160deg, #FFFDFB 0%, #FFF4F9 30%, #FBF6FF 60%, #FFF6F5 100%);
+      background-size: 300% 300%;
+      animation: revealBgShift 3s ease infinite;
+      overflow: hidden;
+      will-change: opacity, transform;
+      transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1), transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    #brand-reveal-overlay.reveal-exit {
+      opacity: 0;
+      transform: scale(1.04);
+      pointer-events: none;
+    }
+
+    @keyframes revealBgShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Ambient orbs */
+    .reveal-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      will-change: transform;
+    }
+    .reveal-orb-1 {
+      width: 280px; height: 280px;
+      top: -60px; right: -40px;
+      background: radial-gradient(circle, rgba(255, 209, 232, 0.35) 0%, transparent 70%);
+    }
+    .reveal-orb-2 {
+      width: 220px; height: 220px;
+      bottom: -30px; left: -30px;
+      background: radial-gradient(circle, rgba(234, 224, 255, 0.35) 0%, transparent 70%);
+    }
+
+    /* Brand content */
+    .reveal-content {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    .reveal-logo-wrapper {
+      position: relative;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .reveal-logo-text {
+      font-family: 'Fredoka', sans-serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      color: #FF7EB6;
+      letter-spacing: -0.01em;
+      text-shadow: 0 0 30px rgba(255, 126, 182, 0.2);
+      opacity: 0;
+      transform: translateY(12px);
+      animation: revealLogoIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards;
+    }
+
+    .reveal-logo-underline {
+      display: block;
+      width: 0;
+      height: 2.5px;
+      background: linear-gradient(90deg, transparent, #FF7EB6, transparent);
+      border-radius: 2px;
+      margin-top: 4px;
+      animation: revealUnderlineGrow 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.8s forwards;
+    }
+
+    .reveal-tagline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 500;
+      font-style: italic;
+      color: #7A5368;
+      letter-spacing: 0.04em;
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(8px);
+      animation: revealFadeUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) 1.2s forwards;
+    }
+
+    .reveal-sub-tagline {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: #C4547A;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      opacity: 0;
+      animation: revealFadeUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) 1.6s forwards;
+    }
+
+    /* Progress bar */
+    .reveal-progress-track {
+      position: absolute;
+      bottom: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 2px;
+      background: rgba(255, 126, 182, 0.15);
+      border-radius: 2px;
+      overflow: hidden;
+      opacity: 0;
+      animation: revealFadeUp 0.4s ease 1.0s forwards;
+    }
+
+    .reveal-progress-bar {
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, #FF7EB6, #FF529C);
+      border-radius: 2px;
+      transition: width 0.1s linear;
+    }
+
+    /* Keyframes */
+    @keyframes revealLogoIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes revealUnderlineGrow {
+      to { width: 80px; }
+    }
+    @keyframes revealFadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hide app content during reveal */
+    .app-hidden {
+      opacity: 0 !important;
+      pointer-events: none !important;
+    }
+    .app-visible {
+      opacity: 1 !important;
+      transition: opacity 0.5s ease 0.1s !important;
+    }
+  </style>
+
   <!-- Background Desktop Ambient Glow -->
   <div class="desktop-bg-glow"></div>
 
     <!-- Simulated Mobile App Container -->
-    <div class="app-shell" id="app-viewport">
+    <div class="app-shell app-hidden" id="app-viewport">
       
       <!-- Intentional Decorative System -->
       <div class="deco-sparkle deco-sparkle-1">✦</div>
@@ -4165,7 +4345,51 @@
        DOM RENDERING LOGIC
        ---------------------------------------------------- */
     document.addEventListener("DOMContentLoaded", () => {
-      initScrollReveals();
+
+      /* ── Brand Reveal Orchestration ── */
+      const revealOverlay = document.getElementById('brand-reveal-overlay');
+      const progressBar = document.getElementById('reveal-progress-bar');
+      const appShell = document.getElementById('app-viewport');
+
+      if (revealOverlay && progressBar && appShell) {
+        let progress = 0;
+        const totalDuration = 2500;
+        const intervalMs = 30;
+        const steps = totalDuration / intervalMs;
+        let step = 0;
+
+        const progressInterval = setInterval(() => {
+          step++;
+          const t = step / steps;
+          progress = Math.round(100 * (1 - Math.pow(1 - t, 2.5)));
+          progressBar.style.width = progress + '%';
+
+          if (step >= steps) {
+            clearInterval(progressInterval);
+            progressBar.style.width = '100%';
+
+            setTimeout(() => {
+              revealOverlay.classList.add('reveal-exit');
+              appShell.classList.remove('app-hidden');
+              appShell.classList.add('app-visible');
+              initScrollReveals();
+
+              setTimeout(() => {
+                revealOverlay.remove();
+              }, 700);
+            }, 300);
+          }
+        }, intervalMs);
+      } else {
+        // Fallback: no overlay
+        if (appShell) {
+          appShell.classList.remove('app-hidden');
+          appShell.classList.add('app-visible');
+        }
+        initScrollReveals();
+      }
+
+      // ── App Initialization (always runs) ──
 
       // 1. Studio Info Headers & Hero Elements
       document.getElementById("config-header-name").textContent = CONFIG_DATA.studioInfo.subName.replace("by ", "");
@@ -5414,6 +5638,8 @@
 
       // Initial page-wide conversion of emojis to Apple color style
       convertEmojisToAppleStyle(document.body);
+
+
     });
   </script>
 </body>
