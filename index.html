@@ -2000,18 +2000,43 @@
     }
 
     footer {
-      padding: 20px 16px 32px;
+      padding: 32px 16px 40px;
       text-align: center;
       background: linear-gradient(180deg, transparent 0%, rgba(255, 209, 232, 0.06) 100%);
       border-top: 0.5px solid rgba(107, 59, 87, 0.05);
-      font-size: 0.72rem;
+      font-size: 0.85rem;
+      line-height: 1.6;
       color: var(--color-plum-light);
     }
 
-    footer p {
-      font-size: 0.72rem;
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--color-plum);
       margin-bottom: 4px;
-      letter-spacing: 0.02em;
+      font-weight: 500;
+    }
+
+    .footer-subtitle {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--color-primary);
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .footer-divider {
+      width: 30px;
+      height: 1px;
+      background: rgba(255, 126, 182, 0.4);
+      margin: 0 auto 16px;
+    }
+
+    footer p {
+      font-size: 0.85rem;
+      margin-bottom: 8px;
+      letter-spacing: 0.03em;
     }
 
     footer a {
@@ -3761,8 +3786,12 @@
 
     <!-- FOOTER -->
     <footer id="main-footer">
-      <p id="footer-copyright"></p>
-      <p>Designed with 💖 for Kenjal's clients. <a href="#" id="footer-privacy">Privacy Policy</a></p>
+      <div class="footer-brand">Beauty Bliss by Kenjal</div>
+      <div class="footer-subtitle">LUXURY NAIL ART STUDIO</div>
+      <div class="footer-divider"></div>
+      <p style="opacity: 0.85;">Crafted with 💖 by Khushal Prajapat</p>
+      <p style="opacity: 0.85;">For Kenjal and her beautiful clients ✨</p>
+      <p style="margin-top: 16px;"><a href="#" id="footer-privacy">Privacy Policy</a></p>
     </footer>
 
   </div>
@@ -4781,7 +4810,6 @@
       document.getElementById("cta-whatsapp").href = CONFIG_DATA.studioInfo.whatsappLink;
       document.getElementById("cta-instagram").href = CONFIG_DATA.studioInfo.instagramLink;
       document.getElementById("cta-whatsapp-bottom").href = CONFIG_DATA.studioInfo.whatsappLink;
-      document.getElementById("footer-copyright").textContent = CONFIG_DATA.footer.copyright;
 
       // Initialise Lucide SVGs
       lucide.createIcons();
