@@ -942,7 +942,7 @@
       height: 100%;
       opacity: 0;
       cursor: ew-resize;
-      z-index: 5;
+      z-index: 6;
     }
 
     /* Custom vertical line divider */
@@ -953,7 +953,7 @@
       left: 50%;
       width: 2px;
       background: linear-gradient(180deg, rgba(255,255,255,0.1), #fff, rgba(255,255,255,0.2));
-      z-index: 2;
+      z-index: 3;
       box-shadow: 0 0 12px rgba(255,255,255,0.85), 0 0 18px rgba(255,126,182,0.35);
       pointer-events: none;
       transform: translateX(-50%);
@@ -970,7 +970,7 @@
       background:
         radial-gradient(circle at 35% 30%, rgba(255,255,255,1) 0 10%, rgba(255,248,252,0.95) 25%, rgba(238,214,232,0.9) 62%, rgba(198,158,188,0.85) 100%);
       border-radius: 50%;
-      z-index: 3;
+      z-index: 4;
       box-shadow: 
         0 12px 24px rgba(107, 59, 87, 0.24),
         0 0 32px rgba(255, 126, 182, 0.38),
@@ -1029,7 +1029,7 @@
       letter-spacing: 1.5px;
       padding: 6px 12px;
       border-radius: 50px;
-      z-index: 4;
+      z-index: 5;
       display: flex;
       align-items: center;
       gap: 4px;
@@ -1052,18 +1052,16 @@
       font-weight: 700;
       padding: 4px 8px;
       border-radius: 8px;
-      z-index: 4;
       text-transform: uppercase;
       letter-spacing: 1px;
       pointer-events: none;
-      transition: opacity 0.25s ease, visibility 0.25s ease;
-      opacity: 1;
     }
 
     .slider-label-before {
       right: 12px;
       background: rgba(0, 0, 0, 0.4);
       color: white;
+      z-index: 1;
     }
 
     .slider-label-after {
@@ -1071,6 +1069,7 @@
       background: rgba(255, 126, 182, 0.8);
       color: white;
       border: 1px solid rgba(255,255,255,0.2);
+      z-index: 1;
     }
 
     /* ----------------------------------------------------
@@ -4941,28 +4940,6 @@
         sliderAfterBox.style.webkitClipPath = `inset(0 ${100 - percent}% 0 0)`;
         sliderDivider.style.left = `${percent}%`;
         sliderHandle.style.left = `${percent}%`;
-
-        // Hide labels when handle goes over them
-        const beforeLabel = document.getElementById("slider-before-label");
-        const afterLabel = document.getElementById("slider-after-label");
-        if (beforeLabel) {
-          if (percent > 85) {
-            beforeLabel.style.opacity = "0";
-            beforeLabel.style.visibility = "hidden";
-          } else {
-            beforeLabel.style.opacity = "1";
-            beforeLabel.style.visibility = "visible";
-          }
-        }
-        if (afterLabel) {
-          if (percent < 15) {
-            afterLabel.style.opacity = "0";
-            afterLabel.style.visibility = "hidden";
-          } else {
-            afterLabel.style.opacity = "1";
-            afterLabel.style.visibility = "visible";
-          }
-        }
       };
 
       sliderControl.addEventListener("input", (e) => {
