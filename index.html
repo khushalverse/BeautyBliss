@@ -2138,19 +2138,22 @@
     }
 
     .story-modal-box {
-      background: rgba(255, 255, 255, 0.75);
-      backdrop-filter: blur(12px) saturate(120%);
-      -webkit-backdrop-filter: blur(12px) saturate(120%);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(20px) saturate(140%);
+      -webkit-backdrop-filter: blur(20px) saturate(140%);
       border-radius: 32px;
       width: 100%;
-      max-width: 390px;
-      padding: 28px 24px;
-      box-shadow: 0 24px 64px rgba(107, 59, 87, 0.25), inset 0 1px 2px rgba(255, 255, 255, 0.9);
-      border: 1px solid rgba(255, 255, 255, 0.8);
+      max-width: 420px;
+      max-height: 85vh;
+      padding: 24px;
+      box-shadow: 0 24px 64px rgba(107, 59, 87, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.9);
+      border: 1px solid rgba(255, 255, 255, 0.65);
       position: relative;
       transform: translateY(30px) scale(0.95);
       transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
       opacity: 0;
+      display: flex;
+      flex-direction: column;
     }
 
     .story-modal-overlay.active .story-modal-box {
@@ -2160,14 +2163,14 @@
 
     .story-modal-close {
       position: absolute;
-      top: 16px;
-      right: 16px;
-      background: rgba(255, 255, 255, 0.5);
+      top: 12px;
+      right: 12px;
+      background: rgba(255, 255, 255, 0.65);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
       border: 1px solid rgba(255, 255, 255, 0.8);
-      width: 34px;
-      height: 34px;
+      width: 36px;
+      height: 36px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -2176,70 +2179,64 @@
       cursor: pointer;
       transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
       z-index: 10;
-      box-shadow: 0 2px 8px rgba(107, 59, 87, 0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     }
 
     .story-modal-close:active {
       transform: scale(0.9);
     }
 
-    .story-modal-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
+    .story-modal-portrait {
+      width: 100%;
+      height: 260px;
+      border-radius: 24px;
+      overflow: hidden;
       margin-bottom: 20px;
-      margin-top: 4px;
+      box-shadow: 0 12px 32px rgba(107, 59, 87, 0.15);
+      position: relative;
+      flex-shrink: 0;
     }
 
-    .story-modal-avatar {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      border: 2px solid var(--color-primary);
-      padding: 2px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 4px 12px rgba(255, 82, 156, 0.2);
-    }
-
-    .story-modal-avatar img {
+    .story-modal-portrait img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
+      object-position: center 30%;
     }
 
-    .story-modal-titles h3 {
-      font-size: 1.45rem;
-      font-weight: 600;
-      font-family: var(--font-display);
-      background: linear-gradient(135deg, var(--color-plum) 0%, var(--color-rose-deep) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 2px;
-      margin-top: 0;
+    .story-modal-header {
+      text-align: center;
+      margin-bottom: 16px;
+      flex-shrink: 0;
+    }
+
+    .story-modal-header h3 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      font-family: var(--font-serif);
+      color: var(--color-plum);
+      margin: 0 0 6px;
       letter-spacing: -0.01em;
     }
 
-    .story-modal-badge {
-      font-size: 0.65rem;
+    .story-modal-header .story-modal-subtitle {
+      font-size: 0.72rem;
       font-weight: 700;
-      color: var(--color-primary);
-      letter-spacing: 0.5px;
+      color: var(--color-primary-deep);
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      opacity: 0.9;
+      display: block;
     }
 
     .story-modal-body {
-      font-size: 0.95rem;
-      line-height: 1.6;
+      font-size: 1.02rem;
+      line-height: 1.7;
       color: var(--color-plum-light);
-      margin-bottom: 28px;
-      max-height: 340px;
+      margin-bottom: 24px;
       overflow-y: auto;
       scrollbar-width: none;
+      flex-grow: 1;
+      padding-right: 4px;
     }
 
     .story-modal-body::-webkit-scrollbar {
@@ -2270,6 +2267,7 @@
       transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.2s;
       text-align: center;
       letter-spacing: 0.02em;
+      flex-shrink: 0;
     }
 
     .btn-modal-cta:active {
@@ -3804,14 +3802,12 @@
       <button class="story-modal-close" id="story-modal-close-btn" aria-label="Close story popup">
         <i data-lucide="x"></i>
       </button>
+      <div class="story-modal-portrait">
+        <img id="story-modal-portrait-img" src="" alt="Kenjal Portrait">
+      </div>
       <div class="story-modal-header">
-        <div class="story-modal-avatar">
-          <img id="story-modal-avatar-img" src="" alt="Kenjal Profile">
-        </div>
-        <div class="story-modal-titles">
-          <h3 id="story-modal-author"></h3>
-          <span class="story-modal-badge" id="story-modal-subtitle"></span>
-        </div>
+        <h3 id="story-modal-title"></h3>
+        <span class="story-modal-subtitle" id="story-modal-subtitle"></span>
       </div>
       <div class="story-modal-body" id="story-modal-body-content">
         <!-- Dynamically Mapped Story Paragraphs -->
@@ -3994,7 +3990,7 @@
         name: "Beauty Bliss",
         subName: "by Kenjal",
         tagline: "Luxury Nails, Crafted With Love",
-        avatar: "./assets/kenjal_profile.webp",
+        avatar: "./assets/kenjal_portrait_medium.webp",
         logoText: "Beauty Bliss",
         heroTitle: "Luxury Nails, Crafted With <em>Love</em> By Kenjal",
         rating: "4.9",
@@ -4083,13 +4079,15 @@
         afterLabel: "After Bliss"
       },
       meetKenjal: {
-        title: "Meet Kenjal",
+        title: "Hi, I'm Kenjal 💖",
         subtitle: "NAIL ARTIST & DETAIL GIRL",
         introText: "Hi, I'm Kenjal. I make soft, glossy, custom nails that feel personal, pretty, and a little bit magical.",
         modalStory: [
-          "For over 5 years, nail artistry has been my true calling. What started as a personal creative outlet in my home studio has grown into a premium luxury service. Today, I'm proud to welcome you to Beauty Bliss - a tactile, high-end experience where technical precision meets high-vibes art.",
-          "Every manicure is a custom piece of art. I use only the highest-grade, non-toxic, and vegan gel formulations to ensure your natural nails remain incredibly strong, healthy, and pristine beneath the gloss.",
-          "Whether it's a sleek minimalist accent, long coffin extensions, or fine hand-painted lace for your special day, I handle every detail with absolute devotion. I can't wait to give your nails the luxury glow-up they deserve!"
+          "Beauty Bliss started from something simple — my love for beautiful nails and creative designs.",
+          "What began as practicing nail art and trying new ideas quickly turned into something I genuinely fell in love with. I realized that creating nails isn't just about color and polish — it's about helping someone feel confident, happy, and a little more like themselves.",
+          "Today, Beauty Bliss is my small dream brought to life. Every set is created with patience, attention to detail, and lots of love. Whether you love soft minimal styles, trendy nail art, or something completely unique, I want every appointment to feel personal and special.",
+          "I'm still learning, growing, and improving every day, and I'm so excited to be part of your nail journey.",
+          "Thank you for supporting my dream and trusting me with your nails. 💅💕"
         ]
       },
       testimonials: [
@@ -4140,9 +4138,9 @@
         {
           id: "story-studio",
           title: "Studio 💅",
-          cover: "./assets/kenjal_profile.webp",
+          cover: "./assets/kenjal_portrait_medium.webp",
           slides: [
-            { image: "./assets/kenjal_profile.webp", caption: "Welcome to Beauty Bliss! Creating beautiful canvases daily. ✨", time: "1d" },
+            { image: "./assets/kenjal_portrait_medium.webp", caption: "Welcome to Beauty Bliss! Creating beautiful canvases daily. ✨", time: "1d" },
             { image: "./assets/logo.webp", caption: "Ready to get pretty? Slots are open for this week! 💖", time: "1d" }
           ]
         },
@@ -4191,7 +4189,7 @@
         },
         { 
           id: "insta-3", 
-          image: "./assets/kenjal_profile.webp",
+          image: "./assets/kenjal_portrait_medium.webp",
           likes: 215,
           caption: "Behind the Bliss! 💅 Smiling because I get to design beautiful, healthy nails for you everyday. Come say hi!",
           time: "1 day ago",
@@ -4478,7 +4476,7 @@
 
       // 1. Studio Info Headers & Hero Elements
       document.getElementById("config-header-name").textContent = CONFIG_DATA.studioInfo.subName.replace("by ", "");
-      document.getElementById("config-avatar-header").src = CONFIG_DATA.studioInfo.avatar;
+      document.getElementById("config-avatar-header").src = "./assets/kenjal_portrait_small.webp";
       
       // Header Buttons (Instagram & WhatsApp)
       document.getElementById("config-header-btn-insta").href = CONFIG_DATA.studioInfo.instagramLink;
@@ -4568,14 +4566,28 @@
       document.getElementById("story-intro-text").textContent = CONFIG_DATA.meetKenjal.introText;
 
       // 6. Meet Kenjal Story Modal elements
-      document.getElementById("story-modal-avatar-img").src = CONFIG_DATA.studioInfo.avatar;
-      document.getElementById("story-modal-author").textContent = CONFIG_DATA.studioInfo.artistName.replace("Artist: ", "");
-      document.getElementById("story-modal-subtitle").textContent = CONFIG_DATA.meetKenjal.subtitle;
-      document.getElementById("story-modal-cta-btn").href = CONFIG_DATA.studioInfo.whatsappLink;
+      const modalPortrait = document.getElementById("story-modal-portrait-img");
+      if (modalPortrait) {
+        modalPortrait.src = "./assets/kenjal_portrait_full.webp";
+      }
+      const modalTitle = document.getElementById("story-modal-title");
+      if (modalTitle) {
+        modalTitle.textContent = CONFIG_DATA.meetKenjal.title;
+      }
+      const modalSubtitle = document.getElementById("story-modal-subtitle");
+      if (modalSubtitle) {
+        modalSubtitle.textContent = CONFIG_DATA.meetKenjal.subtitle;
+      }
+      const modalCta = document.getElementById("story-modal-cta-btn");
+      if (modalCta) {
+        modalCta.href = CONFIG_DATA.studioInfo.whatsappLink;
+      }
 
       // Map story paragraphs inside story modal body
       const storyModalBody = document.getElementById("story-modal-body-content");
-      storyModalBody.innerHTML = CONFIG_DATA.meetKenjal.modalStory.map(pText => `<p>${pText}</p>`).join('');
+      if (storyModalBody) {
+        storyModalBody.innerHTML = CONFIG_DATA.meetKenjal.modalStory.map(pText => `<p>${pText}</p>`).join('');
+      }
 
       // Story Card Modal Actions
       const storyTriggerBtn = document.getElementById("story-trigger-btn");
