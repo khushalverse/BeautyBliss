@@ -1011,21 +1011,20 @@
       display: none;
     }
 
-    /* Floating Pill Tag indicating interaction */
     .slider-reveal-tag {
       position: absolute;
-      bottom: 12px;
+      top: 12px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(107, 59, 87, 0.7);
+      background: rgba(107, 59, 87, 0.75);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       color: white;
-      font-size: 0.7rem;
+      font-size: 0.65rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
-      padding: 6px 12px;
+      letter-spacing: 1.2px;
+      padding: 4px 10px;
       border-radius: 50px;
       z-index: 4;
       display: flex;
@@ -1034,6 +1033,7 @@
       pointer-events: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border: 1px solid rgba(255,255,255,0.15);
+      transition: opacity 0.30s ease, transform 0.30s ease;
     }
 
     .slider-label {
@@ -4933,6 +4933,12 @@
 
       sliderControl.addEventListener("input", (e) => {
         updateSlider(e.target.value);
+        const revealTag = document.querySelector(".slider-reveal-tag");
+        if (revealTag) {
+          revealTag.style.opacity = "0";
+          revealTag.style.pointerEvents = "none";
+          revealTag.style.transform = "translateX(-50%) scale(0.9)";
+        }
       });
 
       // Initialize slider visual sync
