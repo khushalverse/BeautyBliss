@@ -446,21 +446,20 @@
     .hero-cute-title {
       font-family: 'Fredoka', sans-serif;
       font-size: 2.8rem;
-      font-weight: 700;
+      font-weight: 600;
       color: #FF7EB6;
-      margin: 18px auto 34px;
+      margin: 18px auto 26px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
       text-shadow: 
-        0 0 20px rgba(255, 126, 182, 0.25),
-        0 0 30px rgba(255, 126, 182, 0.12),
+        0 0 12px rgba(255, 126, 182, 0.15),
         2px 2px 0px #FFF,
-        4px 4px 0px rgba(255, 126, 182, 0.10);
+        3px 3px 0px rgba(255, 126, 182, 0.08);
       animation: floatCuteTitle 4s ease-in-out infinite;
       user-select: none;
-      filter: drop-shadow(0 3px 8px rgba(255, 126, 182, 0.15));
+      filter: drop-shadow(0 2px 4px rgba(255, 126, 182, 0.10));
     }
 
     @keyframes floatCuteTitle {
@@ -482,29 +481,32 @@
     }
 
     .hero-title {
-      font-size: 1.8rem;
+      font-family: var(--font-body);
+      font-size: 1.9rem;
+      font-weight: 400;
       color: var(--color-plum);
       padding: 0 16px;
-      margin-bottom: 28px;
-      line-height: 1.2;
+      margin-bottom: 12px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
     }
 
-    .hero-title em {
-      font-style: italic;
+    .hero-title .hero-subtitle {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.15rem;
+      font-weight: 500;
       color: var(--color-primary);
-      position: relative;
     }
 
-    .hero-title em::after {
-      content: "";
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background: rgba(255, 209, 232, 0.6);
-      z-index: -1;
-      border-radius: 3px;
+    .hero-caption {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--color-plum-light);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 24px;
+      opacity: 0.85;
     }
 
     /* Action Buttons Grid Layout */
@@ -3596,6 +3598,7 @@
         </div>
         
         <h1 class="hero-title" id="config-hero-title"></h1>
+        <p class="hero-caption">Abohar &bull; Custom Nail Art &bull; Appointments Open</p>
         
         <!-- Grid Hero Buttons (Two lines of text) -->
         <div class="hero-actions">
@@ -4015,7 +4018,7 @@
         tagline: "Luxury Nails, Crafted With Love",
         avatar: "./assets/kenjal_portrait_medium.webp",
         logoText: "Beauty Bliss",
-        heroTitle: "Luxury Nails, Crafted With <em>Love</em> By Kenjal",
+        heroTitle: "Pretty Nails.<br>Pretty Energy.<br><span class=\"hero-subtitle\">By Kenjal ✨</span>",
         rating: "4.9",
         reviewsCount: "142",
         clientCount: "50+ Happy Clients",
