@@ -920,9 +920,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 50%;
+      width: 100%;
       overflow: hidden;
       z-index: 1;
+      clip-path: inset(0 50% 0 0);
+      -webkit-clip-path: inset(0 50% 0 0);
     }
 
     .slider-after-container .slider-img {
@@ -1011,20 +1013,21 @@
       display: none;
     }
 
+    /* Floating Pill Tag indicating interaction */
     .slider-reveal-tag {
       position: absolute;
-      top: 12px;
+      bottom: 12px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(107, 59, 87, 0.75);
+      background: rgba(107, 59, 87, 0.7);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
       color: white;
-      font-size: 0.65rem;
+      font-size: 0.7rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: 1.2px;
-      padding: 4px 10px;
+      letter-spacing: 1.5px;
+      padding: 6px 12px;
       border-radius: 50px;
       z-index: 4;
       display: flex;
@@ -1033,7 +1036,13 @@
       pointer-events: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       border: 1px solid rgba(255,255,255,0.15);
-      transition: opacity 0.30s ease, transform 0.30s ease;
+      transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 1;
+    }
+
+    .slider-reveal-tag.fade-out {
+      opacity: 0;
+      transform: translate(-50%, 8px);
     }
 
     .slider-label {
@@ -4926,7 +4935,8 @@
       const sliderHandle = document.getElementById("slider-handle");
 
       const updateSlider = (percent) => {
-        sliderAfterBox.style.width = `${percent}%`;
+        sliderAfterBox.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
+        sliderAfterBox.style.webkitClipPath = `inset(0 ${100 - percent}% 0 0)`;
         sliderDivider.style.left = `${percent}%`;
         sliderHandle.style.left = `${percent}%`;
       };
@@ -4934,10 +4944,8 @@
       sliderControl.addEventListener("input", (e) => {
         updateSlider(e.target.value);
         const revealTag = document.querySelector(".slider-reveal-tag");
-        if (revealTag) {
-          revealTag.style.opacity = "0";
-          revealTag.style.pointerEvents = "none";
-          revealTag.style.transform = "translateX(-50%) scale(0.9)";
+        if (revealTag && !revealTag.classList.contains("fade-out")) {
+          revealTag.classList.add("fade-out");
         }
       });
 
