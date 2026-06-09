@@ -2187,12 +2187,11 @@
     }
 
     .story-modal-portrait {
-      width: 110px;
-      height: 110px;
+      width: 80px;
+      height: 80px;
       border-radius: 50%;
       border: 3px solid #fff;
       overflow: hidden;
-      margin: 12px auto 16px;
       box-shadow: 
         0 8px 24px rgba(107, 59, 87, 0.12),
         0 0 0 3px var(--color-primary-soft);
@@ -2208,22 +2207,34 @@
     }
 
     .story-modal-header {
-      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 16px;
       margin-bottom: 20px;
+      margin-top: 4px;
       flex-shrink: 0;
+      width: 100%;
     }
 
-    .story-modal-header h3 {
-      font-size: 1.7rem;
+    .story-modal-titles {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+
+    .story-modal-titles h3 {
+      font-size: 1.55rem;
       font-weight: 700;
       font-family: var(--font-serif);
       color: var(--color-plum);
-      margin: 0 0 6px;
+      margin: 0 0 4px;
       letter-spacing: -0.01em;
+      line-height: 1.2;
     }
 
-    .story-modal-header .story-modal-subtitle {
-      font-size: 0.72rem;
+    .story-modal-titles .story-modal-subtitle {
+      font-size: 0.68rem;
       font-weight: 700;
       color: var(--color-primary-deep);
       letter-spacing: 0.1em;
@@ -3805,12 +3816,14 @@
       <button class="story-modal-close" id="story-modal-close-btn" aria-label="Close story popup">
         <i data-lucide="x"></i>
       </button>
-      <div class="story-modal-portrait">
-        <img id="story-modal-portrait-img" src="" alt="Kenjal Portrait">
-      </div>
       <div class="story-modal-header">
-        <h3 id="story-modal-title"></h3>
-        <span class="story-modal-subtitle" id="story-modal-subtitle"></span>
+        <div class="story-modal-portrait">
+          <img id="story-modal-portrait-img" src="" alt="Kenjal Portrait">
+        </div>
+        <div class="story-modal-titles">
+          <h3 id="story-modal-title"></h3>
+          <span class="story-modal-subtitle" id="story-modal-subtitle"></span>
+        </div>
       </div>
       <div class="story-modal-body" id="story-modal-body-content">
         <!-- Dynamically Mapped Story Paragraphs -->
