@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Beauty Bliss | Premium Links</title>
+  <meta name="theme-color" content="#fef8fa">
+  <link rel="icon" type="image/png" href="../assets/logo.webp">
+  <style>
+    :root {
+      --blush-bg: #fef8fa;
+      --pink-primary: #ff8da1;
+      --pink-gradient: linear-gradient(145deg, #ffb6c1, #ff8da1);
+      --glass-light: rgba(255, 255, 255, 0.4);
+      --glass-border: rgba(255, 255, 255, 0.8);
+      --shadow-color: rgba(220, 180, 190, 0.4);
+      --text-dark: #3a2e32;
+      --text-muted: #a8949b;
+      --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+      --ease-smooth: cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body, html {
+      height: 100%;
+      width: 100%;
+      overflow: hidden; 
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--blush-bg);
+      color: var(--text-dark);
+      perspective: 1000px;
+    }
+
+    /* Deep Luxury Atmosphere */
+    .atmosphere {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+      overflow: hidden;
+      pointer-events: none;
+      background: radial-gradient(circle at 50% 20%, #ffffff 0%, #fef8fa 60%, #fdf0f4 100%);
+    }
+
+    .glass-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.6;
+      animation: driftBlob 20s infinite alternate ease-in-out;
+    }
+
+    .blob-1 { width: 400px; height: 400px; background: rgba(255, 182, 193, 0.3); top: -100px; left: -100px; }
+    .blob-2 { width: 300px; height: 300px; background: rgba(230, 210, 255, 0.3); bottom: 10vh; right: -50px; animation-delay: -5s; }
+
+    @keyframes driftBlob {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(50px, -50px) scale(1.1); }
+    }
+
+    /* Particle Sparkles */
+    .particle-layer {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none;
+    }
+    
+    .bg-particles { z-index: 2; opacity: 0.5; }
+    .fg-particles { z-index: 20; opacity: 0.8; }
+
+    .sparkle {
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 12px 2px rgba(255, 255, 255, 0.9);
+      opacity: 0;
+      animation: floatSparkle 6s infinite ease-in-out;
+    }
+
+    @keyframes floatSparkle {
+      0% { transform: translateY(0) scale(0); opacity: 0; }
+      50% { opacity: 1; transform: translateY(-30px) scale(1.5); }
+      100% { transform: translateY(-60px) scale(0); opacity: 0; }
+    }
+
+    .floating-pearl {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ffffff 0%, #ffe6f0 50%, #ffb6c1 100%);
+      box-shadow: 0 5px 15px rgba(255, 180, 200, 0.5), inset -2px -2px 6px rgba(200, 100, 130, 0.2), inset 2px 2px 6px rgba(255, 255, 255, 0.9);
+      opacity: 0.8;
+      animation: driftPearl 12s infinite alternate ease-in-out;
+    }
+
+    @keyframes driftPearl {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(30px, -40px) scale(1.1); }
+    }
+
+    /* Canvas Layout */
+    .canvas {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 0 24px 80px 24px; 
+    }
+
+    /* 3D INTERACTIVE COMPACT MIRROR */
+    .compact-wrapper {
+      position: relative;
+      margin-bottom: 28px;
+      perspective: 1000px;
+      transform-style: preserve-3d;
+    }
+
+    .compact-hero {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: #fff;
+      transform-style: preserve-3d;
+      transition: transform 0.1s linear, box-shadow 0.1s linear;
+      box-shadow: 
+        0 45px 90px rgba(220, 160, 180, 0.45), 
+        inset 0 0 0 6px rgba(255, 245, 248, 1), 
+        inset 0 0 0 8px rgba(230, 200, 210, 0.8), 
+        inset 0 0 35px rgba(0,0,0,0.15); 
+      will-change: transform;
+    }
+
+    .profile-img {
+      position: absolute;
+      top: 8px; left: 8px; right: 8px; bottom: 8px;
+      width: calc(100% - 16px);
+      height: calc(100% - 16px);
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: inset 0 4px 10px rgba(0,0,0,0.2);
+      transform: translateZ(2px);
+    }
+
+    .founder-badge {
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%) translateZ(20px);
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 6px 18px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #c98a98;
+      border: 1px solid rgba(255, 255, 255, 1);
+      box-shadow: 0 15px 30px rgba(200, 160, 170, 0.3);
+      z-index: 20;
+      white-space: nowrap;
+    }
+
+    /* Branding Typography */
+    .brand-title {
+      font-family: "Didot", "Bodoni MT", "Times New Roman", serif;
+      font-size: 38px;
+      font-weight: 700;
+      font-style: italic;
+      color: var(--text-dark);
+      margin-bottom: 8px;
+      text-align: center;
+      text-shadow: 0 15px 30px rgba(200, 150, 160, 0.3);
+      letter-spacing: -0.5px;
+    }
+
+    .brand-tagline {
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    /* Primary CTA: Enhanced Luxury Cosmetic Product */
+    .btn-primary {
+      position: relative;
+      width: 100%;
+      max-width: 320px;
+      padding: 22px;
+      border-radius: 40px; 
+      background: linear-gradient(145deg, #ffc2cc, #ff8da1, #ff6b8b);
+      background-size: 200% 200%;
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.3px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      overflow: hidden;
+      transition: all var(--ease-spring);
+      box-shadow: 
+        0 35px 70px rgba(255, 120, 150, 0.5), 
+        0 10px 20px rgba(255, 120, 150, 0.3), 
+        inset 0 8px 20px rgba(255, 255, 255, 0.95), 
+        inset 0 -8px 20px rgba(200, 40, 70, 0.3); 
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%;
+      width: 50%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.85), transparent);
+      transform: skewX(-25deg);
+      animation: glossySwipe 5s infinite;
+      pointer-events: none;
+    }
+
+    @keyframes glossySwipe {
+      0%, 40% { left: -100%; }
+      60%, 100% { left: 200%; }
+    }
+
+    .btn-primary span, .btn-primary svg {
+      position: relative;
+      z-index: 2;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+    }
+
+    .btn-primary:active {
+      transform: scale(0.95) translateY(4px);
+      box-shadow: 
+        0 15px 30px rgba(255, 120, 150, 0.4),
+        0 5px 10px rgba(255, 120, 150, 0.3),
+        inset 0 4px 12px rgba(255, 255, 255, 0.9),
+        inset 0 -4px 12px rgba(200, 40, 70, 0.4);
+    }
+
+    /* Secondary CTA: Enhanced Glass */
+    .btn-secondary {
+      margin-top: 24px;
+      padding: 16px 36px;
+      border-radius: 30px;
+      background: var(--glass-light);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid var(--glass-border);
+      color: #6a5a60;
+      font-size: 15px;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 15px 35px rgba(200, 180, 190, 0.2), inset 0 2px 4px rgba(255,255,255,0.6);
+      transition: all var(--ease-spring);
+    }
+
+    .btn-secondary:active {
+      transform: scale(0.95);
+      background: rgba(255, 255, 255, 0.7);
+    }
+
+    /* THE FLOATING PEARL NAVIGATION */
+    .pearl-nav-container {
+      position: absolute;
+      bottom: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* The Main Pearl */
+    .pearl {
+      position: relative;
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ffffff 0%, #fff0f5 30%, #ffb6c1 70%, #ff8da1 100%);
+      box-shadow: 
+        0 20px 40px rgba(255, 150, 170, 0.4),
+        inset -5px -5px 15px rgba(200, 80, 120, 0.2),
+        inset 5px 5px 15px rgba(255, 255, 255, 0.9);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s var(--ease-spring), box-shadow 0.4s ease;
+      animation: floatPearl 6s ease-in-out infinite alternate;
+      z-index: 110;
+    }
+
+    .pearl::after {
+      content: '';
+      position: absolute;
+      top: 10%; left: 20%;
+      width: 15px; height: 10px;
+      background: rgba(255,255,255,0.8);
+      border-radius: 50%;
+      transform: rotate(-30deg);
+      filter: blur(1px);
+    }
+
+    @keyframes floatPearl {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-8px); }
+    }
+
+    .pearl:active {
+      transform: scale(0.9);
+      box-shadow: 0 10px 20px rgba(255, 150, 170, 0.3);
+    }
+
+    /* The glowing core icon */
+    .pearl svg {
+      width: 24px;
+      height: 24px;
+      fill: #fff;
+      filter: drop-shadow(0 2px 4px rgba(255,100,130,0.4));
+      transition: transform 0.4s var(--ease-spring);
+    }
+
+    /* Petal Links (Mini Glass Buttons) */
+    .petal {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 1);
+      box-shadow: 0 10px 25px rgba(200, 150, 160, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-dark);
+      text-decoration: none;
+      opacity: 0;
+      pointer-events: none;
+      transform: scale(0) translate(0, 0);
+      transition: all 0.5s var(--ease-spring);
+      z-index: 105;
+    }
+
+    .petal svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+
+    /* Open State */
+    .pearl-nav-container.open .pearl svg {
+      transform: rotate(45deg); /* Turns core into an X or starburst */
+    }
+
+    /* Positioning petals in an arc */
+    .pearl-nav-container.open .petal-1 {
+      opacity: 1; pointer-events: auto;
+      transform: scale(1) translate(-70px, -20px);
+      transition-delay: 0.05s;
+    }
+    
+    .pearl-nav-container.open .petal-2 {
+      opacity: 1; pointer-events: auto;
+      transform: scale(1) translate(0, -80px);
+      transition-delay: 0.1s;
+    }
+
+    .pearl-nav-container.open .petal-3 {
+      opacity: 1; pointer-events: auto;
+      transform: scale(1) translate(70px, -20px);
+      transition-delay: 0.15s;
+    }
+
+    /* Hover on petals */
+    .petal:hover, .petal:active {
+      background: #fff;
+      transform: scale(1.15) translate(var(--tx), var(--ty)) !important; /* Will set tx/ty in JS for proper hover zoom */
+      color: #ff8da1;
+      box-shadow: 0 15px 30px rgba(255, 140, 160, 0.4);
+    }
+    .petal.ig:hover { color: #e1306c; }
+    .petal.wa:hover { color: #25D366; }
+
+  </style>
+</head>
+<body>
+
+  <!-- Deep Atmosphere -->
+  <div class="atmosphere">
+    <div class="glass-blob blob-1"></div>
+    <div class="glass-blob blob-2"></div>
+  </div>
+
+  <div class="particle-layer bg-particles" id="bg-particles"></div>
+
+  <div class="canvas">
+    
+    <!-- Interactive 3D Compact Mirror -->
+    <div class="compact-wrapper">
+      <div class="compact-hero" id="compact">
+        <img src="../assets/kenjal_portrait_medium.webp" alt="Kenjal" class="profile-img">
+        <div class="founder-badge">✨ By Kenjal</div>
+      </div>
+    </div>
+
+    <!-- Editorial Typography -->
+    <h1 class="brand-title">Beauty Bliss</h1>
+    <p class="brand-tagline">Pretty Nails. Pretty Energy.</p>
+
+    <!-- Refined Luxury Product Button -->
+    <a href="https://wa.me/919914010455" class="btn-primary" target="_blank" rel="noopener">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M16.5 16A4.5 4.5 0 0 1 12 20.5 4.5 4.5 0 0 1 7.5 16 4.5 4.5 0 0 1 12 11.5 4.5 4.5 0 0 1 16.5 16z" fill="white" opacity="0.25"/>
+      </svg>
+      <span>Book on WhatsApp</span>
+    </a>
+
+    <!-- Refined Enter Studio Glass Button -->
+    <a href="/" class="btn-secondary">
+      🌐 Visit Website
+    </a>
+
+  </div>
+
+  <div class="particle-layer fg-particles" id="fg-particles"></div>
+
+  <!-- FLOATING PEARL NAVIGATION -->
+  <div class="pearl-nav-container" id="pearlNav">
+    <!-- Petal 1: Instagram -->
+    <a href="https://www.instagram.com/beauty._.blissss" class="petal petal-1 ig" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2" fill="none"/>
+        <circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2" fill="none"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+      </svg>
+    </a>
+    
+    <!-- Petal 2: Website -->
+    <a href="/" class="petal petal-2" aria-label="Website">
+      <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+        <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" stroke="currentColor" stroke-width="2"/>
+        <path d="M2 12h20" stroke="currentColor" stroke-width="2"/>
+      </svg>
+    </a>
+
+    <!-- Petal 3: WhatsApp -->
+    <a href="https://wa.me/919914010455" class="petal petal-3 wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C6.48 2 2 6.48 2 12C2 13.88 2.53 15.64 3.44 17.13L2.25 21.75L6.97 20.51C8.42 21.46 10.15 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM17.16 16.55C16.94 17.16 16.1 17.51 15.6 17.51C15.25 17.51 14.83 17.36 13.55 16.82C11.8 16.1 10.66 14.32 10.58 14.21C10.5 14.1 9.89 13.29 9.89 12.44C9.89 11.6 10.32 11.19 10.49 11.02C10.66 10.85 10.91 10.8 11.09 10.8C11.23 10.8 11.37 10.8 11.51 10.8C11.65 10.8 11.84 10.75 12.02 11.19C12.22 11.69 12.74 12.98 12.8 13.1C12.86 13.22 12.92 13.38 12.84 13.55C12.76 13.72 12.69 13.8 12.57 13.95C12.45 14.09 12.33 14.21 12.21 14.37C12.1 14.51 11.97 14.65 12.13 14.92C12.28 15.19 12.83 16.08 13.63 16.8C14.66 17.72 15.5 18.01 15.77 18.12C16.04 18.23 16.19 18.2 16.35 18.02C16.51 17.84 17.04 17.2 17.21 16.95C17.38 16.69 17.55 16.75 17.78 16.84C18.01 16.93 19.24 17.54 19.49 17.67C19.74 17.8 19.89 17.87 19.95 18.03C20.01 18.19 20.01 18.9 19.67 19.55C19.34 20.21 18.78 20.58 18.33 20.76C17.89 20.93 17.39 21.05 16.42 20.89C15.34 20.71 13.61 19.95 12.11 18.4C10.59 16.83 9.61 14.85 9.38 14.2C9.15 13.55 9.09 12.84 9.35 12.25C9.61 11.66 10.16 11.23 10.66 10.97C11.16 10.71 11.75 10.61 12.35 10.61C13.2 10.61 13.83 10.87 14.15 11C14.47 11.13 14.83 11.51 15.02 11.89C15.21 12.27 15.46 12.98 15.52 13.1C15.58 13.22 15.64 13.38 15.56 13.55C15.48 13.72 15.41 13.8 15.29 13.95C15.17 14.09 15.05 14.21 14.93 14.37C14.82 14.51 14.69 14.65 14.85 14.92C15 15.19 15.55 16.08 16.35 16.8C17.38 17.72 18.22 18.01 18.49 18.12C18.76 18.23 18.91 18.2 19.07 18.02C19.23 17.84 19.76 17.2 19.93 16.95C20.1 16.69 20.27 16.75 20.5 16.84C20.73 16.93 21.96 17.54 22.21 17.67C22.46 17.8 22.61 17.87 22.67 18.03C22.73 18.19 22.73 18.9 22.39 19.55C22.06 20.21 21.5 20.58 21.05 20.76C20.61 20.93 20.11 21.05 19.14 20.89C18.06 20.71 16.33 19.95 14.83 18.4C13.31 16.83 12.33 14.85 12.1 14.2C11.87 13.55 11.81 12.84 12.07 12.25C12.33 11.66 12.88 11.23 13.38 10.97C13.88 10.71 14.47 10.61 15.07 10.61C15.92 10.61 16.55 10.87 16.87 11C17.19 11.13 17.55 11.51 17.74 11.89C17.93 12.27 18.18 12.98 18.24 13.1C18.3 13.22 18.36 13.38 18.28 13.55C18.2 13.72 18.13 13.8 18.01 13.95C17.89 14.09 17.77 14.21 17.65 14.37C17.54 14.51 17.41 14.65 17.57 14.92C17.72 15.19 18.27 16.08 19.07 16.8C20.1 17.72 20.94 18.01 21.21 18.12C21.48 18.23 21.63 18.2 21.79 18.02C21.95 17.84 22.48 17.2 22.65 16.95C22.82 16.69 22.99 16.75 23.22 16.84C23.45 16.93 24.68 17.54 24.93 17.67C25.18 17.8 25.33 17.87 25.39 18.03C25.45 18.19 25.45 18.9 25.11 19.55C24.78 20.21 24.22 20.58 23.77 20.76C23.33 20.93 22.83 21.05 21.86 20.89C20.78 20.71 19.05 19.95 17.55 18.4C16.03 16.83 15.05 14.85 14.82 14.2C14.59 13.55 14.53 12.84 14.79 12.25C15.05 11.66 15.6 11.23 16.1 10.97C16.6 10.71 17.19 10.61 17.79 10.61C18.64 10.61 19.27 10.87 19.59 11C19.91 11.13 20.27 11.51 20.46 11.89C20.65 12.27 20.9 12.98 20.96 13.1C21.02 13.22 21.08 13.38 21 13.55C20.92 13.72 20.85 13.8 20.73 13.95C20.61 14.09 20.49 14.21 20.37 14.37C20.26 14.51 20.13 14.65 20.29 14.92C20.44 15.19 20.99 16.08 21.79 16.8C22.82 17.72 23.66 18.01 23.93 18.12C24.2 18.23 24.35 18.2 24.51 18.02C24.67 17.84 25.2 17.2 25.37 16.95C25.54 16.69 25.71 16.75 25.94 16.84C26.17 16.93 27.4 17.54 27.65 17.67C27.9 17.8 28.05 17.87 28.11 18.03C28.17 18.19 28.17 18.9 27.83 19.55C27.5 20.21 26.94 20.58 26.49 20.76C26.05 20.93 25.55 21.05 24.58 20.89C23.5 20.71 21.77 19.95 20.27 18.4C18.75 16.83 17.77 14.85 17.54 14.2C17.31 13.55 17.25 12.84 17.51 12.25C17.77 11.66 18.32 11.23 18.82 10.97C19.32 10.71 19.91 10.61 20.51 10.61" fill="currentColor"/>
+      </svg>
+    </div>
+  </div>
+
+  <script>
+    // Atmosphere generation
+    function createSparkles(containerId, count, sizeRange) {
+      const container = document.getElementById(containerId);
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'sparkle';
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.top = `${Math.random() * 100}%`;
+        
+        const size = sizeRange[0] + Math.random() * (sizeRange[1] - sizeRange[0]);
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
+        
+        p.style.animationDelay = `${Math.random() * -6}s`;
+        p.style.animationDuration = `${4 + Math.random() * 4}s`;
+        
+        container.appendChild(p);
+      }
+    }
+
+    function createPearls(containerId, count) {
+      const container = document.getElementById(containerId);
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('div');
+        p.className = 'floating-pearl';
+        p.style.left = `${Math.random() * 100}%`;
+        p.style.top = `${Math.random() * 100}%`;
+        
+        const size = 5 + Math.random() * 7; 
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
+        
+        p.style.animationDelay = `${Math.random() * -10}s`;
+        p.style.animationDuration = `${8 + Math.random() * 6}s`;
+        
+        container.appendChild(p);
+      }
+    }
+
+    createSparkles('bg-particles', 25, [1, 4]); // Increased amount and size slightly
+    createSparkles('fg-particles', 15, [2, 5]);
+    createPearls('bg-particles', 12); // Add floating pearls for luxury depth
+
+    // INTERACTIVE 3D COMPACT MIRROR (Tilt Effect)
+    const compact = document.getElementById('compact');
+    const glare = document.getElementById('glare');
+    const MAX_TILT = 15; // Max rotation in degrees
+
+    function handleMove(clientX, clientY) {
+      const rect = compact.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
+      
+      const percentX = (clientX - centerX) / (window.innerWidth / 2);
+      const percentY = -(clientY - centerY) / (window.innerHeight / 2);
+      
+      const tiltX = Math.max(Math.min(percentY * MAX_TILT, MAX_TILT), -MAX_TILT);
+      const tiltY = Math.max(Math.min(percentX * MAX_TILT, MAX_TILT), -MAX_TILT);
+
+      compact.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+    }
+
+    // Mouse tilt
+    document.addEventListener('mousemove', (e) => {
+      handleMove(e.clientX, e.clientY);
+    });
+
+    // Device accelerometer tilt (Mobile)
+    if (window.DeviceOrientationEvent) {
+      window.addEventListener('deviceorientation', (e) => {
+        // Use gamma (left/right) and beta (front/back)
+        if (e.gamma !== null && e.beta !== null) {
+          const tiltY = Math.max(Math.min(e.gamma / 2, MAX_TILT), -MAX_TILT);
+          const tiltX = Math.max(Math.min((e.beta - 45) / 2, MAX_TILT), -MAX_TILT);
+          compact.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg)`;
+        }
+      });
+    }
+
+    // Reset on leave
+    document.addEventListener('mouseleave', () => {
+      compact.style.transform = `rotateX(0deg) rotateY(0deg)`;
+    });
+
+    // PEARL NAVIGATION MENU INTERACTION
+    const pearlContainer = document.getElementById('pearlNav');
+    const pearlBtn = document.querySelector('.pearl');
+    
+    // Set proper transform variables on petals so hover scaling works correctly on transformed elements
+    const petals = document.querySelectorAll('.petal');
+    petals.forEach(petal => {
+      if(petal.classList.contains('petal-1')) { petal.style.setProperty('--tx', '-70px'); petal.style.setProperty('--ty', '-20px'); }
+      if(petal.classList.contains('petal-2')) { petal.style.setProperty('--tx', '0px'); petal.style.setProperty('--ty', '-80px'); }
+      if(petal.classList.contains('petal-3')) { petal.style.setProperty('--tx', '70px'); petal.style.setProperty('--ty', '-20px'); }
+    });
+
+    pearlBtn.addEventListener('click', () => {
+      pearlContainer.classList.toggle('open');
+    });
+
+    // Close pearl menu if clicking outside
+    document.addEventListener('click', (e) => {
+      if (!pearlContainer.contains(e.target)) {
+        pearlContainer.classList.remove('open');
+      }
+    });
+
+  </script>
+</body>
+</html>
