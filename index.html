@@ -442,24 +442,31 @@
       text-align: center;
     }
 
-    /* Premium Elegant Text Logo */
+    /* Premium Elegant Text Logo with Glossy Reflection */
     .hero-cute-title {
       font-family: var(--font-display);
-      font-size: 2.7rem;
-      font-weight: 500;
-      color: #FF7EB6;
+      font-size: 2.9rem;
+      font-weight: 600;
       margin: 18px auto 34px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
+      gap: 12px;
       letter-spacing: 0.03em;
-      text-shadow: 
-        0 0 15px rgba(255, 126, 182, 0.20),
-        0 0 25px rgba(255, 126, 182, 0.08);
       animation: floatCuteTitle 5s ease-in-out infinite;
       user-select: none;
-      filter: drop-shadow(0 2px 5px rgba(255, 126, 182, 0.10));
+      /* Soft premium glow */
+      filter: 
+        drop-shadow(0 4px 15px rgba(255, 126, 182, 0.20))
+        drop-shadow(0 2px 4px rgba(107, 59, 87, 0.05));
+    }
+
+    .cute-title-text {
+      background: linear-gradient(160deg, #FFFFFF 0%, #FFD1E8 20%, #FF7EB6 55%, #FF529C 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: #FF7EB6; /* Fallback */
     }
 
     @keyframes floatCuteTitle {
