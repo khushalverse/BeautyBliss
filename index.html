@@ -1056,6 +1056,8 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       pointer-events: none;
+      transition: opacity 0.25s ease, visibility 0.25s ease;
+      opacity: 1;
     }
 
     .slider-label-before {
@@ -4939,6 +4941,28 @@
         sliderAfterBox.style.webkitClipPath = `inset(0 ${100 - percent}% 0 0)`;
         sliderDivider.style.left = `${percent}%`;
         sliderHandle.style.left = `${percent}%`;
+
+        // Hide labels when handle goes over them
+        const beforeLabel = document.getElementById("slider-before-label");
+        const afterLabel = document.getElementById("slider-after-label");
+        if (beforeLabel) {
+          if (percent > 85) {
+            beforeLabel.style.opacity = "0";
+            beforeLabel.style.visibility = "hidden";
+          } else {
+            beforeLabel.style.opacity = "1";
+            beforeLabel.style.visibility = "visible";
+          }
+        }
+        if (afterLabel) {
+          if (percent < 15) {
+            afterLabel.style.opacity = "0";
+            afterLabel.style.visibility = "hidden";
+          } else {
+            afterLabel.style.opacity = "1";
+            afterLabel.style.visibility = "visible";
+          }
+        }
       };
 
       sliderControl.addEventListener("input", (e) => {
