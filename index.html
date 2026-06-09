@@ -442,24 +442,24 @@
       text-align: center;
     }
 
-    /* Bubbly Cute Text Logo ("strawberry moo" style) */
+    /* Premium Elegant Text Logo */
     .hero-cute-title {
-      font-family: 'Fredoka', sans-serif;
-      font-size: 2.8rem;
-      font-weight: 600;
+      font-family: var(--font-display);
+      font-size: 2.7rem;
+      font-weight: 500;
       color: #FF7EB6;
-      margin: 18px auto 26px;
+      margin: 18px auto 34px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 8px;
+      gap: 10px;
+      letter-spacing: 0.03em;
       text-shadow: 
-        0 0 12px rgba(255, 126, 182, 0.15),
-        2px 2px 0px #FFF,
-        3px 3px 0px rgba(255, 126, 182, 0.08);
-      animation: floatCuteTitle 4s ease-in-out infinite;
+        0 0 15px rgba(255, 126, 182, 0.20),
+        0 0 25px rgba(255, 126, 182, 0.08);
+      animation: floatCuteTitle 5s ease-in-out infinite;
       user-select: none;
-      filter: drop-shadow(0 2px 4px rgba(255, 126, 182, 0.10));
+      filter: drop-shadow(0 2px 5px rgba(255, 126, 182, 0.10));
     }
 
     @keyframes floatCuteTitle {
@@ -481,32 +481,29 @@
     }
 
     .hero-title {
-      font-family: var(--font-body);
-      font-size: 1.9rem;
-      font-weight: 400;
+      font-size: 1.8rem;
       color: var(--color-plum);
       padding: 0 16px;
-      margin-bottom: 12px;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+      line-height: 1.2;
     }
 
-    .hero-title .hero-subtitle {
-      display: block;
-      margin-top: 10px;
-      font-size: 1.15rem;
-      font-weight: 500;
+    .hero-title em {
+      font-style: italic;
       color: var(--color-primary);
+      position: relative;
     }
 
-    .hero-caption {
-      font-size: 0.75rem;
-      font-weight: 600;
-      color: var(--color-plum-light);
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 24px;
-      opacity: 0.85;
+    .hero-title em::after {
+      content: "";
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: rgba(255, 209, 232, 0.6);
+      z-index: -1;
+      border-radius: 3px;
     }
 
     /* Action Buttons Grid Layout */
@@ -3598,7 +3595,6 @@
         </div>
         
         <h1 class="hero-title" id="config-hero-title"></h1>
-        <p class="hero-caption">Abohar &bull; Custom Nail Art &bull; Appointments Open</p>
         
         <!-- Grid Hero Buttons (Two lines of text) -->
         <div class="hero-actions">
@@ -4015,10 +4011,10 @@
       studioInfo: {
         name: "Beauty Bliss",
         subName: "by Kenjal",
-        tagline: "Luxury Nails, Crafted With Love",
+        tagline: "Pretty Nails, Crafted With Love",
         avatar: "./assets/kenjal_portrait_medium.webp",
         logoText: "Beauty Bliss",
-        heroTitle: "Pretty Nails.<br>Pretty Energy.<br><span class=\"hero-subtitle\">By Kenjal ✨</span>",
+        heroTitle: "Pretty Nails, Crafted With <em>Love</em> By Kenjal",
         rating: "4.9",
         reviewsCount: "142",
         clientCount: "50+ Happy Clients",
