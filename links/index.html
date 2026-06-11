@@ -571,9 +571,11 @@
       if(petal.classList.contains('petal-3')) { petal.style.setProperty('--tx', '70px'); petal.style.setProperty('--ty', '-20px'); }
     });
 
-    pearlBtn.addEventListener('click', () => {
-      pearlContainer.classList.toggle('open');
-    });
+    if (pearlBtn) {
+      pearlBtn.addEventListener('click', () => {
+        pearlContainer.classList.toggle('open');
+      });
+    }
 
     // Close pearl menu if clicking outside
     document.addEventListener('click', (e) => {
