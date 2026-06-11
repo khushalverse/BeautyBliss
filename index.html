@@ -4033,7 +4033,11 @@
         artistName: "Artist: Kenjal",
         primaryActionHTML: "<span>💖 Book</span><span>Appointment</span>",
         secondaryActionHTML: "<span>✨ View</span><span>Gallery</span>",
-        whatsappLink: "https://wa.me/919914010455?text=" + encodeURIComponent("Hi Kenjal 💖\n\nI'd love to book a nail appointment with you.\n\n✨ Name:\n📅 Preferred Date:\n💅 Service Interested In:\n📸 Reference Design (optional):\n\nLooking forward to hearing from you! 💕"),
+        whatsappLink: (function() {
+          const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+          const base = isMobile ? "whatsapp://send?phone=919914010455&text=" : "https://api.whatsapp.com/send/?phone=919914010455&text=";
+          return base + encodeURIComponent("Hi Kenjal 💖\n\nI'd love to book a nail appointment with you.\n\n✨ Name:\n📅 Preferred Date:\n💅 Service Interested In:\n📸 Reference Design (optional):\n\nLooking forward to hearing from you! 💕");
+        })(),
         instagramLink: "https://www.instagram.com/beauty._.blissss",
         emailAddress: "mailto:hello@beautyblissbykenjal.com?subject=Nail%20Studio%20Booking%20Inquiry"
       },
@@ -5600,7 +5604,7 @@
         
         // Setup WhatsApp deep reply text link
         const replyText = encodeURIComponent(`Hi Kenjal! I saw your "${story.title}" story highlighting "${slide.caption}" and would love to ask about booking! 💅✨`);
-        storyViewerReplyLink.href = `${CONFIG_DATA.studioInfo.whatsappLink.split('?')[0]}?text=${replyText}`;
+        storyViewerReplyLink.href = `${CONFIG_DATA.studioInfo.whatsappLink.split('text=')[0]}text=${replyText}`;
         
         // Reset timers
         storyElapsedMs = 0;

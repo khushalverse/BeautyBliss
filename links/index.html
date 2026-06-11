@@ -586,7 +586,9 @@
 
     // Dynamic WhatsApp Link Generation (Instagram Browser Fix)
     const waText = "Hi Kenjal 💖\n\nI'd love to book a nail appointment with you.\n\n✨ Name:\n📅 Preferred Date:\n💅 Service Interested In:\n\nLooking forward to hearing from you! 💕";
-    const waUrl = "https://wa.me/919914010455?text=" + encodeURIComponent(waText);
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    const waBaseUrl = isMobile ? "whatsapp://send?phone=919914010455&text=" : "https://api.whatsapp.com/send/?phone=919914010455&text=";
+    const waUrl = waBaseUrl + encodeURIComponent(waText);
     document.getElementById('wa-btn-primary').href = waUrl;
     document.getElementById('wa-btn-petal').href = waUrl;
 
